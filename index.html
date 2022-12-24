@@ -197,33 +197,14 @@
   <time datetime="2022-12-24T14:10:47.000Z" itemprop="datePublished">2022-12-24</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Spring基础"><a href="#Spring基础" class="headerlink" title="Spring基础"></a>Spring基础</h1><h1 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h1><p>@Controller和@RestController用于接受和处理HTTP请求。</p>
-<p>请求页面和数据使用@Controller，如果只请求数据使用@RestController</p>
-<h1 id="路由映射"><a href="#路由映射" class="headerlink" title="路由映射"></a>路由映射</h1><p>@RequestMapping进行路由映射</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 所有json格式请求都会调用test方法</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/*.json&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">test</span><span class="params">()</span>&#123;<span class="keyword">return</span> <span class="string">&quot;get json&quot;</span>;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用@RequestMapping获取参数<br>常规域名后用？[参数名]&#x3D;[参数值] 表示，多个参数用&amp;分隔。<br>例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前往http://localhost:8080/hello页面并且给一个参数name=rick</span></span><br><span class="line"><span class="comment">//链接应该是http://localhost:8080/hello?name=rick</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloController</span> &#123;</span><br><span class="line"><span class="comment">//传入参数名必须和方法变量名一样。不填或者填错则获取到null</span></span><br><span class="line">	<span class="meta">@RequestMapping(value =&quot;/hello&quot;,method=RequestMethod.GET)</span></span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">hello</span><span class="params">(String name)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//如果传入参数不一样可以使用@RequestParam解释</span></span><br><span class="line"><span class="comment">//但是如果加上注解，默认意味着该参数为必填，不填参数为非法</span></span><br><span class="line"><span class="comment">//可以添加required = false设置为非必选</span></span><br><span class="line">	<span class="meta">@RequestMapping(value =&quot;/hello&quot;,method=RequestMethod.GET)</span></span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">hello</span><span class="params">(<span class="meta">@RequestParam(&quot;name&quot;,required = false)</span> String nickname)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="StringBoot-文件"><a href="#StringBoot-文件" class="headerlink" title="StringBoot 文件"></a>StringBoot 文件</h1><p>默认会在项目目录下生成一个static文件存放静态资源。<br>src&#x2F;main&#x2F;resources&#x2F;static<br>在这个static文件中放置图片，可以直接通过文件名访问。例如存放了一张名为test.jpg的图片。可以通过访问<a target="_blank" rel="noopener" href="http://localhost:8080/test.jpg">http://localhost:8080/test.jpg</a> 访问图片。</p>
-<p>可以在src&#x2F;main&#x2F;resources&#x2F;application.properties这里配置访问路径，使用spring.mvc.static-path-pattern修改路径。<br>例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &quot;src/main/resources/application.properties&quot;</span></span><br><span class="line"><span class="comment">//默认是=/**</span></span><br><span class="line">spring.mvc.<span class="keyword">static</span>-path-pattern=/upload<span class="comment">/**</span></span><br></pre></td></tr></table></figure>
-<p>也可以修改static文件夹路径，也是在src&#x2F;main&#x2F;resources&#x2F;application.properties这里，使用spring.web.resources.static-locations修改。<br>例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// &quot;src/main/resources/application.properties&quot;</span><br><span class="line">//默认是=classpath:/static/</span><br><span class="line">spring.web.resources.static-locations=classpath:/static/</span><br></pre></td></tr></table></figure>
-<h1 id="接收文件："><a href="#接收文件：" class="headerlink" title="接收文件："></a>接收文件：</h1><p>src&#x2F;main&#x2F;java&#x2F;com&#x2F;example&#x2F;springbootlearning&#x2F;Controller&#x2F;fileUploadController.java</p>
-<p>springboot中的文件类型使用MultipartFile</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
     <footer class="article-footer">
        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
     </footer>
   </div>
 
@@ -258,27 +239,7 @@
   <time datetime="2022-12-24T11:11:23.351Z" itemprop="datePublished">2022-12-24</time>
 </a>    
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
        
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
 
     <!-- copyright -->
     
