@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2022-12-24T11:11:23.351Z</updated>
+  <updated>2022-12-24T14:13:06.297Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot学习001</title>
+    <link href="https://buggzd.github.io/2022/12/24/SpringBoot%E5%AD%A6%E4%B9%A0001/"/>
+    <id>https://buggzd.github.io/2022/12/24/SpringBoot%E5%AD%A6%E4%B9%A0001/</id>
+    <published>2022-12-24T14:10:47.000Z</published>
+    <updated>2022-12-24T14:13:06.297Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Spring基础&quot;&gt;&lt;a href=&quot;#Spring基础&quot; class=&quot;headerlink&quot; title=&quot;Spring基础&quot;&gt;&lt;/a&gt;Spring基础&lt;/h1&gt;&lt;h1 id=&quot;控制器&quot;&gt;&lt;a href=&quot;#控制器&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
