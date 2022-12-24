@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2022-12-24T14:17:29.832Z</updated>
+  <updated>2022-12-24T14:25:38.553Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://buggzd.github.io/2022/12/24/SpringBoot%E5%AD%A6%E4%B9%A0001/"/>
     <id>https://buggzd.github.io/2022/12/24/SpringBoot%E5%AD%A6%E4%B9%A0001/</id>
     <published>2022-12-24T14:10:47.000Z</published>
-    <updated>2022-12-24T14:17:29.832Z</updated>
+    <updated>2022-12-24T14:25:38.553Z</updated>
     
     
       
@@ -33,6 +33,8 @@
       
     
     
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="后端" scheme="https://buggzd.github.io/tags/%E5%90%8E%E7%AB%AF/"/>

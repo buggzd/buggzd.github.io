@@ -18,6 +18,9 @@
 <h1 id="接收文件："><a href="#接收文件：" class="headerlink" title="接收文件："></a>接收文件：</h1><p>src&#x2F;main&#x2F;java&#x2F;com&#x2F;example&#x2F;springbootlearning&#x2F;Controller&#x2F;fileUploadController.java</p>
 <p>springboot中的文件类型使用MultipartFile</p>
 ]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
       <tags>
         <tag>后端</tag>
         <tag>SpringBoot</tag>
