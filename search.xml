@@ -81,4 +81,420 @@
         <tag>工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机体系结构笔记第一章</title>
+    <url>/2022/06/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0-computerarchitecture01/</url>
+    <content><![CDATA[<h1 id="x3D-x3D-计算机系统多级层次结构-x3D-x3D"><a href="#x3D-x3D-计算机系统多级层次结构-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;计算机系统多级层次结构&#x3D;&#x3D;"></a>&#x3D;&#x3D;计算机系统多级层次结构&#x3D;&#x3D;</h1><p><img src="https://s2.loli.net/2022/12/26/PkoWf9iTAKCI8n3.png" alt="image.png"></p>
+<h1 id="x3D-x3D-计算机系统体系结构的定义-x3D-x3D"><a href="#x3D-x3D-计算机系统体系结构的定义-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;计算机系统体系结构的定义&#x3D;&#x3D;"></a>&#x3D;&#x3D;计算机系统体系结构的定义&#x3D;&#x3D;</h1><h2 id="经典定义"><a href="#经典定义" class="headerlink" title="经典定义"></a>经典定义</h2><p>计算机体系结构是指传统机器程序员所看到的计算机属性，即概念结构与功能特效。</p>
+<h2 id="广义定义"><a href="#广义定义" class="headerlink" title="广义定义"></a>广义定义</h2><p>系统结构定义为：指令系统结构，组成，硬件。</p>
+<h1 id="计算机组成和实现"><a href="#计算机组成和实现" class="headerlink" title="计算机组成和实现"></a>计算机组成和实现</h1><p>计算机系统结构：计算机系统的软硬件的界面。（传统机器所具有的结构）</p>
+<p>计算机组成：逻辑结构的实现（控制方式，功能等）</p>
+<p>计算机实现：物理实现（引脚，电压，散热等）</p>
+<p><del>翻译和解释的区别：</del><br><del>翻译：全部一起翻译后一起执行，占用空间大<br>解释：逐条解释执行，占用空间小，消耗时间大</del></p>
+<h1 id="计算机系统结构分类"><a href="#计算机系统结构分类" class="headerlink" title="计算机系统结构分类"></a>计算机系统结构分类</h1><h2 id="Flynn分类"><a href="#Flynn分类" class="headerlink" title="Flynn分类"></a>Flynn分类</h2><p>按照指令流和数据流分类<br>Single Multiple | Instruction Data</p>
+<ol>
+<li>SISD</li>
+<li>SIMD</li>
+<li>MISD 并不存在</li>
+<li>MIMD</li>
+</ol>
+<h2 id="冯式分类"><a href="#冯式分类" class="headerlink" title="冯式分类"></a>冯式分类</h2><p>按照系统最大并行度分类<br>最大并行度：能处理的最大二进制位数<br><img src="https://s2.loli.net/2022/12/26/2jZuCKqfzJb7Q34.png" alt="2022-06-06.png"></p>
+<ol>
+<li>WSBS字串位串</li>
+<li>WSBP字串位并</li>
+<li>WPBS字并位串</li>
+<li>WPBP字并位并</li>
+</ol>
+<h2 id="Handler分类法"><a href="#Handler分类法" class="headerlink" title="Handler分类法"></a>Handler分类法</h2><p>根据并行度和流水线分类</p>
+<ol>
+<li>控制部件个数k</li>
+<li>ALU部件d</li>
+<li>ALU包含的基本逻辑线路ELC套数w</li>
+</ol>
+<p>公式t&#x3D;（k，d，w）</p>
+<p>如果考虑流水线：<br>t&#x3D;（k*k` ，d*d`，w*w`）加上流水线并行<br>例如：Cray有一个CPU，12个相当于ALU或者PE的处理部件，最多可以实现8级流水，字长为64位，可实现1<del>14位流水线处理。则表示为t（Cray）&#x3D;（1,12*8,64*（1\</del>14））</p>
+<h1 id="计算机系统设计"><a href="#计算机系统设计" class="headerlink" title="计算机系统设计"></a>计算机系统设计</h1><h2 id="定量原理"><a href="#定量原理" class="headerlink" title="定量原理"></a>定量原理</h2><p>4个定量原理：</p>
+<ol>
+<li>经常性事件为重点</li>
+<li>&#x3D;&#x3D;Amdahl定理：系统性能加速比&#x3D;系统性能改进后&#x2F;系统性能改进前 &#x3D;总执行时间改进前&#x2F;总执行时间改进后  。&#x3D;&#x3D;<br>&#x3D;&#x3D;这意味着提升百分比是非直线的，改进越多总收益提升增长越慢，一般加速比不会超过1&#x2F;（1-可改进比例）&#x3D;&#x3D;</li>
+<li>CPU性能公式：执行所需时钟周期*时钟周期<br> CPI（执行每条指令平均时钟周期）&#x3D;执行程序总时间&#x2F;总指令条数</li>
+<li>&#x3D;&#x3D;程序的局部性原理：程序执行时访问的存储器地址分布不是随机的而是相对的簇聚。&#x3D;&#x3D;<ul>
+<li>时间局部性</li>
+<li>空间局部性</li>
+</ul>
+</li>
+</ol>
+<h2 id="系统设计的主要方法"><a href="#系统设计的主要方法" class="headerlink" title="系统设计的主要方法"></a><del>系统设计的主要方法</del></h2><p><del>1. 由上往下<br>2. 由下往上<br>3. 从中间开始：解决前两种软硬件设计分离和脱节问题</del></p>
+<p> <del>计算机系统性能评测</del><br> <del>执行时间和吞吐率</del><br><del>执行时间</del><br><del>CPU时间：不包含I&#x2F;O等待和运行其他程序时间</del><br><del>- 用户程序CPU时间</del><br><del>- 系统CPU时间</del><br><del>基准测试程序：用于比较性能的测试程序（编译器等等）</del></p>
+<h1 id="计算机系统结构的发展"><a href="#计算机系统结构的发展" class="headerlink" title="计算机系统结构的发展"></a>计算机系统结构的发展</h1><h2 id="冯诺依曼结构及其改进"><a href="#冯诺依曼结构及其改进" class="headerlink" title="冯诺依曼结构及其改进"></a>冯诺依曼结构及其改进</h2><p>冯诺依曼结构的组成：输入设备，输出设备，&#x3D;&#x3D;运算器&#x3D;&#x3D;，存储器，控制器<br>冯诺依曼结构特点：</p>
+<ul>
+<li>运算器为中心</li>
+<li>指令和数据都在存储器中同等对待</li>
+<li>存储器按地址访问</li>
+<li>指令执行按顺序的</li>
+<li>指令由操作码和地址码组成</li>
+<li>指令和数据都以二进制表示使用二进制运算</li>
+</ul>
+<p><del>对冯诺依曼的改进</del></p>
+<ul>
+<li><del>输入输出改进降低CPU负担，使用 程序控制，DMA，I&#x2F;O处理机</del></li>
+<li><del>采用并行处理技术</del></li>
+<li><del>存储器改进：相联存储器，通用寄存器组，Cache</del></li>
+<li><del>指令系统发展：复杂指令集，精简指令集（目前常用）</del></li>
+</ul>
+<h2 id="软件对系统结构的影响"><a href="#软件对系统结构的影响" class="headerlink" title="软件对系统结构的影响"></a>软件对系统结构的影响</h2><h3 id="实现可移植性的方法："><a href="#实现可移植性的方法：" class="headerlink" title="实现可移植性的方法："></a>实现可移植性的方法：</h3><ol>
+<li>统一高级语言</li>
+<li>&#x3D;&#x3D;系列机&#x3D;&#x3D;，比如Intel酷睿系列，系统结构相同。因此分为向上，向下，向前和向后兼容，重点是向后兼容<br><img src="https://s2.loli.net/2022/12/26/ejnmOphvZ3qfy6M.png" alt="image-1654596959856.png"></li>
+<li>模拟和仿真<br>模拟：虚拟机（通常用&#x3D;&#x3D;解释&#x3D;&#x3D;的方法实现）<br><img src="https://s2.loli.net/2022/12/26/93f1XxpljUYwd4E.png" alt="image-1654597159717-thumbnail.png"><br>仿真：使用主机的微程序解释目标机的微程序，&#x3D;&#x3D;速度快很多&#x3D;&#x3D;但是需要系统结构差别不大的计算机。</li>
+</ol>
+<p><del>器件发展对系统结构的影响：</del><br><del>1. 摩尔定律</del><br><del>2. 计算机分代主要以器件作为划分标准</del></p>
+<p><del>应用发展对系统结构的影响：</del><br><del>应用需求是促使计算机系统结构发展的最根本的动力</del></p>
+<h2 id="计算机系统结构中并行性的发展"><a href="#计算机系统结构中并行性的发展" class="headerlink" title="计算机系统结构中并行性的发展"></a>计算机系统结构中并行性的发展</h2><h3 id="并行性："><a href="#并行性：" class="headerlink" title="并行性："></a>并行性：</h3><p>同时性：同一个时刻<br>并发性：同一个时间间隔</p>
+<h3 id="提高并行性的方法"><a href="#提高并行性的方法" class="headerlink" title="提高并行性的方法"></a>提高并行性的方法</h3><ol>
+<li>时间重叠：流水线技术</li>
+<li>资源重复：空间取胜，比如磁盘整列</li>
+<li>资源共享：软件方法，比如操作系统时间片</li>
+</ol>
+<h3 id="单机系统并行性的发展"><a href="#单机系统并行性的发展" class="headerlink" title="单机系统并行性的发展"></a>单机系统并行性的发展</h3><p>重点是&#x3D;&#x3D;时间重叠&#x3D;&#x3D;，指令流水线技术。<br>在单处理机中资源共享是模拟多处理机的功能，例如分时系统。</p>
+<h3 id="多机系统并行性的发展"><a href="#多机系统并行性的发展" class="headerlink" title="多机系统并行性的发展"></a>多机系统并行性的发展</h3><p>耦合性：描述各机之间物理连接紧密程度和交互作用力的强弱。</p>
+<table>
+<thead>
+<tr>
+<th>紧密耦合系统</th>
+<th>松散耦合系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>总线互联共享主存</td>
+<td>通信互联共享文件</td>
+</tr>
+</tbody></table>
+<p>功能专用化（时间重叠）<br>机间互联：容错系统</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机体系结构笔记第七章</title>
+    <url>/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E7%AB%A0-computerarchitecture07/</url>
+    <content><![CDATA[<h1 id="系统的三级存储结构"><a href="#系统的三级存储结构" class="headerlink" title="系统的三级存储结构"></a>系统的三级存储结构</h1><p>缓存Cache-主存储器-辅存（磁盘存储器）<br><img src="https://s2.loli.net/2022/12/26/6scXm1ahHrFp87E.png" alt="image-1655802335804.png"></p>
+<h1 id="映像规则的三种分类"><a href="#映像规则的三种分类" class="headerlink" title="映像规则的三种分类"></a>映像规则的三种分类</h1><h2 id="全相联映像"><a href="#全相联映像" class="headerlink" title="全相联映像"></a>全相联映像</h2><p>全相连：主存中的任意一块可以被放置到cache中任意一个位置。<br><img src="https://s2.loli.net/2022/12/26/mpSQCJwK1uYlibT.png" alt="image-1655885253586.png"></p>
+<h2 id="直接联映像"><a href="#直接联映像" class="headerlink" title="直接联映像"></a>直接联映像</h2><p>主存中每块只能被放置到cache中唯一的一个位置。<br>主存i块可以放到cache中的j块。<br>j&#x3D;i mod（M）       M：cache的块数<br><img src="https://s2.loli.net/2022/12/26/9l8IujpEAas2GrK.png" alt="image-1655885442474.png"></p>
+<h2 id="组相连映像"><a href="#组相连映像" class="headerlink" title="组相连映像"></a>组相连映像</h2><p>是前两种的结合，把cache分组，每一个组对主存都是直接相连，对组内是全相连。<br>主存第i块映像到第k组。<br>k&#x3D;i mod （G）                            G：cache组数<br><img src="https://s2.loli.net/2022/12/26/ukKU7qIdEN9OrXv.png" alt="image-1655887250919.png"></p>
+<h3 id="n路组相连"><a href="#n路组相连" class="headerlink" title="n路组相连"></a>n路组相连</h3><p>每组中有n个块（n&#x3D;M&#x2F;G）。n为相连度。相连度越高空间利用率越高，块冲突越低，不命中率也越低。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>n</th>
+<th>G</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>全相连</td>
+<td>M</td>
+<td>1</td>
+</tr>
+<tr>
+<td>直接映像</td>
+<td>1</td>
+<td>M</td>
+</tr>
+<tr>
+<td>组相连</td>
+<td>1&lt;n&lt;M</td>
+<td>1&lt;G&lt;M</td>
+</tr>
+</tbody></table>
+<p>通常n&lt;&#x3D;4</p>
+<h1 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h1><h2 id="x3D-x3D-随机法-x3D-x3D"><a href="#x3D-x3D-随机法-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;随机法&#x3D;&#x3D;"></a>&#x3D;&#x3D;随机法&#x3D;&#x3D;</h2><h2 id="先进先出FIFO"><a href="#先进先出FIFO" class="headerlink" title="先进先出FIFO"></a>先进先出FIFO</h2><h2 id="x3D-x3D-最近最少使用LRU-x3D-x3D"><a href="#x3D-x3D-最近最少使用LRU-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;最近最少使用LRU&#x3D;&#x3D;"></a>&#x3D;&#x3D;最近最少使用LRU&#x3D;&#x3D;</h2><p>使用堆栈（可以被随机访问），被访问后重新入栈，提升优先级。当需要替换时，选栈低元素。</p>
+<h1 id="写策略"><a href="#写策略" class="headerlink" title="写策略"></a>写策略</h1><h2 id="写直达法"><a href="#写直达法" class="headerlink" title="写直达法"></a>写直达法</h2><p>不只写入cache也写入主存。缺块不按写分配。</p>
+<h2 id="写回法"><a href="#写回法" class="headerlink" title="写回法"></a>写回法</h2><p>值写入cache，cache要被替换时才写入主存。（cache需要增添一个修改位），缺块按写分配。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>写直达法</td>
+<td>一致性好</td>
+<td>写停顿</td>
+</tr>
+<tr>
+<td>写回法</td>
+<td>速度快，存储器使用带宽低</td>
+<td>比写直达法难实现</td>
+</tr>
+</tbody></table>
+<h1 id="cache性能分析"><a href="#cache性能分析" class="headerlink" title="cache性能分析"></a>cache性能分析</h1><h2 id="平均访存时间"><a href="#平均访存时间" class="headerlink" title="平均访存时间"></a>平均访存时间</h2><p>平均访存时间&#x3D;命中时间+不命中率x不命中开销</p>
+<h1 id="降低cache不命中率"><a href="#降低cache不命中率" class="headerlink" title="降低cache不命中率"></a>降低cache不命中率</h1><h2 id="cache不命中分类"><a href="#cache不命中分类" class="headerlink" title="cache不命中分类"></a>cache不命中分类</h2><ol>
+<li>强制性不命中<br>第一次访问，该块不在cache中。</li>
+<li>容量不命中<br>cache容量不足以放入整个块。但是又被重新访问。</li>
+<li>冲突不命中<br>组相连或者直接映像cache中，太多块映像到同一个块中，但对应的块都要访问，产生冲突。</li>
+</ol>
+<p>增大cache大小，降低容量不命中概率。<br>相联度增加，降低冲突不命中。</p>
+<h1 id="降低cache不命中开销"><a href="#降低cache不命中开销" class="headerlink" title="降低cache不命中开销"></a>降低cache不命中开销</h1><h2 id="两级cache加速"><a href="#两级cache加速" class="headerlink" title="两级cache加速"></a>两级cache加速</h2><p>L1块，L2容量大<br>平均访存时间&#x3D;命中时间<del>L1</del>+不命中率<del>L1</del>x不命中开销<del>L1</del><br>不命中开销<del>L1</del>&#x3D;命中时间<del>L2</del>+不命中率<del>L2</del>x不命中开销<del>L2</del></p>
+<h2 id="局部不命中与全局不命中"><a href="#局部不命中与全局不命中" class="headerlink" title="局部不命中与全局不命中"></a>局部不命中与全局不命中</h2><p>局部不命中率&#x3D;该级的cache不命中次数&#x2F;到达该级的访问次数。<br>全局不命中率&#x3D;该级cache的不命中次数&#x2F;CPU发出访存的总次数</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机体系结构笔记第三章</title>
+    <url>/2022/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0-computerarchitecture03/</url>
+    <content><![CDATA[<h1 id="流水线的概念"><a href="#流水线的概念" class="headerlink" title="流水线的概念"></a>流水线的概念</h1><p>基本定义：把一个重复的过程分解为若干个子过程，每个子过程由专门的功能部件实现。把多个处理过程在时间上错开，依次通过个功能段，每个子过程可以与其他子过程并行处理。</p>
+<p>流水线的段（级）：流水线中每个子过程及其功能部件。<br>流水线的深度：流水线的段数。</p>
+<h1 id="流水线的通过时间和排空时间"><a href="#流水线的通过时间和排空时间" class="headerlink" title="流水线的通过时间和排空时间"></a>流水线的通过时间和排空时间</h1><p><img src="https://s2.loli.net/2022/12/26/PHeiBQfj8ZJClWa.png" alt="image-1655714992274.png"></p>
+<h2 id="通过时间"><a href="#通过时间" class="headerlink" title="通过时间"></a>通过时间</h2><p>第一个任务从开始到结束的时间。</p>
+<h2 id="排空时间"><a href="#排空时间" class="headerlink" title="排空时间"></a>排空时间</h2><p>最后一个任务n开始到结束时间</p>
+<h1 id="流水线的性能指标"><a href="#流水线的性能指标" class="headerlink" title="流水线的性能指标"></a>流水线的性能指标</h1><h2 id="吞吐率TP"><a href="#吞吐率TP" class="headerlink" title="吞吐率TP"></a>吞吐率TP</h2><p>单位时间内流水线所完成的任务数量或输出结果的数量。<br>TP&#x3D;n&#x2F;T<del>k</del><br>n：任务数<br>T<del>k</del>：处理n个任务所用时间</p>
+<h3 id="各段时间相等的流水线"><a href="#各段时间相等的流水线" class="headerlink" title="各段时间相等的流水线"></a>各段时间相等的流水线</h3><p><img src="https://s2.loli.net/2022/12/26/vxlJ2U1uwG5mqBp.png" alt="image-1655715839281.png"><br>T<del>k</del>&#x3D;k△t+（n-1）△t<br>TP&#x3D;n&#x2F;(k△t+（n-1）△t)<br>最大吞吐率为n趋近于∞时，TP<del>max</del>&#x3D;1&#x2F;△t</p>
+<h3 id="各段时间不完全相等的流水线"><a href="#各段时间不完全相等的流水线" class="headerlink" title="各段时间不完全相等的流水线"></a>各段时间不完全相等的流水线</h3><p>流水线中时间最长的段被称为流水线的++瓶颈段++。<br><img src="https://s2.loli.net/2022/12/26/Tyujgqxo4IPJk7G.png" alt="image-1655716370952.png"><br>因此对于瓶颈段，多要采用分割，分为多个子流水段，或者增加处理硬件。</p>
+<h2 id="加速比S"><a href="#加速比S" class="headerlink" title="加速比S"></a>加速比S</h2><p>完成同一批任务，不使用流水线的时间（T<del>s</del>）和使用流水线的时间（T<del>k</del>）之比。<br>S&#x3D;T<del>s</del>&#x2F;T<del>k</del></p>
+<h3 id="各段时间相等的流水线-1"><a href="#各段时间相等的流水线-1" class="headerlink" title="各段时间相等的流水线"></a>各段时间相等的流水线</h3><p>S&#x3D;nk△t&#x2F;(k△t+（n-1）△t)&#x3D;nk&#x2F;(k+n-1)<br>n趋于∞时S<del>max</del>&#x3D;k</p>
+<h3 id="各段时间不完全相等的流水线-1"><a href="#各段时间不完全相等的流水线-1" class="headerlink" title="各段时间不完全相等的流水线"></a>各段时间不完全相等的流水线</h3><p><img src="https://s2.loli.net/2022/12/26/7X9kaLtIeCUxhDQ.png" alt="image-1655716859307.png"></p>
+<h2 id="流水线的效率"><a href="#流水线的效率" class="headerlink" title="流水线的效率"></a>流水线的效率</h2><p>流水线中设备实际使用时间：整个运行时间的比值，也就是利用率。</p>
+<h3 id="各段时间相等的流水线-2"><a href="#各段时间相等的流水线-2" class="headerlink" title="各段时间相等的流水线"></a>各段时间相等的流水线</h3><p>e<del>1</del>&#x3D;e<del>2</del>&#x3D;…&#x3D;e<del>k</del>&#x3D;n&#x2F;(k+n-1)<br>整条流水线效率为：E&#x3D;(e<del>1</del>+e<del>2</del>+…e<del>k</del>)&#x2F;k&#x3D;n&#x2F;(k+n-1)<br>E<del>max</del>&#x3D;1<br>在图像上，流水线效率&#x3D;流水线面积&#x2F;总面积</p>
+<h1 id="流水线设计中的三个问题："><a href="#流水线设计中的三个问题：" class="headerlink" title="流水线设计中的三个问题："></a>流水线设计中的三个问题：</h1><h2 id="颈问题："><a href="#颈问题：" class="headerlink" title="颈问题："></a>颈问题：</h2><p>机器时钟周期取决于瓶颈段的延迟时间。设计时应该使各段时间相等</p>
+<h2 id="流水线的额外开销："><a href="#流水线的额外开销：" class="headerlink" title="流水线的额外开销："></a>流水线的额外开销：</h2><ul>
+<li>流水寄存器需要建立时间和传输延迟</li>
+<li>时钟偏移开销</li>
+</ul>
+<h2 id="冲突问题"><a href="#冲突问题" class="headerlink" title="冲突问题"></a>冲突问题</h2><ul>
+<li>运算操作的数据准备</li>
+<li>指令操作的相互关联</li>
+</ul>
+<h1 id="五段流水线"><a href="#五段流水线" class="headerlink" title="五段流水线"></a>五段流水线</h1><h2 id="取指令周期-IF"><a href="#取指令周期-IF" class="headerlink" title="取指令周期 IF"></a>取指令周期 IF</h2><ul>
+<li>从PC取出指令放到IR</li>
+<li>PC+&#x3D;4</li>
+</ul>
+<h2 id="指令译码-x2F-读寄存器周期-ID"><a href="#指令译码-x2F-读寄存器周期-ID" class="headerlink" title="指令译码&#x2F;读寄存器周期 ID"></a>指令译码&#x2F;读寄存器周期 ID</h2><ul>
+<li>译码，读出操作数</li>
+</ul>
+<h2 id="执行-x2F-有效地址计算周期-EX"><a href="#执行-x2F-有效地址计算周期-EX" class="headerlink" title="执行&#x2F;有效地址计算周期 EX"></a>执行&#x2F;有效地址计算周期 EX</h2><ul>
+<li>计算有效地址</li>
+</ul>
+<h2 id="存储器访问-x2F-分支完成周期-MEM"><a href="#存储器访问-x2F-分支完成周期-MEM" class="headerlink" title="存储器访问&#x2F;分支完成周期 MEM"></a>存储器访问&#x2F;分支完成周期 MEM</h2><ul>
+<li>只有load，store和分支指令，其他类型指令不做任何操作。</li>
+</ul>
+<h2 id="写回周期-WB"><a href="#写回周期-WB" class="headerlink" title="写回周期 WB"></a>写回周期 WB</h2><ul>
+<li>ALU运算指令和load指令把结果数据写入通用寄存器组。</li>
+</ul>
+<h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><p>两条指令之间存在某种依赖关系。</p>
+<h2 id="数据相关："><a href="#数据相关：" class="headerlink" title="数据相关："></a>数据相关：</h2><p>两条指令i和j如果存在：<br>    - j使用i产生的结果<br>    - 指令j与指令k数据相关，而k又和i数据相关。（传递性）<br>    例如：<br>   <img src="https://s2.loli.net/2022/12/26/I4s8AfUWY5tEplr.png" alt="image-1655724310200.png"></p>
+<h2 id="名相关"><a href="#名相关" class="headerlink" title="名相关"></a>名相关</h2><p>名：指令所访问的寄存器或存储器单元的名称<br>指令i，j之间：<br>反相关：指令J写的名&#x3D;指令I读的名<br>输出相关：指令J写的名&#x3D;指令I写的名<br><img src="https://s2.loli.net/2022/12/26/WcPgyDVbsKSIBJN.png" alt="image-1655726426480.png"></p>
+<h2 id="控制相关"><a href="#控制相关" class="headerlink" title="控制相关"></a>控制相关</h2><p>是由分支指令引起的相关。<br>例如if-then语句</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> p1&#123;</span><br><span class="line">	S1；</span><br><span class="line">&#125;</span><br><span class="line">S;</span><br><span class="line"><span class="keyword">if</span> p2&#123;</span><br><span class="line">	S2；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>P1与S1存在控制相关，P2与S2存在控制相关</p>
+<h1 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h1><h2 id="结构冲突："><a href="#结构冲突：" class="headerlink" title="结构冲突："></a>结构冲突：</h2><p>硬件资源不满足指令执行要求</p>
+<h2 id="数据冲突："><a href="#数据冲突：" class="headerlink" title="数据冲突："></a>数据冲突：</h2><p>需要用到前面的指令执行结果<br>指令I和J，I在J前进入流水线。</p>
+<h3 id="写后读冲突RAW"><a href="#写后读冲突RAW" class="headerlink" title="写后读冲突RAW"></a>写后读冲突RAW</h3><p>i写入前j先读（数据相关）</p>
+<h3 id="写后写冲突WAW"><a href="#写后写冲突WAW" class="headerlink" title="写后写冲突WAW"></a>写后写冲突WAW</h3><p>i写入前j先写（输出相关）</p>
+<h3 id="读后写冲突WAR"><a href="#读后写冲突WAR" class="headerlink" title="读后写冲突WAR"></a>读后写冲突WAR</h3><p>i读入前j先写（反相关）</p>
+<h2 id="控制冲突："><a href="#控制冲突：" class="headerlink" title="控制冲突："></a>控制冲突：</h2><p>遇到分支指令和其他会改变PC值的指令</p>
+<h1 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h1><p>指令被暂停时，该暂停指令之后流出的所有指令都要暂停，之前的继续执行</p>
+<h2 id="结构冲突"><a href="#结构冲突" class="headerlink" title="结构冲突"></a>结构冲突</h2><p>访存冲突：只有一个存储器时，数据指令都要读取。<br>方法1：插入气泡<br><img src="https://s2.loli.net/2022/12/26/Yj3EwUBGCfxayM8.png" alt="image-1655727386817.png"><br>方法2：设置独立指令Cache和数据Cache</p>
+<h2 id="数据冲突"><a href="#数据冲突" class="headerlink" title="数据冲突"></a>数据冲突</h2><p>++定向技术++减少写后读冲突（数据相关）：EX段和MEM段之间的流水寄存器保存的ALU计算结果总是回送到ALU入口，当检测到需要用前一个ALU运算结果，就用保存在流水寄存器的值运算。<br>需要停顿的数据冲突：当定向技术无法解决，需要暂停流水线直到冲突消失<br>编译器解决数据冲突：通过编译器重新组织顺序。</p>
+<h2 id="控制冲突"><a href="#控制冲突" class="headerlink" title="控制冲突"></a>控制冲突</h2><p>冻结或者排空流水线，优点：简单。<br>分支指令引起的延迟叫分支延迟。<br>编译器减少分支延迟。预测分支失败，预测分支成功，延迟分支（插入延迟槽）。<br>延迟槽调度：<img src="https://s2.loli.net/2022/12/26/5BOJIqQZC9bxp8z.png" alt="image-1655733199443.png"><br>分支取消机制：</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机体系结构笔记第二章</title>
+    <url>/2022/06/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0-computerarchitecture02/</url>
+    <content><![CDATA[<h1 id="x3D-x3D-指令系统结构分类-x3D-x3D"><a href="#x3D-x3D-指令系统结构分类-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;指令系统结构分类&#x3D;&#x3D;"></a>&#x3D;&#x3D;指令系统结构分类&#x3D;&#x3D;</h1><h2 id="按照存储分类"><a href="#按照存储分类" class="headerlink" title="按照存储分类"></a>按照存储分类</h2><ol>
+<li>堆栈结构</li>
+<li>累加器结构</li>
+<li>通用寄存器结构：根据操作数来源分为RM，RR （R寄存器，M存储器）</li>
+</ol>
+<p>对于不同结构操作数位置和给出方式会不同。</p>
+<ul>
+<li>显式给出：例如mov</li>
+<li>隐式给出：例如push，pop</li>
+</ul>
+<h2 id="x3D-x3D-通用寄存器型结构-x3D-x3D"><a href="#x3D-x3D-通用寄存器型结构-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;通用寄存器型结构&#x3D;&#x3D;"></a>&#x3D;&#x3D;通用寄存器型结构&#x3D;&#x3D;</h2><p> 现代指令系统主流结构。<br> 根据ALU指令操作数个数可以分为：</p>
+<ol>
+<li>3操作数指令</li>
+<li>2操作数指令</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>指令结构类型</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RR</td>
+<td>字长固定，结构简洁</td>
+<td>指令条数多，程序占用空间大</td>
+</tr>
+<tr>
+<td>RM</td>
+<td>不必load加载，易于编码</td>
+<td>从R和M中读取时间差异大</td>
+</tr>
+<tr>
+<td>MM</td>
+<td>代码最紧凑，不需要寄存器保存变量</td>
+<td>指令字长变化大，速度慢</td>
+</tr>
+</tbody></table>
+<h1 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h1><p>寻找有效地址EA<br>表达方式：<br><img src="https://s2.loli.net/2022/12/26/9yU4V5Ed3Fl8pbw.png" alt="image-1654697899593.png"></p>
+<ol>
+<li>寄存器寻址ADD R1，R2</li>
+<li>立即数寻址ADD R1，#6</li>
+<li>偏移寻址ADD R1，120（R2）</li>
+<li>寄存器间接寻址ADD R1，（R2）</li>
+<li>索引寻址ADD R1，（R2+R3）</li>
+<li>直接寻址ADD R1，（1000）</li>
+<li>存储器间接寻址ADD R2，@（R1）</li>
+<li>自增寻址ADD R1，（R2）+    &#x2F;&#x2F;R2会自增</li>
+<li>自减寻址ADD R1，-（R2）</li>
+<li>缩放寻址ADD R1，80（R2）[R3]</li>
+</ol>
+<p>不同寻址方式使用频率不同<br>最高为立即数寻址和偏移寻址</p>
+<p>物理空间的信息存放问题：<br><img src="https://s2.loli.net/2022/12/26/z4vqwsOPxVlB7c8.png" alt="image-1654698935808.png"><br>如果使用左侧则会降低读入效率，右侧浪费存储空间。</p>
+<h1 id="指令系统的设计与优化"><a href="#指令系统的设计与优化" class="headerlink" title="指令系统的设计与优化"></a>指令系统的设计与优化</h1><h2 id="指令系统的设计"><a href="#指令系统的设计" class="headerlink" title="指令系统的设计"></a>指令系统的设计</h2><p>功能设计，格式设计。<br>指令系统的设计需要考虑速度，成本，灵活性</p>
+<h2 id="x3D-x3D-指令系统的基本要求-x3D-x3D"><a href="#x3D-x3D-指令系统的基本要求-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;指令系统的基本要求&#x3D;&#x3D;"></a>&#x3D;&#x3D;指令系统的基本要求&#x3D;&#x3D;</h2><ol>
+<li>完整性：提供的指令对于程序而言足够</li>
+<li>规整性：每种操作要对所有数据类型都兼容</li>
+<li>正交性：不同含义字段互不相干，互相独立</li>
+<li>高效率：速度快</li>
+<li>兼容性：向后兼容</li>
+</ol>
+<h2 id="控制指令"><a href="#控制指令" class="headerlink" title="控制指令"></a>控制指令</h2><p>包括：跳转，分支。<br>对于控制指令而言，分支指令最为常用。<br>分支条件的方法：<br><img src="https://s2.loli.net/2022/12/26/vuBTo5LRIZGSxnC.png" alt="image-1655605265132.png"></p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h3><p>&#x3D;&#x3D;使用频率最高的用最短的编码。&#x3D;&#x3D;<br>构造方式：哈夫曼树<br>缺点：变长，难以处理。<br>改进：使用几种固定长度的编码，但是也是概率高的用短的。</p>
+<h3 id="操作码优化程度的判定"><a href="#操作码优化程度的判定" class="headerlink" title="操作码优化程度的判定"></a>操作码优化程度的判定</h3><p>信息熵：<br><img src="https://s2.loli.net/2022/12/26/YHrMLRnwVOdXs3G.png" alt="image-1654865460945.png"><br>信息冗余计算&#x3D;(实际平均编码长度-理论最短平均长度)&#x2F;实际平均编码长度 *100% </p>
+<h3 id="等长扩展码"><a href="#等长扩展码" class="headerlink" title="等长扩展码"></a>等长扩展码</h3><p>15&#x2F;15&#x2F;15编码 每一轮的1111作为扩展位<br>8&#x2F;64&#x2F;512编码 每四位选第一为做扩展位<br><img src="https://s2.loli.net/2022/12/26/wdUIumbtvDNCQ37.png" alt="image-1654867059473.png"></p>
+<h3 id="定长操作码：目前常用"><a href="#定长操作码：目前常用" class="headerlink" title="定长操作码：目前常用"></a>定长操作码：目前常用</h3><p>优点：编译速度快<br>缺点：存储空间占用大</p>
+<h3 id="x3D-x3D-编码格式-x3D-x3D"><a href="#x3D-x3D-编码格式-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;编码格式&#x3D;&#x3D;"></a>&#x3D;&#x3D;编码格式&#x3D;&#x3D;</h3><ol>
+<li>可变长度编码格式：</li>
+<li>固定长度编码：操作码和寻址方式放到一起，大部分RISC使用</li>
+<li>混合型编码格式：类似哈夫曼改进。</li>
+</ol>
+<h1 id="指令系统的发展和改进"><a href="#指令系统的发展和改进" class="headerlink" title="指令系统的发展和改进"></a>指令系统的发展和改进</h1><h2 id="CISC方向"><a href="#CISC方向" class="headerlink" title="CISC方向"></a>CISC方向</h2><p>指令数量多，功能多。<br>改进方向：</p>
+<ol>
+<li>面向目标程序增强指令功能：增强处理速度，I&#x2F;O，控制</li>
+<li>面向高级语言优化</li>
+<li>面向操作系统优化：进程同步互斥信号量。</li>
+</ol>
+<h2 id="RISC方向"><a href="#RISC方向" class="headerlink" title="RISC方向"></a>RISC方向</h2><p>只对常用指令编码。<br>指令定长，指令条数少。</p>
+<h1 id="操作数的类型和大小"><a href="#操作数的类型和大小" class="headerlink" title="操作数的类型和大小"></a>操作数的类型和大小</h1><h2 id="表示操作数的方法"><a href="#表示操作数的方法" class="headerlink" title="表示操作数的方法"></a>表示操作数的方法</h2><ol>
+<li>给指令操作码制定的操作数</li>
+<li>给数据加上表示，数据本身给出操作类型。</li>
+</ol>
+<h2 id="操作数大小"><a href="#操作数大小" class="headerlink" title="操作数大小"></a>操作数大小</h2><p>字节，半字，字，双字</p>
+<h2 id="操作数表示"><a href="#操作数表示" class="headerlink" title="操作数表示"></a>操作数表示</h2><p>字符：ASCII<br>整数：二进制补码<br>浮点：IEEE 754</p>
+<h1 id="MIPS指令系统结构"><a href="#MIPS指令系统结构" class="headerlink" title="MIPS指令系统结构"></a>MIPS指令系统结构</h1><p>MIPS寄存器：</p>
+<ol>
+<li>32个64位通用寄存器</li>
+<li>32个64位浮点数寄存器</li>
+<li>特殊寄存器，如溢出<br>数据表示：<br>字节8b半字16b字32b双子64b<br>存储方式：<br>大端存储：低地址放高位，高地址放地位</li>
+</ol>
+<p>MIPS指令格式分类：</p>
+<ol>
+<li>I类指令（立即跳转），如load，store，立即数，分支，寄存器跳转<br><img src="https://s2.loli.net/2022/12/26/lmGUucT7dbPFwHM.png" alt="image-1655713665768.png"></li>
+<li>R类指令（Register）<br><img src="https://s2.loli.net/2022/12/26/54I7dHwUo1KPOjE.png" alt="image-1655713848575.png"></li>
+<li>J类指令（Jump）<br><img src="https://s2.loli.net/2022/12/26/UTvIM4kderJ2QXc.png" alt="image-1655713918821.png"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机体系结构笔记第五章</title>
+    <url>/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E7%AB%A0-computerarchitecture05/</url>
+    <content><![CDATA[<h1 id="指令集并行的概念"><a href="#指令集并行的概念" class="headerlink" title="指令集并行的概念"></a>指令集并行的概念</h1><p>指令集并行ILP：指令之间存在的一种并行性，利用它，计算机可以并行执行两条或者两条以上的指令。</p>
+<h2 id="开发ILP方法分类"><a href="#开发ILP方法分类" class="headerlink" title="开发ILP方法分类"></a>开发ILP方法分类</h2><ol>
+<li>基于硬件的动态开发</li>
+<li>基于软件的静态开发</li>
+</ol>
+<h2 id="流水线处理机的实际CPI"><a href="#流水线处理机的实际CPI" class="headerlink" title="流水线处理机的实际CPI"></a>流水线处理机的实际CPI</h2><p>CPI<del>流水线</del>&#x3D;CPI<del>理想状态</del>+停顿<del>结构冲突</del>+停顿<del>数据冲突</del>+停顿<del>控制冲突</del></p>
+<p>IPC：每个时钟周期完成的指令条数&#x3D;CPI的倒数</p>
+<h2 id="基本程序块"><a href="#基本程序块" class="headerlink" title="基本程序块"></a>基本程序块</h2><p>编译中提到的只有出入口，没有别的分支和跳转的代码块。</p>
+<h2 id="循环级并行"><a href="#循环级并行" class="headerlink" title="循环级并行"></a>循环级并行</h2><p>使一个循环的不同循环体并行执行。</p>
+<h1 id="指令的动态调度"><a href="#指令的动态调度" class="headerlink" title="指令的动态调度"></a>指令的动态调度</h1><h2 id="静态调度"><a href="#静态调度" class="headerlink" title="静态调度"></a>静态调度</h2><p>编译器减少相关和冲突</p>
+<h2 id="动态调度"><a href="#动态调度" class="headerlink" title="动态调度"></a>动态调度</h2><p>执行过程通过计算机硬件减少停顿。</p>
+<h2 id="动态调度的基本思想"><a href="#动态调度的基本思想" class="headerlink" title="动态调度的基本思想"></a>动态调度的基本思想</h2><p>将译码阶段ID拆分为两个阶段：</p>
+<ol>
+<li>流出IS：指令译码检查是否存在结果冲突</li>
+<li>读操作数RO：等待时间冲突消失，后读操作数<br>不同的动态调度算法</li>
+</ol>
+<h3 id="记分牌动态调度"><a href="#记分牌动态调度" class="headerlink" title="记分牌动态调度"></a>记分牌动态调度</h3><p>在没有结构冲突时，尽可能早的执行没有数据冲突的指令，实现每个周期都执行一条指令（把等待的空闲时间用来干活）</p>
+<h3 id="Tomasulo算法"><a href="#Tomasulo算法" class="headerlink" title="Tomasulo算法"></a>Tomasulo算法</h3><p>记录和检测指令相关。操作数一旦就绪就立即执行，把发生RAW冲突的可能性降低。<br>通过寄存器换名消除WAR冲突和WAW冲突。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机体系结构笔记第八章</title>
+    <url>/2022/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%85%AB%E7%AB%A0-computerarchitecture08/</url>
+    <content><![CDATA[<h1 id="IO系统的可靠性，可用性，可信性"><a href="#IO系统的可靠性，可用性，可信性" class="headerlink" title="IO系统的可靠性，可用性，可信性"></a>IO系统的可靠性，可用性，可信性</h1><h2 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h2><p>系统从某个初始参考点开始一直连续提供服务的能力。</p>
+<h3 id="平均无故障时间MTTF"><a href="#平均无故障时间MTTF" class="headerlink" title="平均无故障时间MTTF"></a>平均无故障时间MTTF</h3><h3 id="平均修复时间MTTR"><a href="#平均修复时间MTTR" class="headerlink" title="平均修复时间MTTR"></a>平均修复时间MTTR</h3><h2 id="可用性"><a href="#可用性" class="headerlink" title="可用性"></a>可用性</h2><p>系统正常工作的时间在连续两次正常服务间隔时间所占比率。<br>可用性&#x3D;MTTF&#x2F;(MTTF+MTTR)</p>
+<h2 id="可信性"><a href="#可信性" class="headerlink" title="可信性"></a>可信性</h2><p>服务的质量。（主观评价非量化）</p>
+<h1 id="廉价磁盘冗余阵列RAID"><a href="#廉价磁盘冗余阵列RAID" class="headerlink" title="廉价磁盘冗余阵列RAID"></a>廉价磁盘冗余阵列RAID</h1><p>磁盘整列：用多个磁盘构成一个大容量的磁盘。</p>
+<h2 id="数据交叉存放的粒度（-RAID的特征）"><a href="#数据交叉存放的粒度（-RAID的特征）" class="headerlink" title="数据交叉存放的粒度（ RAID的特征）"></a>数据交叉存放的粒度（ RAID的特征）</h2><p>细粒度磁盘整列：在概念上把数据分割为相对较小的单位交叉存放。<br>高传输速度，存在IO请求定位，浪费时间。<br>粗粒度磁盘整列：把数据以较大的单位交叉存放</p>
+<h2 id="RAID分级"><a href="#RAID分级" class="headerlink" title="RAID分级"></a>RAID分级</h2><p><img src="https://s2.loli.net/2022/12/26/yTxV3ceMJjObfao.png" alt="image-1655967824497.png"><br><img src="https://s2.loli.net/2022/12/26/3ADrKB5atpXWMnz.png" alt="image-1655967867081.png"></p>
+<h2 id="RAID0"><a href="#RAID0" class="headerlink" title="RAID0"></a>RAID0</h2><p>无冗余盘，把数据切分为条带，按条带为单位交叉分布存放到多个磁盘内。</p>
+<h2 id="RAID1"><a href="#RAID1" class="headerlink" title="RAID1"></a>RAID1</h2><p>镜像磁盘，对每一个磁盘添加一个冗余备份。速度最快。但是成高<br><img src="https://s2.loli.net/2022/12/26/fP7IuJjBHal9dxZ.png" alt="image-1655969483088.png"></p>
+<h2 id="RAID2"><a href="#RAID2" class="headerlink" title="RAID2"></a>RAID2</h2><p>使用汉明码做伪纠错。冗余盘个数为log<del>2</del>m  m是数据盘个数<br><img src="https://s2.loli.net/2022/12/26/ad4TLVuMcqFAQWo.png" alt="image-1655969635428.png"></p>
+<h2 id="RAID3"><a href="#RAID3" class="headerlink" title="RAID3"></a>RAID3</h2><p>使用位交叉奇偶校验磁盘阵列<br>细粒度整列。<br><img src="https://s2.loli.net/2022/12/26/tr2YCwKDnyxsoJQ.png" alt="image-1655982074406.png"></p>
+<h2 id="RAID4"><a href="#RAID4" class="headerlink" title="RAID4"></a>RAID4</h2><p>块交叉奇偶校验磁盘阵列<br>和RAID3类似，但是是粗粒度</p>
+<h2 id="RAID5"><a href="#RAID5" class="headerlink" title="RAID5"></a>RAID5</h2><p>块交叉分布奇偶校验磁盘阵列<br>不使用专用的冗余盘，把冗余校验信息放在各盘中。<br><img src="https://s2.loli.net/2022/12/26/jVY6s2ynlMF1dag.png" alt="image-1655982582515.png"></p>
+<h2 id="RAID6"><a href="#RAID6" class="headerlink" title="RAID6"></a>RAID6</h2><p>P+Q双校验磁盘阵列<br>是RAID5校验开销的2倍，因为使用了两次校验。允许两个盘出现错误。<br><img src="https://s2.loli.net/2022/12/26/Ls9FngJPITqHAWY.png" alt="image-1655982698240.png"></p>
+<h2 id="RAID10和RAID01"><a href="#RAID10和RAID01" class="headerlink" title="RAID10和RAID01"></a>RAID10和RAID01</h2><p><img src="https://s2.loli.net/2022/12/26/GOd57zZCqxKWr19.png" alt="image-1655987540182.png"></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机体系结构笔记第四章</title>
+    <url>/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E7%AB%A0-computerarchitecture04/</url>
+    <content><![CDATA[<h1 id="向量处理方式"><a href="#向量处理方式" class="headerlink" title="向量处理方式"></a>向量处理方式</h1><p>例：<br><img src="https://s2.loli.net/2022/12/26/PBT916xogHyhUsd.png" alt="image-1655794201810.png"></p>
+<h2 id="横向（水平）处理方式"><a href="#横向（水平）处理方式" class="headerlink" title="横向（水平）处理方式"></a>横向（水平）处理方式</h2><p>从左到右计算，D[i]&#x3D;A[i]x(B[i]-C[i])<br>数据相关N，功能切换2N次</p>
+<h2 id="纵向（垂直）处理方式"><a href="#纵向（垂直）处理方式" class="headerlink" title="纵向（垂直）处理方式"></a>纵向（垂直）处理方式</h2><p>显卡的工作方式。<br>从上到下进行<br>先算Q[i]&#x3D;B[i]-C[i]后算A[i]xQ[i]<br>功能切换1次。</p>
+<h2 id="纵横（分组）处理方式"><a href="#纵横（分组）处理方式" class="headerlink" title="纵横（分组）处理方式"></a>纵横（分组）处理方式</h2><p>组内是纵向处理，组外是横向处理。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机体系结构</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
 </search>

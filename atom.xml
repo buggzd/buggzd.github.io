@@ -67,6 +67,191 @@
   </entry>
   
   <entry>
+    <title>计算机体系结构笔记第八章</title>
+    <link href="https://buggzd.github.io/2022/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%85%AB%E7%AB%A0-computerarchitecture08/"/>
+    <id>https://buggzd.github.io/2022/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%85%AB%E7%AB%A0-computerarchitecture08/</id>
+    <published>2022-06-23T06:26:07.890Z</published>
+    <updated>2022-06-23T13:07:23.528Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IO系统的可靠性，可用性，可信性&quot;&gt;&lt;a href=&quot;#IO系统的可靠性，可用性，可信性&quot; class=&quot;headerlink&quot; title=&quot;IO系统的可靠性，可用性，可信性&quot;&gt;&lt;/a&gt;IO系统的可靠性，可用性，可信性&lt;/h1&gt;&lt;h2 id=&quot;可靠性&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机体系结构笔记第七章</title>
+    <link href="https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E7%AB%A0-computerarchitecture07/"/>
+    <id>https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E7%AB%A0-computerarchitecture07/</id>
+    <published>2022-06-21T09:05:38.492Z</published>
+    <updated>2022-06-23T06:14:49.758Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;系统的三级存储结构&quot;&gt;&lt;a href=&quot;#系统的三级存储结构&quot; class=&quot;headerlink&quot; title=&quot;系统的三级存储结构&quot;&gt;&lt;/a&gt;系统的三级存储结构&lt;/h1&gt;&lt;p&gt;缓存Cache-主存储器-辅存（磁盘存储器）&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机体系结构笔记第五章</title>
+    <link href="https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E7%AB%A0-computerarchitecture05/"/>
+    <id>https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E7%AB%A0-computerarchitecture05/</id>
+    <published>2022-06-21T07:05:52.706Z</published>
+    <updated>2022-06-22T03:10:34.607Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;指令集并行的概念&quot;&gt;&lt;a href=&quot;#指令集并行的概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机体系结构笔记第四章</title>
+    <link href="https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E7%AB%A0-computerarchitecture04/"/>
+    <id>https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E7%AB%A0-computerarchitecture04/</id>
+    <published>2022-06-21T06:52:55.094Z</published>
+    <updated>2022-06-21T07:02:07.036Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;向量处理方式&quot;&gt;&lt;a href=&quot;#向量处理方式&quot; class=&quot;headerlink&quot; title=&quot;向量处理方式&quot;&gt;&lt;/a&gt;向量处理方式&lt;/h1&gt;&lt;p&gt;例：&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机体系结构笔记第三章</title>
+    <link href="https://buggzd.github.io/2022/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0-computerarchitecture03/"/>
+    <id>https://buggzd.github.io/2022/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0-computerarchitecture03/</id>
+    <published>2022-06-20T08:37:50.353Z</published>
+    <updated>2022-06-21T06:40:35.488Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;流水线的概念&quot;&gt;&lt;a href=&quot;#流水线的概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机体系结构笔记第二章</title>
+    <link href="https://buggzd.github.io/2022/06/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0-computerarchitecture02/"/>
+    <id>https://buggzd.github.io/2022/06/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0-computerarchitecture02/</id>
+    <published>2022-06-08T12:28:36.035Z</published>
+    <updated>2022-06-20T08:37:40.575Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;x3D-x3D-指令系统结构分类-x3D-x3D&quot;&gt;&lt;a href=&quot;#x3D-x3D-指令系统结构分类-x3D-x3D&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机体系结构笔记第一章</title>
+    <link href="https://buggzd.github.io/2022/06/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0-computerarchitecture01/"/>
+    <id>https://buggzd.github.io/2022/06/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0-computerarchitecture01/</id>
+    <published>2022-06-06T09:49:39.979Z</published>
+    <updated>2022-06-19T01:28:48.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;x3D-x3D-计算机系统多级层次结构-x3D-x3D&quot;&gt;&lt;a href=&quot;#x3D-x3D-计算机系统多级层次结构-x3D-x3D&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网站们</title>
     <link href="https://buggzd.github.io/2022/04/27/%E7%BD%91%E7%AB%99%E4%BB%AC-webs/"/>
     <id>https://buggzd.github.io/2022/04/27/%E7%BD%91%E7%AB%99%E4%BB%AC-webs/</id>
