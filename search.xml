@@ -534,4 +534,20 @@
         <tag>xlsx.js</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Excel制作随机点名</title>
+    <url>/2022/12/28/Excel%E5%88%B6%E4%BD%9C%E9%9A%8F%E6%9C%BA%E7%82%B9%E5%90%8D/</url>
+    <content><![CDATA[<h1 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h1><p>在A列下填写人物名字，按f9刷新后，随机抽取一个人。</p>
+<h1 id="具体实现："><a href="#具体实现：" class="headerlink" title="具体实现："></a>具体实现：</h1><p>在其他单元格写</p>
+<figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">INDEX</span>(<span class="symbol">A:A</span>,<span class="built_in">RANDBETWEEN</span>(<span class="number">2</span>,<span class="built_in">COUNTA</span>(<span class="symbol">A:A</span>)))</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="函数解释："><a href="#函数解释：" class="headerlink" title="函数解释："></a>函数解释：</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">INDEX</span>(<span class="symbol">A:A</span>,<span class="built_in">RANDBETWEEN</span>(<span class="number">2</span>,<span class="built_in">COUNTA</span>(<span class="symbol">A:A</span>)))</span><br></pre></td></tr></table></figure>
+<p><code>A:A</code>表示A列</p>
+<p><code>COUNTA()</code>可以统计区域内非空元素个数</p>
+<p><code>RANDBETWEEN (bottom,top)</code>从[bottom,top]随机返回一个整数</p>
+<p><code>INDEX(Range,index)</code>返回range范围内id为index的单元格内容。</p>
+<p>首先用counta获取A这一列一共有多少数据，然后用randbetween（由于第一行是标题因此是从2开始，Excel是从1计数）从这些数据中获取一个值，用index从a列中选中随机值对应的单元格数据返回。</p>
+]]></content>
+  </entry>
 </search>
