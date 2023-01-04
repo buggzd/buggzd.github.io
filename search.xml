@@ -608,4 +608,49 @@
 </ol>
 ]]></content>
   </entry>
+  <entry>
+    <title>DawnCraft指南</title>
+    <url>/2023/01/04/DawnCraft%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h1 id="一些mod介绍"><a href="#一些mod介绍" class="headerlink" title="一些mod介绍"></a>一些mod介绍</h1><h2 id="尸体"><a href="#尸体" class="headerlink" title="尸体"></a>尸体</h2><blockquote>
+<p><a href="https://www.mcmod.cn/class/3007.html">https://www.mcmod.cn/class/3007.html</a></p>
+</blockquote>
+<p>此模组添加了遗体，遗体会在玩家死亡后生成在该玩家的死亡地点。</p>
+<p>在没有开启死亡不掉落的情况下，玩家的物品会存储在遗体里，玩家可以右键遗体并拿回自己的物品，物品一旦拿走就不能再放入遗体里。</p>
+<p>遗体会在无物品后 30 秒消失，在有物品的情况下两游戏天（即实际40分钟）后会变成骷髅（非敌对生物中的骷髅）。</p>
+<p>遗体占用6格空间，无实体碰撞。</p>
+<p>左键无法破坏。</p>
+<p>掉入岩浆遗体会浸没在岩浆里，并且物品不会丢失。</p>
+<p>掉入虚空会在虚空上方约y&#x3D;0处生成遗体。</p>
+<h2 id="史诗战斗Epic-Fight"><a href="#史诗战斗Epic-Fight" class="headerlink" title="史诗战斗Epic Fight"></a>史诗战斗Epic Fight</h2><blockquote>
+<p><a href="https://www.mcmod.cn/class/3037.html">https://www.mcmod.cn/class/3037.html</a></p>
+</blockquote>
+<p>按R键切换战斗和挖掘模式</p>
+<h2 id="ER-末地：创世End-Remastered"><a href="#ER-末地：创世End-Remastered" class="headerlink" title="[ER]末地：创世End Remastered"></a>[ER]末地：创世End Remastered</h2><blockquote>
+<p><a href="https://www.mcmod.cn/class/3369.html">https://www.mcmod.cn/class/3369.html</a></p>
+</blockquote>
+<p>末地：创世 旨在让你的生存更具挑战性，添加了12种末影之眼，并在主世界添加了End Castle和End Gate两种结构，用来代替原版的要塞。</p>
+<p>由于原版末地传送门失效，为了能够去往末地，你需要搜刮原版建筑或在与怪物的战斗中找齐这12种末影之眼。之后你可以选择跟随它们到达End Gate，或者从制图师那里买来探险家地图寻找End Castle。进入二者之一并找到隐藏的传送门房间，放置12种末影之眼，即可进入末地。</p>
+<h2 id="灾变L-Ender-‘s-Cataclysm"><a href="#灾变L-Ender-‘s-Cataclysm" class="headerlink" title="灾变L_Ender ‘s Cataclysm"></a>灾变L_Ender ‘s Cataclysm</h2><blockquote>
+<p><a href="https://www.mcmod.cn/class/5214.html">https://www.mcmod.cn/class/5214.html</a></p>
+</blockquote>
+<p>灾变是一个增加了困难的地牢、具有挑战性的 Boss 和强大武器的模组。</p>
+<p>Boss 的灵感主要来自 Minecraft Dungeons ，与原版 Boss 相比，它们更加独特、复杂和强大。</p>
+<p>目前，本模组添加了 3 个精细的 Boss，每个 Boss 都有自己的结构和独特技能，以及有特殊能力的掉落物。</p>
+<p>探索多种结构，挑战并击败 Boss 以证明自己，获得强大的装备吧！</p>
+<h2 id="农夫乐事"><a href="#农夫乐事" class="headerlink" title="农夫乐事"></a>农夫乐事</h2><p>老朋友了。</p>
+<blockquote>
+<p><a href="https://www.mcmod.cn/class/2820.html">https://www.mcmod.cn/class/2820.html</a></p>
+</blockquote>
+<h2 id="机械动力"><a href="#机械动力" class="headerlink" title="机械动力"></a>机械动力</h2><p>老朋友+1</p>
+<blockquote>
+<p><a href="https://www.mcmod.cn/class/2021.html">https://www.mcmod.cn/class/2021.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>MineCraft</tag>
+      </tags>
+  </entry>
 </search>
