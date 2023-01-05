@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>【施工中】DawnCraft黎明世界Mod列表 |  Junto&#39;s blog</title>
+      <title>Unity网络通信 |  Junto&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-DawnCraft指南"
+  id="post-Unity网络通信"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  【施工中】DawnCraft黎明世界Mod列表
+  Unity网络通信
 </h1>
  
 
@@ -75,11 +75,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/04/DawnCraft%E6%8C%87%E5%8D%97/" class="article-date">
-  <time datetime="2023-01-03T23:58:17.000Z" itemprop="datePublished">2023-01-04</time>
+      <a href="/2023/01/05/Unity%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/" class="article-date">
+  <time datetime="2023-01-04T21:50:06.000Z" itemprop="datePublished">2023-01-05</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
   </div>
   
 <div class="word_count">
@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.3k</span>
+            <span class="post-count">713</span>
         </span>
     </span>
 
@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -111,131 +111,19 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>游戏版本：DawnCraftv0.7<br>本篇涵盖大部分游戏中的mod，不会涉及前置mod或优化mod。</p>
-<h1 id="mod介绍-amp-地址"><a href="#mod介绍-amp-地址" class="headerlink" title="mod介绍&amp;地址"></a>mod介绍&amp;地址</h1><h2 id="蔚蓝浩空Blue-Skies"><a href="#蔚蓝浩空Blue-Skies" class="headerlink" title="蔚蓝浩空Blue Skies"></a>蔚蓝浩空Blue Skies</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1563.html">https://www.mcmod.cn/class/1563.html</a></p>
+  <p>毕设打算把树莓派传感器上的参数传给unity，了解了一下具体实现，可以通过socket建立tcp连接，也可以创建HTTP服务通过Get，Post等请求获取。最后选择使用socket连接。</p>
+<h1 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h1><p>因为在树莓派上获取参数，直接使用了python实现树莓派上的服务。</p>
+<h2 id="python实现socket通信"><a href="#python实现socket通信" class="headerlink" title="python实现socket通信"></a>python实现socket通信</h2><blockquote>
+<p>python网络编程：<a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-socket.html">https://www.runoob.com/python/python-socket.html</a></p>
 </blockquote>
-<p>蔚蓝浩空增加了两个维度，每一个维度都有自己的主题，永昼之地（EverBright）是光明的，但却寒冷，而恒晓之地（Everdawn）是黑暗的，但却温暖。除此之外，每个维度都包含一个具有四个Boss之二的地牢。召唤师、星熠破灭之树或炼金术士、幽咽蛛王，它们都受到了伊拉格斯的启发。</p>
-<h2 id="真实物理Physics-mod"><a href="#真实物理Physics-mod" class="headerlink" title="真实物理Physics mod"></a>真实物理Physics mod</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3460.html">https://www.mcmod.cn/class/3460.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入socket包</span></span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="comment"># 测试时使用按钮触发，引入GUI库tkinter</span></span><br><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">click</span>(<span class="params">c</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;发送&quot;</span>)</span><br><span class="line">    c.send((<span class="string">&#x27;hello！ &#x27;</span>+<span class="built_in">str</span>(i)).encode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"></span><br><span class="line">s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)   <span class="comment"># 创建 socket 对象</span></span><br><span class="line">host = socket.gethostname()  <span class="comment"># 获取本地主机名</span></span><br><span class="line"><span class="built_in">print</span>(host)</span><br><span class="line">port = <span class="number">12345</span>  <span class="comment"># 设置端口</span></span><br><span class="line">s.bind((<span class="string">&#x27;localhost&#x27;</span>, port))  <span class="comment"># 绑定端口</span></span><br><span class="line">s.listen(<span class="number">5</span>)  <span class="comment"># 等待客户端连接</span></span><br><span class="line"></span><br><span class="line">c, addr = s.accept()  <span class="comment"># 建立客户端连接，accept是阻断试的</span></span><br><span class="line"><span class="built_in">print</span>( <span class="string">&#x27;连接地址：&#x27;</span>, addr)</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建窗口</span></span><br><span class="line">root = tk.Tk()</span><br><span class="line">root.title(<span class="string">&quot;按钮示例&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建按钮</span></span><br><span class="line">button = tk.Button(root, text=<span class="string">&quot;点我&quot;</span>, command=<span class="keyword">lambda</span>: click(c))</span><br><span class="line">button.pack()</span><br><span class="line"><span class="comment">#进入消息循环</span></span><br><span class="line">root.mainloop()</span><br><span class="line">c.close()  <span class="comment"># 关闭连接</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><p>在unity中创建客户端，C#是.Net语言，可以使用.Net提供的Socket编程。</p>
+<h2 id="C-实现网络通信"><a href="#C-实现网络通信" class="headerlink" title="C#实现网络通信"></a>C#实现网络通信</h2><blockquote>
+<p>.Net Socket:<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/dotnet/api/system.net.sockets.socket?view=net-7.0">https://learn.microsoft.com/zh-cn/dotnet/api/system.net.sockets.socket?view=net-7.0</a></p>
 </blockquote>
-<p>潜入一个前所未有的新世界——坍塌的洞穴，可交互的布娃娃死亡生物，物品物理以及更多的东西在等着你！</p>
-<p>这个模组为死亡的生物和被破坏的方块添加了真实的物理效果，这很容易理解！你可以自定义此模组的各项数值，通过启用或关闭某些功能，以便在你的电脑&#x2F;笔记本电脑上获得更好的性能。</p>
-<h2 id="BrassAmber-BattleTowers"><a href="#BrassAmber-BattleTowers" class="headerlink" title="BrassAmber BattleTowers"></a>BrassAmber BattleTowers</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/5549.html">https://www.mcmod.cn/class/5549.html</a></p>
-</blockquote>
-<p>在世界各处分布着高耸入云的石塔 外面看起来只是普通的建筑物</p>
-<p>但当你靠近时，无数的刷怪笼、咆哮着向你涌来的怪物</p>
-<p>以及淹没在怪物浪潮中的战利品箱清楚地告诉你：</p>
-<p>这里只属于强大的冒险者!</p>
-<h2 id="AM-Alex-的生物Alex’s-Mobs"><a href="#AM-Alex-的生物Alex’s-Mobs" class="headerlink" title="[AM]Alex 的生物Alex’s Mobs"></a>[AM]Alex 的生物Alex’s Mobs</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3318.html">https://www.mcmod.cn/class/3318.html</a></p>
-</blockquote>
-<p>Alex 的生物是一个将许多生物加入 Minecraft，使游戏变得更加有趣味的模组。</p>
-<p>本模组的生物被分为两类：一类为现实生物，另一类则是虚构生物。</p>
-<p>所有的新增的生物，都具有自己特有的掉落物、机制和功能，并没有纯粹的仅用来增加游戏美感的生物。</p>
-<p>换而言之，它们还有助于在游戏中使某些环境令人感觉更加真实生动。</p>
-<p>不同于一些获得材料的方式基本只有杀戮这一条道路的动物模组，Alex 的生物中的很多东西都需要通过运用生物的特殊机制和功能来获取。</p>
-<h2 id="尸体"><a href="#尸体" class="headerlink" title="尸体"></a>尸体</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3007.html">https://www.mcmod.cn/class/3007.html</a></p>
-</blockquote>
-<p>此模组添加了遗体，遗体会在玩家死亡后生成在该玩家的死亡地点。</p>
-<p>在没有开启死亡不掉落的情况下，玩家的物品会存储在遗体里，玩家可以右键遗体并拿回自己的物品，物品一旦拿走就不能再放入遗体里。</p>
-<p>遗体会在无物品后 30 秒消失，在有物品的情况下两游戏天（即实际40分钟）后会变成骷髅（非敌对生物中的骷髅）。</p>
-<p>遗体占用6格空间，无实体碰撞。</p>
-<p>左键无法破坏。</p>
-<p>掉入岩浆遗体会浸没在岩浆里，并且物品不会丢失。</p>
-<p>掉入虚空会在虚空上方约y&#x3D;0处生成遗体。</p>
-<h2 id="史诗战斗Epic-Fight"><a href="#史诗战斗Epic-Fight" class="headerlink" title="史诗战斗Epic Fight"></a>史诗战斗Epic Fight</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3037.html">https://www.mcmod.cn/class/3037.html</a></p>
-</blockquote>
-<p>按R键切换战斗和挖掘模式</p>
-<h2 id="ER-末地：创世End-Remastered"><a href="#ER-末地：创世End-Remastered" class="headerlink" title="[ER]末地：创世End Remastered"></a>[ER]末地：创世End Remastered</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/3369.html">https://www.mcmod.cn/class/3369.html</a></p>
-</blockquote>
-<p>末地：创世 旨在让你的生存更具挑战性，添加了12种末影之眼，并在主世界添加了End Castle和End Gate两种结构，用来代替原版的要塞。</p>
-<p>由于原版末地传送门失效，为了能够去往末地，你需要搜刮原版建筑或在与怪物的战斗中找齐这12种末影之眼。之后你可以选择跟随它们到达End Gate，或者从制图师那里买来探险家地图寻找End Castle。进入二者之一并找到隐藏的传送门房间，放置12种末影之眼，即可进入末地。</p>
-<h2 id="灾变L-Ender-‘s-Cataclysm"><a href="#灾变L-Ender-‘s-Cataclysm" class="headerlink" title="灾变L_Ender ‘s Cataclysm"></a>灾变L_Ender ‘s Cataclysm</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/5214.html">https://www.mcmod.cn/class/5214.html</a></p>
-</blockquote>
-<p>灾变是一个增加了困难的地牢、具有挑战性的 Boss 和强大武器的模组。</p>
-<p>Boss 的灵感主要来自 Minecraft Dungeons ，与原版 Boss 相比，它们更加独特、复杂和强大。</p>
-<p>目前，本模组添加了 3 个精细的 Boss，每个 Boss 都有自己的结构和独特技能，以及有特殊能力的掉落物。</p>
-<p>探索多种结构，挑战并击败 Boss 以证明自己，获得强大的装备吧！</p>
-<h2 id="迎战Meet-Your-Fight"><a href="#迎战Meet-Your-Fight" class="headerlink" title="迎战Meet Your Fight"></a>迎战Meet Your Fight</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/4204.html">https://www.mcmod.cn/class/4204.html</a></p>
-</blockquote>
-<p>迎战（Meet Your Fight）增加了几个战斗的 Boss，每个 Boss 都有独立的战利品，例如有用的饰品或很酷的武器和工具。这些 Boss 接到召唤才会前来，你需要制作合适的召唤物品。</p>
-<p>目前有 3 个 Boss，每个都有独立的图案、可制作的物品和召唤仪式。</p>
-<h2 id="滑翔伞Paragliders"><a href="#滑翔伞Paragliders" class="headerlink" title="滑翔伞Paragliders"></a>滑翔伞Paragliders</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1344.html">https://www.mcmod.cn/class/1344.html</a></p>
-</blockquote>
-<p>相信大家一定对塞尔达传说-荒野之息里林克的滑翔伞印象深刻。</p>
-<p>现在这个MOD将林克的滑翔伞添加到了MC中</p>
-<p>现在可以对滑翔伞进行染色或者附加上德库树叶的皮肤（玩过塞尔达剑技的玩家应该不陌生）</p>
-<p>使用方式：拿在手上，在超过三格的地方掉下来就会自动打开滑翔伞。</p>
-<p>目前滑翔伞只提供缓慢降落功能，有点类似IC的喷气背包，需要玩家自行移动。</p>
-<p>注意事项：</p>
-<p>1.放副手（就是放盾牌的地方）是无法起作用的。</p>
-<p>2.这不是鞘翅，不是鞘翅，不是鞘翅。只能缓慢降落，不能飞，也不能用烟花加速</p>
-<h2 id="黑暗之魂DarkSouls"><a href="#黑暗之魂DarkSouls" class="headerlink" title="黑暗之魂DarkSouls"></a>黑暗之魂DarkSouls</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/7437.html">https://www.mcmod.cn/class/7437.html</a></p>
-</blockquote>
-<p>本模组添加了一些来自游戏黑魂的生物以及设定，如篝火保存存档以及一些攻击方式。</p>
-<p>玩法</p>
-<p>模组版本 0.3.0 中添加了新的武器类型，如巨剑、矛以及新的怪物攻击方式。</p>
-<p>你可以在王国的帐篷里找到战士和士兵，或者在火神庙里找到非敌对的 NPC。</p>
-<p>在游玩时要小心晚上在外迷路的恶魔。</p>
-<h2 id="PFM-Paladin的家具-Paladin’s-Furniture"><a href="#PFM-Paladin的家具-Paladin’s-Furniture" class="headerlink" title="[PFM] Paladin的家具 (Paladin’s Furniture)"></a>[PFM] Paladin的家具 (Paladin’s Furniture)</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/8455.html">https://www.mcmod.cn/class/8455.html</a></p>
-</blockquote>
-<p>本模组是为现代 Minecraft 版本提供的全新家具模组。它包含了超过 1000 件家具，既可用于装点建筑，同时兼顾美观和功能性。所有家具都可以合成并在生存模式合成。</p>
-<h2 id="Goblins-amp-Dungeons"><a href="#Goblins-amp-Dungeons" class="headerlink" title="Goblins &amp; Dungeons"></a>Goblins &amp; Dungeons</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/7220.html">https://www.mcmod.cn/class/7220.html</a></p>
-</blockquote>
-<p>Goblins &amp; Dungeons 是一款基于《龙与地下城》等流行的桌面角色扮演游戏的模组。</p>
-<p>模組的目标是通过有趣的生物、结构和物品为游戏添加独特的体验，同时也尽量不偏离原版的玩法太远。</p>
-<h2 id="哥布林商人Goblin-Traders"><a href="#哥布林商人Goblin-Traders" class="headerlink" title="哥布林商人Goblin Traders"></a>哥布林商人Goblin Traders</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/2353.html">https://www.mcmod.cn/class/2353.html</a></p>
-</blockquote>
-<p>Goblin Traders添加了哥布林商人，你可以和它们进行交易。</p>
-<p>你只能在地下洞穴中发现哥布林商人，它们会出售一些通常你无法获得的，稀有和特殊的物品。</p>
-<p>与它们交易，你也会获得一些比正常附魔等级更高的附魔书。</p>
-<p>哥布林商人类似于流浪商人，它们会随机在一个玩家的附近生成。当你不买他的东西时会对你造成0伤害的击退（请不要伤害它）</p>
-<h2 id="FTBQ-FTB任务FTB-Quests"><a href="#FTBQ-FTB任务FTB-Quests" class="headerlink" title="[FTBQ]FTB任务FTB Quests"></a>[FTBQ]FTB任务FTB Quests</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/1423.html">https://www.mcmod.cn/class/1423.html</a></p>
-</blockquote>
-<p>一个强大的轻量级，基于团队系统的任务模组，和 Hardcore Questing Mode 类似。</p>
-<h2 id="Enlightened-End"><a href="#Enlightened-End" class="headerlink" title="Enlightened End"></a>Enlightened End</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/5607.html">https://www.mcmod.cn/class/5607.html</a></p>
-</blockquote>
-<p>把它想像成下界更新，但是一个末地版本。</p>
-<h2 id="orcz"><a href="#orcz" class="headerlink" title="orcz"></a>orcz</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/6158.html">https://www.mcmod.cn/class/6158.html</a></p>
-</blockquote>
-<p>目前新增 7 种兽人和 3 种哥布林，兽人和哥布林都制作了复杂的 AI！</p>
-<p>探索兽人营地以获得一些战利品并获得一些乐趣，包括沙地的变体和雪地的变体！（可以在配置文件中禁用）</p>
-<p>与兽人和哥布林对抗，为你的生存而战，还有更多内容！</p>
-<h2 id="下界乐事Nether’s-Delight"><a href="#下界乐事Nether’s-Delight" class="headerlink" title="下界乐事Nether’s Delight"></a>下界乐事Nether’s Delight</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/4563.html">https://www.mcmod.cn/class/4563.html</a></p>
-</blockquote>
-<p>下界乐事是农夫乐事的拓展模组，基于向下界添加烹饪内容添加了许多新食材和物品。</p>
-<p>使用先进的狩猎技术和烹饪技巧，你可以设法准备无数令人作呕的饭菜和长满菌类的小吃，以便在下界生存更长时间。</p>
-<p>这个农夫乐事拓展模组专注于为下界提供更多内容，以满足我们吃下界生物的愿望！</p>
-<p>目前，你可以吃下界菌类、岩浆怪、炽足兽和疣猪兽。</p>
-<p>击败疣猪兽时有几率掉落肉，这些肉可以用来合成一些食物，比如肉拌诡异菌。</p>
-<p>你可以把整头疣猪兽做成大盘菜，这个菜可以右键摆在方块上，然后可以用模组内的刀切开，切开后用碗右击可以获得一碗食物，提供的饥饿值和饱和度较高。</p>
-<p>这个模组还包含烈焰棒肉串和岩浆怪全家桶。</p>
-<p>这些食物的模型都非常精致，总之，是一款非常好玩的模组。</p>
-<h2 id="农夫乐事"><a href="#农夫乐事" class="headerlink" title="农夫乐事"></a>农夫乐事</h2><p>老朋友了。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/2820.html">https://www.mcmod.cn/class/2820.html</a></p>
-</blockquote>
-<h2 id="机械动力"><a href="#机械动力" class="headerlink" title="机械动力"></a>机械动力</h2><p>老朋友+1</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/2021.html">https://www.mcmod.cn/class/2021.html</a></p>
-</blockquote>
- 
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Net.Sockets;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">namespace</span> <span class="title">SocketClient</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//创建一个新的 socket，使用 IPV4 地址族、流式 socket 类型和 TCP 协议</span></span><br><span class="line">            Socket socket = <span class="keyword">new</span> Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//连接到服务器</span></span><br><span class="line">            socket.Connect(<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8080</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//发送一条消息</span></span><br><span class="line">            <span class="built_in">string</span> message = <span class="string">&quot;Hello World!&quot;</span>;</span><br><span class="line">            <span class="comment">//需要编码否则接收到的数据异常</span></span><br><span class="line">            <span class="built_in">byte</span>[] data = Encoding.UTF8.GetBytes(message);</span><br><span class="line">            socket.Send(data);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//接收服务器返回的数据</span></span><br><span class="line">            data = <span class="keyword">new</span> <span class="built_in">byte</span>[<span class="number">1024</span>];</span><br><span class="line">            <span class="built_in">int</span> received = socket.Receive(data);</span><br><span class="line">            message = Encoding.UTF8.GetString(data, <span class="number">0</span>, received);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;Received: &#123;0&#125;&quot;</span>, message);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//关闭 socket</span></span><br><span class="line">            socket.Close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码只是进行了一次通信发送和接受了数据就结束了，但是我需要持续接受来自树莓派的消息，并且这个脚本应该写到untiy中通过组件挂载脚本。需要做一些调整。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Net.Sockets;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">clientTest</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">     Socket socket=<span class="keyword">new</span> Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);</span><br><span class="line">    <span class="comment">//设置端口</span></span><br><span class="line">    <span class="built_in">int</span> port = <span class="number">12345</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">byte</span>[] data = <span class="keyword">new</span> <span class="built_in">byte</span>[<span class="number">1024</span>];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        socket.Connect(<span class="string">&quot;localhost&quot;</span>, port);</span><br><span class="line">    </span><br><span class="line">        Debug.Log(<span class="string">&quot;客户端启动！&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//检查是否有可用的数据</span></span><br><span class="line">        <span class="keyword">if</span> (socket.Available &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//接收服务器返回的数据</span></span><br><span class="line">            <span class="comment">//Receive是阻断试的，当没有新的数据到达将会卡在update方法中</span></span><br><span class="line">            <span class="built_in">int</span> received = socket.Receive(data);</span><br><span class="line">            <span class="built_in">string</span> message = Encoding.UTF8.GetString(data, <span class="number">0</span>, received);</span><br><span class="line">            Array.Clear(data, <span class="number">0</span>, received);</span><br><span class="line">            Debug.Log(message);</span><br><span class="line">        &#125;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//类似析构函数，当组件销毁时调用</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnDestroy</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//关闭socket</span></span><br><span class="line">        socket.Close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -299,12 +187,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/04/DawnCraft%E6%8C%87%E5%8D%97/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/05/Unity%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MineCraft/" rel="tag">MineCraft</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/socket%E7%BC%96%E7%A8%8B/" rel="tag">socket编程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity/" rel="tag">unity</a></li></ul>
 
     </footer>
   </div>
@@ -312,19 +200,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/01/05/Unity%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Unity网络通信
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/12/30/bot002%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" class="article-nav-link">
+      <a href="/2023/01/04/DawnCraft%E6%8C%87%E5%8D%97/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">bot002使用手册</div>
+        <div class="article-nav-title">【施工中】DawnCraft黎明世界Mod列表</div>
       </a>
     
   </nav>

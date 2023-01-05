@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2023-01-05T05:43:01.885Z</updated>
+  <updated>2023-01-05T06:33:46.259Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unity网络通信</title>
+    <link href="https://buggzd.github.io/2023/01/05/Unity%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"/>
+    <id>https://buggzd.github.io/2023/01/05/Unity%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/</id>
+    <published>2023-01-04T21:50:06.000Z</published>
+    <updated>2023-01-05T06:33:46.259Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;毕设打算把树莓派传感器上的参数传给unity，了解了一下具体实现，可以通过socket建立tcp连接，也可以创建HTTP服务通过Get，Post等请求获取。最后选择使用socket连接。&lt;/p&gt;
+&lt;h1 id=&quot;服务端&quot;&gt;&lt;a href=&quot;#服务端&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="unity" scheme="https://buggzd.github.io/tags/unity/"/>
+    
+    <category term="python" scheme="https://buggzd.github.io/tags/python/"/>
+    
+    <category term="socket编程" scheme="https://buggzd.github.io/tags/socket%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>【施工中】DawnCraft黎明世界Mod列表</title>
