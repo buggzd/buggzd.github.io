@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2023-01-09T05:47:17.361Z</updated>
+  <updated>2023-01-10T03:57:58.640Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PowerDesigner上手</title>
+    <link href="https://buggzd.github.io/2023/01/10/PowerDesigner%E4%B8%8A%E6%89%8B/"/>
+    <id>https://buggzd.github.io/2023/01/10/PowerDesigner%E4%B8%8A%E6%89%8B/</id>
+    <published>2023-01-09T19:38:33.000Z</published>
+    <updated>2023-01-10T03:57:58.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;chatGPT:&lt;br&gt;&lt;br&gt;PowerDesigner是一款用于建模和设计数据库、数据仓库和业务流程的软件。它可以帮助企业分析、设计和沟通数据和流程模型，并生成文档和数据库脚本。PowerDesigner提供了一系列的工具和功能，可以帮助你创建</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="工具" scheme="https://buggzd.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>个人硬件清单</title>

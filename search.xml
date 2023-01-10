@@ -890,4 +890,29 @@
         <tag>硬件</tag>
       </tags>
   </entry>
+  <entry>
+    <title>PowerDesigner上手</title>
+    <url>/2023/01/10/PowerDesigner%E4%B8%8A%E6%89%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>chatGPT:<br><br>PowerDesigner是一款用于建模和设计数据库、数据仓库和业务流程的软件。它可以帮助企业分析、设计和沟通数据和流程模型，并生成文档和数据库脚本。PowerDesigner提供了一系列的工具和功能，可以帮助你创建和管理数据模型，包括关系数据模型、结构化查询语言（SQL）数据定义、XML模式、业务流程模型和系统架构图。它还提供了一些额外的功能，例如数据字典生成、数据库转换和数据库同步功能。</p>
+</blockquote>
+<h1 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h1><p>有概念数据模型(ConceptualDataModel)和物理数据模型(PhysicalDataModel)之分。</p>
+<h2 id="概念数据模型-ConceptualDataModel"><a href="#概念数据模型-ConceptualDataModel" class="headerlink" title="概念数据模型(ConceptualDataModel)"></a>概念数据模型(ConceptualDataModel)</h2><p>概念数据模型是指普通设计时的数据模型，是抽象层面上的数据模型，即ER图这类的抽象表单和数据类型。</p>
+<p>在画概念数据模型时，和使用visio画图类似。</p>
+<h2 id="物理数据模型-PhysicalDataModel"><a href="#物理数据模型-PhysicalDataModel" class="headerlink" title="物理数据模型(PhysicalDataModel)"></a>物理数据模型(PhysicalDataModel)</h2><p>实际的数据库模型，使用的数据库可以实现的数据类型，关系方式，关联等。</p>
+<p>需要使用实际的数据库知识实现对应关系。</p>
+<h1 id="两种数据模型的互相转化"><a href="#两种数据模型的互相转化" class="headerlink" title="两种数据模型的互相转化"></a>两种数据模型的互相转化</h1><p>在tool工具栏中有两种图像相互转换的方法。</p>
+<h1 id="生成对应的SQL语句"><a href="#生成对应的SQL语句" class="headerlink" title="生成对应的SQL语句"></a>生成对应的SQL语句</h1><p>需要先生成物理模型，然后在数据库-&gt;generate database或者使用快捷键<code>ctrl</code>+<code>c</code></p>
+<h1 id="逆向工程SQL生成模型"><a href="#逆向工程SQL生成模型" class="headerlink" title="逆向工程SQL生成模型"></a>逆向工程SQL生成模型</h1><p>文件-&gt;ReverseEngineer<br><br>但是这个在很多数据库连接工具里也可以画图，所以用处不大。</p>
+<blockquote>
+<p>参考：<br><br>PowerDesigner入门使用教程：<a href="https://blog.csdn.net/u010565545/article/details/105115033/">https://blog.csdn.net/u010565545/article/details/105115033/</a> <br><br>视频教程：<a href="https://www.bilibili.com/video/BV1PA411h7L3">https://www.bilibili.com/video/BV1PA411h7L3</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>
