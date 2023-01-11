@@ -932,4 +932,45 @@
         <tag>mc</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Nginx静态资源服务器使用</title>
+    <url>/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>看到HMCL支持从静态资源服务器直接下载整合包到客户端，这样能方便腐竹更新游戏客户端版本，终于能解决每次更新要重发整个客户端的老大难问题。</p>
+<blockquote>
+<p>HMCL 允许服务器管理员借助服务端自动更新整合包来实现自动分发整合包更新，这将大大方便有需要频繁更新游戏客户端 Mod、配置等信息的服务器管理员。 HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提供静态文件服务，比如 Apache 和 Nginx 皆可）来提供检查整合包更新并允许 HMCL 下载更新文件。</p>
+</blockquote>
+<p>因此，计划在服务器上开一个静态资源路由，看到HMCL给的提示，Nginx就可以做静态资源服务器，本身我的博客也是使用Nginx逆向代理，说干就干，动手动手！</p>
+<h1 id="新建静态资源文件夹"><a href="#新建静态资源文件夹" class="headerlink" title="新建静态资源文件夹"></a>新建静态资源文件夹</h1><p>我为了省事直接在&#x2F;根目录下新建了一个<code>MinecraftClientStatic</code>文件夹，以后需要作为静态资源的文件都丢这里面。<br>命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 到更目录</span></span><br><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> MinecraftClientStatic</span><br><span class="line"><span class="comment"># 防止nginx无法访问，配置文件夹访问权限</span></span><br><span class="line"><span class="built_in">chmod</span> 777 MinecraftClientStatic</span><br><span class="line"><span class="comment"># 进入文件夹</span></span><br><span class="line"><span class="built_in">cd</span> MinecraftClientStatic</span><br><span class="line"><span class="comment"># 新建一个测试用的文件</span></span><br><span class="line"><span class="built_in">touch</span> helloMC.html</span><br><span class="line"><span class="comment"># 给文件权限</span></span><br><span class="line"><span class="built_in">chmod</span> 777 helloMC.html</span><br><span class="line"><span class="comment"># 编辑html内容</span></span><br><span class="line">vim helloMC.html</span><br></pre></td></tr></table></figure>
+<p>这里为了测试静态资源是否配置成功，需要新建一个helloMC.html的静态测试文件。可以在这个文件内随意写两行字。<br>例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- helloMC.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello static!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="分配次级域名"><a href="#分配次级域名" class="headerlink" title="分配次级域名"></a>分配次级域名</h1><p>假设我们的域名是buggzd.com<br>在域名解析新建一个记录，取名为minecraft，然后加上服务器ip。<br><img src="https://s2.loli.net/2023/01/11/8V1thbsZWgd6qxp.png" alt="image.png"><br>这是我们就有了一个子域名minecraft.buggzd.com<br>添加完成后可以使用cmd去ping一下这个域名(minecraft.buggzd.com)DNS是否已经记录。</p>
+<h1 id="配置nginx-conf"><a href="#配置nginx-conf" class="headerlink" title="配置nginx.conf"></a>配置nginx.conf</h1><p>因为好久动nginx配置了，甚至都忘了nginx的配置文件放哪里去了，还好可以用指令查一下。<br>查找nginx配置文件目录：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nginx -t</span></span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br></pre></td></tr></table></figure>
+<p>然后cd到nginx配置目录。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx</span><br><span class="line"><span class="comment"># 编写配置文件</span></span><br><span class="line">vim nginx.conf</span><br></pre></td></tr></table></figure>
+<p>因为之前配置过博客逆向代理，<code>nginx.conf</code>会带有之前的配置记录，不能把他们搞乱。所以理清层级关系很重要！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 这是nginx.conf的层级目录</span><br><span class="line"># 每个nginx.conf配置文件都只有一个http块，所以如果之前配置过nginx</span><br><span class="line"># 就只需要粘贴server块里的内容，把server块放到http块内部。</span><br><span class="line"> http &#123;    </span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>需要填写的配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http &#123;    </span><br><span class="line">   server &#123;       </span><br><span class="line">      # 需要监听的端口号，可以不动</span><br><span class="line">      listen 80;       </span><br><span class="line">      # 这里需要把localhost改为上面分配好的域名</span><br><span class="line">      server_name  minecraft.buggzd.com;      </span><br><span class="line">      location  /&#123;            </span><br><span class="line">      # root后面是对应的静态资源文件夹的位置</span><br><span class="line">           root /MinecraftClientStatic;     </span><br><span class="line">      # 这里是默认加载的首页html，这里放的是刚刚新建的测试文件</span><br><span class="line">      # 它是从root目录文件夹内开始查找的，所以不要写/MinecraftClientStatic/helloMC.html</span><br><span class="line">           index helloMC.html;    </span><br><span class="line">      &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Q:上面的配置干了什么事？<br>A:比如你访问<a href="http://minecraft.buggzd.com/test.png%E6%97%B6%EF%BC%8Cnginx%E4%BC%9A%E8%AE%BF%E9%97%AE%E6%9C%AC%E5%9C%B0%E7%9A%84/MinecraftClientStatic/test.png">http://minecraft.buggzd.com/test.png时，nginx会访问本地的/MinecraftClientStatic/test.png</a> 然后返回。</p>
+</blockquote>
+<p>当正确编写完<code>nginx.conf</code> ，需要让nginx重新加载一下配置文件。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<p>然后直接访问刚刚配置的域名(minecraft.buggzd.com)，默认会跳转到编写好的<code>helloMC.html</code>,你也可以在域名后加&#x2F;helloMC.html  (minecraft.buggzd.com&#x2F;helloMC.html)<br><img src="https://s2.loli.net/2023/01/11/oAx4X1aDE3J6sup.png" alt="image.png"><br>当页面出现<code>helloMC.html</code>的文本内容时，说明已经配置成功了！<br>放张图片到静态资源文件夹试试。<br><img src="https://s2.loli.net/2023/01/11/UCdr8tgq2EVDnP7.png" alt="image.png"><br>访问成功，没问题！</p>
+<blockquote>
+<p>参考：<br>nginx配置文件结构：<a href="https://blog.csdn.net/pibuliao8626/article/details/110449349">https://blog.csdn.net/pibuliao8626/article/details/110449349</a><br>使用nginx如何部署静态资源：<a href="https://www.muzhuangnet.com/show/86630.html">https://www.muzhuangnet.com/show/86630.html</a><br>Nginx 作为静态资源服务器：<a href="https://zhuanlan.zhihu.com/p/514547633">https://zhuanlan.zhihu.com/p/514547633</a><br>nginx配置静态静态资源服务器：<a href="https://cloud.tencent.com/developer/article/2028983?from=15425">https://cloud.tencent.com/developer/article/2028983?from=15425</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>网站搭建相关</category>
+      </categories>
+      <tags>
+        <tag>实用类</tag>
+        <tag>mc</tag>
+        <tag>服务器</tag>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
 </search>

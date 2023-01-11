@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>最后一次手动更新指南 |  Junto&#39;s blog</title>
+      <title>Nginx静态资源服务器使用 |  Junto&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-最后一次手动更新指南"
+  id="post-Nginx静态资源服务器使用"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  最后一次手动更新指南
+  Nginx静态资源服务器使用
 </h1>
  
 
@@ -75,11 +75,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/" class="article-date">
-  <time datetime="2023-01-10T22:10:26.000Z" itemprop="datePublished">2023-01-11</time>
+      <a href="/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2023-01-10T22:13:45.000Z" itemprop="datePublished">2023-01-11</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
+    <a class="article-category-link" href="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/">网站搭建相关</a>
   </div>
   
 <div class="word_count">
@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">244</span>
+            <span class="post-count">1k</span>
         </span>
     </span>
 
@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
@@ -111,12 +111,33 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>大概这是最后一次要求玩家自行更新客户了，以后将会采用hmcl自动更新整合包的方式更新客户端，只需要通上网就能自动更新。</p>
-<h1 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h1><p>群内下载<code>v7.2客户端.zip</code>，解压文件夹。<br>打开v7.2文件夹里的hmcl启动器。<br>点击左侧的1.18.2<br><img src="https://s2.loli.net/2023/01/11/erojJnNg2fBX1hR.png" alt="image.png"><br>点击浏览-&gt;游戏文件夹<br><img src="https://s2.loli.net/2023/01/11/wYBP3nxmHUb8p7t.png" alt="image.png"><br>同样把之前版本的hmcl也打开然后按照以上步骤打开老版本的游戏文件夹（例如v7版本）。<br>将老版本文件夹中的<code>XaeroWaypoints</code>,<code>XaeroWaypoints_BACKUP032021</code>,<code>XaeroWorldMap</code>三个文件夹复制粘贴到v7.2（新版本）的游戏文件夹中。</p>
-<p>粘贴以后你v7.2版本游戏文件夹应该是长这样的<br><img src="https://s2.loli.net/2023/01/11/58pqnVv9fAJ64lx.png" alt="image.png"></p>
-<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><p>记得填游戏ID！</p>
-<p>以后每次登录游戏，hmcl会多进行一部验证操作，验证游戏客户端是否是最新，如果有新版本会自动下载更新。</p>
-<p><img src="https://s2.loli.net/2023/01/11/l9U2rpVq8JSQt4A.png" alt="image.png"></p>
+  <p>看到HMCL支持从静态资源服务器直接下载整合包到客户端，这样能方便腐竹更新游戏客户端版本，终于能解决每次更新要重发整个客户端的老大难问题。</p>
+<blockquote>
+<p>HMCL 允许服务器管理员借助服务端自动更新整合包来实现自动分发整合包更新，这将大大方便有需要频繁更新游戏客户端 Mod、配置等信息的服务器管理员。 HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提供静态文件服务，比如 Apache 和 Nginx 皆可）来提供检查整合包更新并允许 HMCL 下载更新文件。</p>
+</blockquote>
+<p>因此，计划在服务器上开一个静态资源路由，看到HMCL给的提示，Nginx就可以做静态资源服务器，本身我的博客也是使用Nginx逆向代理，说干就干，动手动手！</p>
+<h1 id="新建静态资源文件夹"><a href="#新建静态资源文件夹" class="headerlink" title="新建静态资源文件夹"></a>新建静态资源文件夹</h1><p>我为了省事直接在&#x2F;根目录下新建了一个<code>MinecraftClientStatic</code>文件夹，以后需要作为静态资源的文件都丢这里面。<br>命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 到更目录</span></span><br><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> MinecraftClientStatic</span><br><span class="line"><span class="comment"># 防止nginx无法访问，配置文件夹访问权限</span></span><br><span class="line"><span class="built_in">chmod</span> 777 MinecraftClientStatic</span><br><span class="line"><span class="comment"># 进入文件夹</span></span><br><span class="line"><span class="built_in">cd</span> MinecraftClientStatic</span><br><span class="line"><span class="comment"># 新建一个测试用的文件</span></span><br><span class="line"><span class="built_in">touch</span> helloMC.html</span><br><span class="line"><span class="comment"># 给文件权限</span></span><br><span class="line"><span class="built_in">chmod</span> 777 helloMC.html</span><br><span class="line"><span class="comment"># 编辑html内容</span></span><br><span class="line">vim helloMC.html</span><br></pre></td></tr></table></figure>
+<p>这里为了测试静态资源是否配置成功，需要新建一个helloMC.html的静态测试文件。可以在这个文件内随意写两行字。<br>例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- helloMC.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello static!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="分配次级域名"><a href="#分配次级域名" class="headerlink" title="分配次级域名"></a>分配次级域名</h1><p>假设我们的域名是buggzd.com<br>在域名解析新建一个记录，取名为minecraft，然后加上服务器ip。<br><img src="https://s2.loli.net/2023/01/11/8V1thbsZWgd6qxp.png" alt="image.png"><br>这是我们就有了一个子域名minecraft.buggzd.com<br>添加完成后可以使用cmd去ping一下这个域名(minecraft.buggzd.com)DNS是否已经记录。</p>
+<h1 id="配置nginx-conf"><a href="#配置nginx-conf" class="headerlink" title="配置nginx.conf"></a>配置nginx.conf</h1><p>因为好久动nginx配置了，甚至都忘了nginx的配置文件放哪里去了，还好可以用指令查一下。<br>查找nginx配置文件目录：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nginx -t</span></span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br></pre></td></tr></table></figure>
+<p>然后cd到nginx配置目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx</span><br><span class="line"><span class="comment"># 编写配置文件</span></span><br><span class="line">vim nginx.conf</span><br></pre></td></tr></table></figure>
+<p>因为之前配置过博客逆向代理，<code>nginx.conf</code>会带有之前的配置记录，不能把他们搞乱。所以理清层级关系很重要！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 这是nginx.conf的层级目录</span><br><span class="line"># 每个nginx.conf配置文件都只有一个http块，所以如果之前配置过nginx</span><br><span class="line"># 就只需要粘贴server块里的内容，把server块放到http块内部。</span><br><span class="line"> http &#123;    </span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>需要填写的配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">http &#123;    </span><br><span class="line">   server &#123;       </span><br><span class="line">      # 需要监听的端口号，可以不动</span><br><span class="line">      listen 80;       </span><br><span class="line">      # 这里需要把localhost改为上面分配好的域名</span><br><span class="line">      server_name  minecraft.buggzd.com;      </span><br><span class="line">      location  /&#123;            </span><br><span class="line">      # root后面是对应的静态资源文件夹的位置</span><br><span class="line">           root /MinecraftClientStatic;     </span><br><span class="line">      # 这里是默认加载的首页html，这里放的是刚刚新建的测试文件</span><br><span class="line">      # 它是从root目录文件夹内开始查找的，所以不要写/MinecraftClientStatic/helloMC.html</span><br><span class="line">           index helloMC.html;    </span><br><span class="line">      &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Q:上面的配置干了什么事？<br>A:比如你访问<a target="_blank" rel="noopener" href="http://minecraft.buggzd.com/test.png%E6%97%B6%EF%BC%8Cnginx%E4%BC%9A%E8%AE%BF%E9%97%AE%E6%9C%AC%E5%9C%B0%E7%9A%84/MinecraftClientStatic/test.png">http://minecraft.buggzd.com/test.png时，nginx会访问本地的/MinecraftClientStatic/test.png</a> 然后返回。</p>
+</blockquote>
+<p>当正确编写完<code>nginx.conf</code> ，需要让nginx重新加载一下配置文件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<p>然后直接访问刚刚配置的域名(minecraft.buggzd.com)，默认会跳转到编写好的<code>helloMC.html</code>,你也可以在域名后加&#x2F;helloMC.html  (minecraft.buggzd.com&#x2F;helloMC.html)<br><img src="https://s2.loli.net/2023/01/11/oAx4X1aDE3J6sup.png" alt="image.png"><br>当页面出现<code>helloMC.html</code>的文本内容时，说明已经配置成功了！<br>放张图片到静态资源文件夹试试。<br><img src="https://s2.loli.net/2023/01/11/UCdr8tgq2EVDnP7.png" alt="image.png"><br>访问成功，没问题！</p>
+<blockquote>
+<p>参考：<br>nginx配置文件结构：<a target="_blank" rel="noopener" href="https://blog.csdn.net/pibuliao8626/article/details/110449349">https://blog.csdn.net/pibuliao8626/article/details/110449349</a><br>使用nginx如何部署静态资源：<a target="_blank" rel="noopener" href="https://www.muzhuangnet.com/show/86630.html">https://www.muzhuangnet.com/show/86630.html</a><br>Nginx 作为静态资源服务器：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/514547633">https://zhuanlan.zhihu.com/p/514547633</a><br>nginx配置静态静态资源服务器：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2028983?from=15425">https://cloud.tencent.com/developer/article/2028983?from=15425</a></p>
+</blockquote>
  
       <!-- reward -->
       
@@ -181,12 +202,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mc/" rel="tag">mc</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mc/" rel="tag">mc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E7%94%A8%E7%B1%BB/" rel="tag">实用类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li></ul>
 
     </footer>
   </div>
@@ -194,19 +215,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Nginx静态资源服务器使用
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/01/10/PowerDesigner%E4%B8%8A%E6%89%8B/" class="article-nav-link">
+      <a href="/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">PowerDesigner上手</div>
+        <div class="article-nav-title">最后一次手动更新指南</div>
       </a>
     
   </nav>

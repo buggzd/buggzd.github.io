@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2023-01-11T06:12:41.355Z</updated>
+  <updated>2023-01-11T06:14:39.798Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx静态资源服务器使用</title>
+    <link href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/"/>
+    <id>https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</id>
+    <published>2023-01-10T22:13:45.000Z</published>
+    <updated>2023-01-11T06:14:39.798Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;看到HMCL支持从静态资源服务器直接下载整合包到客户端，这样能方便腐竹更新游戏客户端版本，终于能解决每次更新要重发整个客户端的老大难问题。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HMCL</summary>
+        
+      
+    
+    
+    
+    <category term="网站搭建相关" scheme="https://buggzd.github.io/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/"/>
+    
+    
+    <category term="实用类" scheme="https://buggzd.github.io/tags/%E5%AE%9E%E7%94%A8%E7%B1%BB/"/>
+    
+    <category term="mc" scheme="https://buggzd.github.io/tags/mc/"/>
+    
+    <category term="服务器" scheme="https://buggzd.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="Nginx" scheme="https://buggzd.github.io/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>最后一次手动更新指南</title>
