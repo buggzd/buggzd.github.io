@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1k</span>
+            <span class="post-count">1.1k</span>
         </span>
     </span>
 
@@ -116,14 +116,21 @@
 <p>HMCL 允许服务器管理员借助服务端自动更新整合包来实现自动分发整合包更新，这将大大方便有需要频繁更新游戏客户端 Mod、配置等信息的服务器管理员。 HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提供静态文件服务，比如 Apache 和 Nginx 皆可）来提供检查整合包更新并允许 HMCL 下载更新文件。</p>
 </blockquote>
 <p>因此，计划在服务器上开一个静态资源路由，看到HMCL给的提示，Nginx就可以做静态资源服务器，本身我的博客也是使用Nginx逆向代理，说干就干，动手动手！</p>
+<h1 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h1><p>这里很基础略过，可以看以下参考文档。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/515069497">https://zhuanlan.zhihu.com/p/515069497</a></p>
+</blockquote>
 <h1 id="新建静态资源文件夹"><a href="#新建静态资源文件夹" class="headerlink" title="新建静态资源文件夹"></a>新建静态资源文件夹</h1><p>我为了省事直接在&#x2F;根目录下新建了一个<code>MinecraftClientStatic</code>文件夹，以后需要作为静态资源的文件都丢这里面。<br>命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 到更目录</span></span><br><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> MinecraftClientStatic</span><br><span class="line"><span class="comment"># 防止nginx无法访问，配置文件夹访问权限</span></span><br><span class="line"><span class="built_in">chmod</span> 777 MinecraftClientStatic</span><br><span class="line"><span class="comment"># 进入文件夹</span></span><br><span class="line"><span class="built_in">cd</span> MinecraftClientStatic</span><br><span class="line"><span class="comment"># 新建一个测试用的文件</span></span><br><span class="line"><span class="built_in">touch</span> helloMC.html</span><br><span class="line"><span class="comment"># 给文件权限</span></span><br><span class="line"><span class="built_in">chmod</span> 777 helloMC.html</span><br><span class="line"><span class="comment"># 编辑html内容</span></span><br><span class="line">vim helloMC.html</span><br></pre></td></tr></table></figure>
 <p>这里为了测试静态资源是否配置成功，需要新建一个helloMC.html的静态测试文件。可以在这个文件内随意写两行字。<br>例如：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- helloMC.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello static!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="分配次级域名"><a href="#分配次级域名" class="headerlink" title="分配次级域名"></a>分配次级域名</h1><p>假设我们的域名是buggzd.com<br>在域名解析新建一个记录，取名为minecraft，然后加上服务器ip。<br><img src="https://s2.loli.net/2023/01/11/8V1thbsZWgd6qxp.png" alt="image.png"><br>这是我们就有了一个子域名minecraft.buggzd.com<br>添加完成后可以使用cmd去ping一下这个域名(minecraft.buggzd.com)DNS是否已经记录。</p>
-<h1 id="配置nginx-conf"><a href="#配置nginx-conf" class="headerlink" title="配置nginx.conf"></a>配置nginx.conf</h1><p>因为好久动nginx配置了，甚至都忘了nginx的配置文件放哪里去了，还好可以用指令查一下。<br>查找nginx配置文件目录：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nginx -t</span></span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br></pre></td></tr></table></figure>
-<p>然后cd到nginx配置目录。</p>
+<h1 id="分配次级域名-可选"><a href="#分配次级域名-可选" class="headerlink" title="分配次级域名(可选)"></a>分配次级域名(可选)</h1><blockquote>
+<p>如果你没有域名，那么这里可以跳过，后面需要域名的地方直接使用服务器ip地址</p>
+</blockquote>
+<p>假设我们的域名是buggzd.com<br>在域名解析新建一个记录，取名为minecraft，然后加上服务器ip。<br><img src="https://s2.loli.net/2023/01/11/8V1thbsZWgd6qxp.png" alt="image.png"><br>这是我们就有了一个子域名minecraft.buggzd.com<br>添加完成后可以使用cmd去ping一下这个域名(minecraft.buggzd.com)DNS是否已经记录,如果返回了正确的ip地址就是已经分配成功了。</p>
+<h1 id="配置nginx-conf"><a href="#配置nginx-conf" class="headerlink" title="配置nginx.conf"></a>配置nginx.conf</h1><p>因为好久没动nginx配置了，甚至都忘了nginx的配置文件放哪里去了，还好可以用指令查一下。<br>查找nginx配置文件目录：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nginx -t</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span></span><br></pre></td></tr></table></figure>
+<p>这里<code>/etc/nginx/nginx.conf</code>就是Nginx的配置文件<br>然后cd到nginx配置目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx</span><br><span class="line"><span class="comment"># 编写配置文件</span></span><br><span class="line">vim nginx.conf</span><br></pre></td></tr></table></figure>
 <p>因为之前配置过博客逆向代理，<code>nginx.conf</code>会带有之前的配置记录，不能把他们搞乱。所以理清层级关系很重要！</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 这是nginx.conf的层级目录</span><br><span class="line"># 每个nginx.conf配置文件都只有一个http块，所以如果之前配置过nginx</span><br><span class="line"># 就只需要粘贴server块里的内容，把server块放到http块内部。</span><br><span class="line"> http &#123;    </span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    server &#123; ... &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
