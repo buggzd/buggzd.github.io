@@ -982,4 +982,51 @@
         <tag>Nginx</tag>
       </tags>
   </entry>
+  <entry>
+    <title>使用HMCL自动更新服务器客户端</title>
+    <url>/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/</url>
+    <content><![CDATA[<blockquote>
+<p>阅读本文前，请先阅读HMCL官方文章：<a href="https://hmcl.huangyuhui.net/help/launcher/serverpack.html">https://hmcl.huangyuhui.net/help/launcher/serverpack.html</a></p>
+</blockquote>
+<p>本文是HMCL官方文章的一些补充，以及Nginx静态资源示例。</p>
+<h1 id="配置静态资源网站"><a href="#配置静态资源网站" class="headerlink" title="配置静态资源网站"></a>配置静态资源网站</h1><p>这里有两种解决方案：</p>
+<ol>
+<li>使用GitHub来当静态资源网站，好处是可以白嫖，坏处是国内访问GitHub处于<em>量子叠加态</em>时好时坏，本来是可以使用Gitee的，但是现在Gitee倒了，开源仓库需要审核。</li>
+<li>自行搭建静态资源网站，其实对于各位腐竹来说这个选择也不错，因为本身就有服务器，只需要搭建一下静态资源服务器就可以使用。</li>
+</ol>
+<p>对于以上两种解决方案各位自行选择。<br>这里提供参考资料：</p>
+<ol>
+<li>使用GitHub第三方静态资源网站教程：<a href="https://www.bilibili.com/video/BV1hu411C7BZ">https://www.bilibili.com/video/BV1hu411C7BZ</a></li>
+<li>自行搭建静态资源服务器，参考我之前的文章：Nginx静态资源服务器使用 <a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</a></li>
+</ol>
+<p><strong>本篇将以Nginx做静态资源服务器为例，所以请看第二篇<a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">Nginx静态资源服务器使用</a> 。</strong></p>
+<h1 id="导出整合包"><a href="#导出整合包" class="headerlink" title="导出整合包"></a>导出整合包</h1><p><img src="https://s2.loli.net/2023/01/11/JwLryPXjdU8HEKo.png" alt="image.png"><br>选择服务器自动更新整合包<br><img src="https://s2.loli.net/2023/01/11/Yr2e5N1qXAuMiIx.png" alt="image.png"><br><strong>整合包下载链接前缀</strong>：填静态资源服务器的地址。<br>我们从<a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">Nginx静态资源服务器使用</a>这篇文章继续，我们需要先去静态资源文件夹下新建一个modepack文件夹（也就是&#x2F;MinecraftClientStatic&#x2F;modepack），然后整合包下载链接前缀这里填写<code>http://minecraft.buggzd.com/modepack</code><br><img src="https://s2.loli.net/2023/01/11/PQfCEkdVAoqm1Ru.png" alt="image.png"></p>
+<h1 id="上传整合包到静态资源服务器"><a href="#上传整合包到静态资源服务器" class="headerlink" title="上传整合包到静态资源服务器"></a>上传整合包到静态资源服务器</h1><p>假设我们刚刚打包的整合包名称为<code>client1.0.zip</code><br>我们把<code>client1.0.zip</code>通过ftp上传到服务器中，然后使用解压命令将这个整合包解压到<code>/MinecraftClientStatic/modepack</code>文件夹中。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">假设我们把client1.0.zip上传到了/home/ftp文件夹中</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">把 /home/ftp/client1.0.zip 解压到 /minecraftClientStatic/modepack</span></span><br><span class="line">unzip /home/ftp/client1.0.zip -d /minecraftClientStatic/modepack</span><br></pre></td></tr></table></figure>
+<p>解压完以后我们查看一下</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls /minecraftClientStatic/modepack</span><br></pre></td></tr></table></figure>
+<p>服务器返回：</p>
+<p><font color="blue">overrides</font> server-manifest.json</p>
+<p>其中overrides是一个文件夹，server-manifest.json是整合包配置文件。</p>
+<h1 id="客户端初始化"><a href="#客户端初始化" class="headerlink" title="客户端初始化"></a>客户端初始化</h1><p>第一次使用客户端需要在一个空文件夹中放一个hmcl启动器，打开hmcl导入刚刚做好的<code>client1.0.zip</code>。<br>然后就可以把这个文件夹打包成一个zip发给玩家了，以后玩家每次打开hmcl登录时，hmcl就会自动向静态资源服务器中查询整合包配置信息，当发现更新时会自动下载。<br>当缺少mod时会自动下载静态资源服务器上的mod<br><img src="https://s2.loli.net/2023/01/11/WpD4Xm7i561YbIj.png" alt="image.png"></p>
+<h1 id="更新客户端"><a href="#更新客户端" class="headerlink" title="更新客户端"></a>更新客户端</h1><p>目前HMCL版本更新的步骤是这样的：</p>
+<ol>
+<li>hmcl对比本地的mod和服务器的mod<strong>名称</strong>，发现服务器上存在本地不存在的mod，把不存在的mod下载。</li>
+<li>对比名称相同的mod，当对比的mod存在<strong>名称相同时</strong>，对比其<strong>MD5哈希值</strong>，如果哈希值不匹配则重新下载服务器上的mod。</li>
+<li>在获得更新的时候对比一次本地的文件，如果以前版本的模组在新的版本没有了，hmcl会自动将本地的这个模组删除</li>
+</ol>
+<p>当想要添加新的mod，添加后需要重新导出整合包，导出的整合包版本++，然后重新上传整合包到静态资源服务器，玩家打开hmcl点击启动后，HMCL就会检测到版本更新，自动更新mod。</p>
+<blockquote>
+<p>参考资料：<br>HMCL官方文章：<a href="https://hmcl.huangyuhui.net/help/launcher/serverpack.html">https://hmcl.huangyuhui.net/help/launcher/serverpack.html</a><br>使用Gitee作为静态资源服务器：<a href="https://www.kdocs.cn/l/ck0hwms5llq8">https://www.kdocs.cn/l/ck0hwms5llq8</a><br>Nginx配置静态资源服务器：<a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>实用类</tag>
+        <tag>mc</tag>
+        <tag>服务器</tag>
+      </tags>
+  </entry>
 </search>

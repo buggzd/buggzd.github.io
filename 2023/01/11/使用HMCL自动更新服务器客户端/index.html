@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Tag: 服务器 |  Junto&#39;s blog</title>
+      <title>使用HMCL自动更新服务器客户端 |  Junto&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -55,91 +55,234 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
+  <article
+  id="post-使用HMCL自动更新服务器客户端"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">#&nbsp服务器</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/" class="archive-article-date">
-  <time datetime="2023-01-11T00:46:38.000Z" itemprop="datePublished">01/11</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/"
-    >使用HMCL自动更新服务器客户端</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  使用HMCL自动更新服务器客户端
+</h1>
  
 
-    </header>
-    
-    
       
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/" class="article-date">
+  <time datetime="2023-01-11T00:46:38.000Z" itemprop="datePublished">2023-01-11</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">998</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">3 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>阅读本文前，请先阅读HMCL官方文章：<a target="_blank" rel="noopener" href="https://hmcl.huangyuhui.net/help/launcher/serverpack.html">https://hmcl.huangyuhui.net/help/launcher/serverpack.html</a></p>
+</blockquote>
+<p>本文是HMCL官方文章的一些补充，以及Nginx静态资源示例。</p>
+<h1 id="配置静态资源网站"><a href="#配置静态资源网站" class="headerlink" title="配置静态资源网站"></a>配置静态资源网站</h1><p>这里有两种解决方案：</p>
+<ol>
+<li>使用GitHub来当静态资源网站，好处是可以白嫖，坏处是国内访问GitHub处于<em>量子叠加态</em>时好时坏，本来是可以使用Gitee的，但是现在Gitee倒了，开源仓库需要审核。</li>
+<li>自行搭建静态资源网站，其实对于各位腐竹来说这个选择也不错，因为本身就有服务器，只需要搭建一下静态资源服务器就可以使用。</li>
+</ol>
+<p>对于以上两种解决方案各位自行选择。<br>这里提供参考资料：</p>
+<ol>
+<li>使用GitHub第三方静态资源网站教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hu411C7BZ">https://www.bilibili.com/video/BV1hu411C7BZ</a></li>
+<li>自行搭建静态资源服务器，参考我之前的文章：Nginx静态资源服务器使用 <a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</a></li>
+</ol>
+<p><strong>本篇将以Nginx做静态资源服务器为例，所以请看第二篇<a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">Nginx静态资源服务器使用</a> 。</strong></p>
+<h1 id="导出整合包"><a href="#导出整合包" class="headerlink" title="导出整合包"></a>导出整合包</h1><p><img src="https://s2.loli.net/2023/01/11/JwLryPXjdU8HEKo.png" alt="image.png"><br>选择服务器自动更新整合包<br><img src="https://s2.loli.net/2023/01/11/Yr2e5N1qXAuMiIx.png" alt="image.png"><br><strong>整合包下载链接前缀</strong>：填静态资源服务器的地址。<br>我们从<a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">Nginx静态资源服务器使用</a>这篇文章继续，我们需要先去静态资源文件夹下新建一个modepack文件夹（也就是&#x2F;MinecraftClientStatic&#x2F;modepack），然后整合包下载链接前缀这里填写<code>http://minecraft.buggzd.com/modepack</code><br><img src="https://s2.loli.net/2023/01/11/PQfCEkdVAoqm1Ru.png" alt="image.png"></p>
+<h1 id="上传整合包到静态资源服务器"><a href="#上传整合包到静态资源服务器" class="headerlink" title="上传整合包到静态资源服务器"></a>上传整合包到静态资源服务器</h1><p>假设我们刚刚打包的整合包名称为<code>client1.0.zip</code><br>我们把<code>client1.0.zip</code>通过ftp上传到服务器中，然后使用解压命令将这个整合包解压到<code>/MinecraftClientStatic/modepack</code>文件夹中。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">假设我们把client1.0.zip上传到了/home/ftp文件夹中</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">把 /home/ftp/client1.0.zip 解压到 /minecraftClientStatic/modepack</span></span><br><span class="line">unzip /home/ftp/client1.0.zip -d /minecraftClientStatic/modepack</span><br></pre></td></tr></table></figure>
+<p>解压完以后我们查看一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /minecraftClientStatic/modepack</span><br></pre></td></tr></table></figure>
+<p>服务器返回：</p>
+<p><font color="blue">overrides</font> server-manifest.json</p>
+<p>其中overrides是一个文件夹，server-manifest.json是整合包配置文件。</p>
+<h1 id="客户端初始化"><a href="#客户端初始化" class="headerlink" title="客户端初始化"></a>客户端初始化</h1><p>第一次使用客户端需要在一个空文件夹中放一个hmcl启动器，打开hmcl导入刚刚做好的<code>client1.0.zip</code>。<br>然后就可以把这个文件夹打包成一个zip发给玩家了，以后玩家每次打开hmcl登录时，hmcl就会自动向静态资源服务器中查询整合包配置信息，当发现更新时会自动下载。<br>当缺少mod时会自动下载静态资源服务器上的mod<br><img src="https://s2.loli.net/2023/01/11/WpD4Xm7i561YbIj.png" alt="image.png"></p>
+<h1 id="更新客户端"><a href="#更新客户端" class="headerlink" title="更新客户端"></a>更新客户端</h1><p>目前HMCL版本更新的步骤是这样的：</p>
+<ol>
+<li>hmcl对比本地的mod和服务器的mod<strong>名称</strong>，发现服务器上存在本地不存在的mod，把不存在的mod下载。</li>
+<li>对比名称相同的mod，当对比的mod存在<strong>名称相同时</strong>，对比其<strong>MD5哈希值</strong>，如果哈希值不匹配则重新下载服务器上的mod。</li>
+<li>在获得更新的时候对比一次本地的文件，如果以前版本的模组在新的版本没有了，hmcl会自动将本地的这个模组删除</li>
+</ol>
+<p>当想要添加新的mod，添加后需要重新导出整合包，导出的整合包版本++，然后重新上传整合包到静态资源服务器，玩家打开hmcl点击启动后，HMCL就会检测到版本更新，自动更新mod。</p>
+<blockquote>
+<p>参考资料：<br>HMCL官方文章：<a target="_blank" rel="noopener" href="https://hmcl.huangyuhui.net/help/launcher/serverpack.html">https://hmcl.huangyuhui.net/help/launcher/serverpack.html</a><br>使用Gitee作为静态资源服务器：<a target="_blank" rel="noopener" href="https://www.kdocs.cn/l/ck0hwms5llq8">https://www.kdocs.cn/l/ck0hwms5llq8</a><br>Nginx配置静态资源服务器：<a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</a></p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mc/" rel="tag">mc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E7%94%A8%E7%B1%BB/" rel="tag">实用类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li></ul>
 
-    
+    </footer>
   </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  <time datetime="2023-01-10T22:13:45.000Z" itemprop="datePublished">01/11</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/"
-    >Nginx静态资源服务器使用</a> 
-</h2>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Nginx静态资源服务器使用</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
  
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mc/" rel="tag">mc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E7%94%A8%E7%B1%BB/" rel="tag">实用类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li></ul>
-
-    
-  </div>
+   
+     
 </article>
-      
-      
-    </div>
-  </div>
-  
-  
 
-  
 </section>
       <footer class="footer">
   <div class="outer">
@@ -280,6 +423,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
