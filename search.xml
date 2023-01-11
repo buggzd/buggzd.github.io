@@ -915,4 +915,21 @@
         <tag>工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>最后一次手动更新指南</title>
+    <url>/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>大概这是最后一次要求玩家自行更新客户了，以后将会采用hmcl自动更新整合包的方式更新客户端，只需要通上网就能自动更新。</p>
+<h1 id="更新方法"><a href="#更新方法" class="headerlink" title="更新方法"></a>更新方法</h1><p>群内下载<code>v7.2客户端.zip</code>，解压文件夹。<br>打开v7.2文件夹里的hmcl启动器。<br>点击左侧的1.18.2<br><img src="https://s2.loli.net/2023/01/11/erojJnNg2fBX1hR.png" alt="image.png"><br>点击浏览-&gt;游戏文件夹<br><img src="https://s2.loli.net/2023/01/11/wYBP3nxmHUb8p7t.png" alt="image.png"><br>同样把之前版本的hmcl也打开然后按照以上步骤打开老版本的游戏文件夹（例如v7版本）。<br>将老版本文件夹中的<code>XaeroWaypoints</code>,<code>XaeroWaypoints_BACKUP032021</code>,<code>XaeroWorldMap</code>三个文件夹复制粘贴到v7.2（新版本）的游戏文件夹中。</p>
+<p>粘贴以后你v7.2版本游戏文件夹应该是长这样的<br><img src="https://s2.loli.net/2023/01/11/58pqnVv9fAJ64lx.png" alt="image.png"></p>
+<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><p>记得填游戏ID！</p>
+<p>以后每次登录游戏，hmcl会多进行一部验证操作，验证游戏客户端是否是最新，如果有新版本会自动下载更新。</p>
+<p><img src="https://s2.loli.net/2023/01/11/l9U2rpVq8JSQt4A.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>mc</tag>
+      </tags>
+  </entry>
 </search>

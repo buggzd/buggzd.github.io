@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2023-01-10T03:57:58.640Z</updated>
+  <updated>2023-01-11T06:12:41.355Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最后一次手动更新指南</title>
+    <link href="https://buggzd.github.io/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/"/>
+    <id>https://buggzd.github.io/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/</id>
+    <published>2023-01-10T22:10:26.000Z</published>
+    <updated>2023-01-11T06:12:41.355Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大概这是最后一次要求玩家自行更新客户了，以后将会采用hmcl自动更新整合包的方式更新客户端，只需要通上网就能自动更新。&lt;/p&gt;
+&lt;h1 id=&quot;更新方法&quot;&gt;&lt;a href=&quot;#更新方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="mc" scheme="https://buggzd.github.io/tags/mc/"/>
+    
+  </entry>
   
   <entry>
     <title>PowerDesigner上手</title>
