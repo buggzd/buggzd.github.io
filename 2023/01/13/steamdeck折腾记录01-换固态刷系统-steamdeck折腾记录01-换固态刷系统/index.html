@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+
+<html lang="ch_zh">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="一个热爱绘画的码农" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>steamdeck折腾记录01-换固态刷系统 |  Junto&#39;s blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Junto's blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-steamdeck折腾记录01-换固态刷系统-steamdeck折腾记录01-换固态刷系统"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  steamdeck折腾记录01-换固态刷系统
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F/" class="article-date">
+  <time datetime="2023-01-13T07:56:28.942Z" itemprop="datePublished">2023-01-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">966</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">3 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="换硬盘"><a href="#换硬盘" class="headerlink" title="换硬盘"></a>换硬盘</h1><blockquote>
+<p>参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11d4y1x7CM">https://www.bilibili.com/video/BV11d4y1x7CM</a></p>
+</blockquote>
+<blockquote>
+<p>建议：先开始下载SteamOS文件，并且烧录，因为下载和烧录需要时间。<a href="#%E5%88%B7%E7%B3%BB%E7%BB%9F">刷系统</a></p>
+</blockquote>
+<blockquote>
+<p>需要准备的工具：<br>小螺丝刀（十字口），拆机翘片（如果你相信你的指甲也可以不用），一个2230的固态</p>
+</blockquote>
+<p>我本以为换硬盘是很简单的事，拆机经验丰富如我（什么联想拯救者，戴尔灵越，华硕飞行堡垒，惠普暗夜精灵，华为magicbook，我都拆过），然而这次拆steamdeck给我的体验是灾难性的。</p>
+<h2 id="固态购买"><a href="#固态购买" class="headerlink" title="固态购买"></a>固态购买</h2><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/7984464794">https://tieba.baidu.com/p/7984464794</a></p>
+</blockquote>
+<p>首先要知道steamdeck用的固态是特殊型号的，所以挑选的时候需要选择2230的固态，其次需要知道的就是steamdeck使用的是PCIe3.0，没必要买PCIe4.0的。</p>
+<p>需要注意的参数：</p>
+<ol>
+<li><strong>型号一定要2230</strong>，虽然网传有魔改M.2 2242的方法，但是steamdeck工程师警告会影响deck寿命。</li>
+<li><strong>低功耗</strong>（网上有一些换固态然后烧了的，所以一定要低功耗散热压力低），另外就是低功耗余留出的功耗是可以被用在cpu，gpu上的。</li>
+</ol>
+<p>ps：因为2230是没有零售的，也就是说市面上的都是散片，基本是没有保修的。</p>
+<p>我挑选的是 西数sn530 1t</p>
+<h2 id="拆外壳"><a href="#拆外壳" class="headerlink" title="拆外壳"></a>拆外壳</h2><p>外壳四个角有四个长螺丝，中间有4个短螺丝这个比较好下。<br>撬开外壳，和大部分笔记本一样，需要使用一个垫片沿着边缝翘，建议从扳机旁边翘，屏幕上下边都比较好翘，握手两侧比较费力。</p>
+<h2 id="拆静电屏蔽板"><a href="#拆静电屏蔽板" class="headerlink" title="拆静电屏蔽板"></a>拆静电屏蔽板</h2><p>到这里也就花了我5分钟的时间，谁知道噩梦就从这开始了。<br><strong>静电屏蔽板上有3个螺丝，注意有2个空的，那个并不是漏了而是由外壳螺丝固定，所以需要注意位置，装回去的时候要一样。</strong><br>角上两颗螺丝，还有一颗大螺丝被胶带盖住了。<br>就这三颗螺丝<br>拆了我一个小时，这螺丝紧的像是被焊丝在上面一样，好在这螺丝质量够结实，否则早被我拧滑丝了。</p>
+<h2 id="拔电"><a href="#拔电" class="headerlink" title="拔电"></a>拔电</h2><p>这个电线上还带一个拉环，很好拆，拔完电源按下开机键确保没电了。</p>
+<h2 id="换固态"><a href="#换固态" class="headerlink" title="换固态"></a>换固态</h2><blockquote>
+<p>可以先洗个手消除一下静电</p>
+</blockquote>
+<p>和普通笔记本的更换方法相同，拧下螺丝，拔卡，换卡，装螺丝。</p>
+<h1 id="刷系统"><a href="#刷系统" class="headerlink" title="刷系统"></a>刷系统</h1><blockquote>
+<p>需要准备的工具：<br>type-c转USB扩展坞，一个USB3.0的u盘（3.0很重要，否则你刷一次机得等1小时）</p>
+</blockquote>
+<h2 id="下载系统镜像文件"><a href="#下载系统镜像文件" class="headerlink" title="下载系统镜像文件"></a>下载系统镜像文件</h2><blockquote>
+<p>镜像恢复官方教程：<a target="_blank" rel="noopener" href="https://help.steampowered.com/zh-cn/faqs/view/1b71-edf2-eb6d-2bb3">https://help.steampowered.com/zh-cn/faqs/view/1b71-edf2-eb6d-2bb3</a><br>SteamOS下载地址：<a target="_blank" rel="noopener" href="https://steamdeck-images.steamos.cloud/recovery/steamdeck-recovery-4.img.bz2">https://steamdeck-images.steamos.cloud/recovery/steamdeck-recovery-4.img.bz2</a><br>系统烧录工具：<a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></p>
+</blockquote>
+<h2 id="烧录"><a href="#烧录" class="headerlink" title="烧录"></a>烧录</h2><p>刷系统也有坑！！！<br><strong>必须usb3.0！必须usb3.0！必须usb3.0！</strong><br>我手上的两个u盘都不是usb3.0 读写速度慢的离谱。</p>
+<p>用下好的烧录工具balena把SteamOS烧录到U盘中。</p>
+<h2 id="恢复镜像"><a href="#恢复镜像" class="headerlink" title="恢复镜像"></a>恢复镜像</h2><p>接上U盘。<br>长按 <kbd>音量- </kbd> + <kbd>开机键</kbd><br>刷入系统镜像。</p>
+<h2 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h2><ol>
+<li>插上U盘，按<kbd>音量- </kbd> +  <kbd>开机键</kbd>没反应，屏幕还是黑的，但是触控板触摸有反馈<blockquote>
+<p>U盘不是USB3.0，读取速度慢需要耐心等待，</p>
+</blockquote>
+</li>
+<li>刷完系统后开机，一直卡在Installing（正在安装），从倒数3分钟到1s然后又来一轮倒数。<blockquote>
+<p>耐心，慢慢等是会完成的，我卡了2小时。</p>
+</blockquote>
+</li>
+<li>如果你看了官方的SteamDeck恢复教程，你可能用的是Rufus utility这个系统烧录工具，系统烧录到100%但什么反应也没有。<blockquote>
+<p>我的解决方法是换一个烧录工具，用balena进行烧录。</p>
+</blockquote>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/" rel="tag">steam</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steamdeck/" rel="tag">steamdeck</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            steamdeck折腾记录02-基础上手
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/01/12/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-steamdeckguidance/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">SteamDeck折腾记录</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2023
+        <i class="ri-heart-fill heart_icon"></i> Junto
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Junto&#39;s blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.pixiv.net/users/17109509">pixiv</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

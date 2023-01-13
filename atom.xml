@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2023-01-11T08:47:14.924Z</updated>
+  <updated>2023-01-13T08:24:24.280Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,170 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>steamdeck折腾记录02-基础上手</title>
+    <link href="https://buggzd.github.io/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B/"/>
+    <id>https://buggzd.github.io/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B/</id>
+    <published>2023-01-13T07:59:45.153Z</published>
+    <updated>2023-01-13T08:24:24.280Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>steamdeck折腾记录01-换固态刷系统</title>
+    <link href="https://buggzd.github.io/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://buggzd.github.io/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F/</id>
+    <published>2023-01-13T07:56:28.942Z</published>
+    <updated>2023-01-13T07:57:48.359Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;换硬盘&quot;&gt;&lt;a href=&quot;#换硬盘&quot; class=&quot;headerlink&quot; title=&quot;换硬盘&quot;&gt;&lt;/a&gt;换硬盘&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;参考视频：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="steam" scheme="https://buggzd.github.io/tags/steam/"/>
+    
+    <category term="steamdeck" scheme="https://buggzd.github.io/tags/steamdeck/"/>
+    
+    <category term="折腾" scheme="https://buggzd.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SteamDeck折腾记录</title>
+    <link href="https://buggzd.github.io/2023/01/12/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-steamdeckguidance/"/>
+    <id>https://buggzd.github.io/2023/01/12/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-steamdeckguidance/</id>
+    <published>2023-01-12T02:54:31.358Z</published>
+    <updated>2023-01-13T08:00:13.275Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;换硬盘&quot;&gt;&lt;a href=&quot;#换硬盘&quot; class=&quot;headerlink&quot; title=&quot;换硬盘&quot;&gt;&lt;/a&gt;换硬盘&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;参考视频：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="linux" scheme="https://buggzd.github.io/tags/linux/"/>
+    
+    <category term="steam" scheme="https://buggzd.github.io/tags/steam/"/>
+    
+    <category term="steamdeck" scheme="https://buggzd.github.io/tags/steamdeck/"/>
+    
+    <category term="折腾" scheme="https://buggzd.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用HMCL自动更新服务器客户端</title>
+    <link href="https://buggzd.github.io/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF-%E4%BD%BF%E7%94%A8hmcl%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    <id>https://buggzd.github.io/2023/01/11/%E4%BD%BF%E7%94%A8HMCL%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF-%E4%BD%BF%E7%94%A8hmcl%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF/</id>
+    <published>2023-01-11T06:32:32.004Z</published>
+    <updated>2023-01-11T09:31:23.107Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;阅读本文前，请先阅读HMCL官方文章：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="服务器" scheme="https://buggzd.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="mc" scheme="https://buggzd.github.io/tags/mc/"/>
+    
+    <category term="游戏" scheme="https://buggzd.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最后一次手动更新客户端指南</title>
+    <link href="https://buggzd.github.io/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8C%87%E5%8D%97-zui-hou-yi-ci-shou-dong-geng-xin-ke-hu-duan-zhi-nan/"/>
+    <id>https://buggzd.github.io/2023/01/11/%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8C%87%E5%8D%97-zui-hou-yi-ci-shou-dong-geng-xin-ke-hu-duan-zhi-nan/</id>
+    <published>2023-01-11T06:00:05.757Z</published>
+    <updated>2023-01-11T06:00:05.757Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大概这是最后一次要求玩家自行更新客户了，以后将会采用hmcl自动更新整合包的方式更新客户端，只需要通上网就能自动更新。&lt;/p&gt;
+&lt;h1 id=&quot;更新方法&quot;&gt;&lt;a href=&quot;#更新方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="mc" scheme="https://buggzd.github.io/tags/mc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx静态资源服务器使用</title>
+    <link href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8-nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/"/>
+    <id>https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8-nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</id>
+    <published>2023-01-11T02:28:19.164Z</published>
+    <updated>2023-01-11T08:42:48.446Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;看到HMCL支持从静态资源服务器直接下载整合包到客户端，这样能方便腐竹更新游戏客户端版本，终于能解决每次更新要重发整个客户端的老大难问题。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HMCL</summary>
+        
+      
+    
+    
+    
+    <category term="网站搭建相关" scheme="https://buggzd.github.io/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/"/>
+    
+    
+    <category term="服务器" scheme="https://buggzd.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="mc" scheme="https://buggzd.github.io/tags/mc/"/>
+    
+    <category term="Nginx" scheme="https://buggzd.github.io/tags/Nginx/"/>
+    
+    <category term="实用类" scheme="https://buggzd.github.io/tags/%E5%AE%9E%E7%94%A8%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>使用HMCL自动更新服务器客户端</title>
@@ -51,7 +215,7 @@
     <link href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/"/>
     <id>https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</id>
     <published>2023-01-10T22:13:45.000Z</published>
-    <updated>2023-01-11T08:49:13.307Z</updated>
+    <updated>2023-01-11T08:54:54.535Z</updated>
     
     
       
@@ -128,6 +292,60 @@
     
     
     <category term="工具" scheme="https://buggzd.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>昆明好吃的</title>
+    <link href="https://buggzd.github.io/2023/01/09/%E6%98%86%E6%98%8E%E5%A5%BD%E5%90%83%E7%9A%84-kun-ming-hao-chi-de/"/>
+    <id>https://buggzd.github.io/2023/01/09/%E6%98%86%E6%98%8E%E5%A5%BD%E5%90%83%E7%9A%84-kun-ming-hao-chi-de/</id>
+    <published>2023-01-09T15:08:05.843Z</published>
+    <updated>2023-01-10T02:11:08.625Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;味之绝-金鹰店&lt;/li&gt;
+&lt;li&gt;南强街-太小&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>个人硬件清单</title>
+    <link href="https://buggzd.github.io/2023/01/09/%E4%B8%AA%E4%BA%BA%E7%A1%AC%E4%BB%B6%E6%B8%85%E5%8D%95-%E4%B8%AA%E4%BA%BA%E7%A1%AC%E4%BB%B6%E6%B8%85%E5%8D%95/"/>
+    <id>https://buggzd.github.io/2023/01/09/%E4%B8%AA%E4%BA%BA%E7%A1%AC%E4%BB%B6%E6%B8%85%E5%8D%95-%E4%B8%AA%E4%BA%BA%E7%A1%AC%E4%BB%B6%E6%B8%85%E5%8D%95/</id>
+    <published>2023-01-09T05:11:39.488Z</published>
+    <updated>2023-01-09T06:44:22.345Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;笔记本&quot;&gt;&lt;a href=&quot;#笔记本&quot; class=&quot;headerlink&quot; title=&quot;笔记本&quot;&gt;&lt;/a&gt;笔记本&lt;/h1&gt;&lt;p&gt;拯救者y7000-2019&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU：i5 9300H&lt;/li&gt;
+&lt;li&gt;GPU：NVIDIA</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="硬件" scheme="https://buggzd.github.io/tags/%E7%A1%AC%E4%BB%B6/"/>
     
   </entry>
   
@@ -241,6 +459,64 @@
   
   <entry>
     <title>Excel制作随机点名</title>
+    <link href="https://buggzd.github.io/2022/12/29/Excel%E5%88%B6%E4%BD%9C%E9%9A%8F%E6%9C%BA%E7%82%B9%E5%90%8D-excel-zhi-zuo-sui-ji-dian-ming/"/>
+    <id>https://buggzd.github.io/2022/12/29/Excel%E5%88%B6%E4%BD%9C%E9%9A%8F%E6%9C%BA%E7%82%B9%E5%90%8D-excel-zhi-zuo-sui-ji-dian-ming/</id>
+    <published>2022-12-29T01:28:57.825Z</published>
+    <updated>2022-12-29T01:28:57.825Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用方法：&quot;&gt;&lt;a href=&quot;#使用方法：&quot; class=&quot;headerlink&quot; title=&quot;使用方法：&quot;&gt;&lt;/a&gt;使用方法：&lt;/h1&gt;&lt;p&gt;在A列下填写人物名字，按f9刷新后，随机抽取一个人。&lt;/p&gt;
+&lt;h1 id=&quot;具体实现：&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="工具" scheme="https://buggzd.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Excel" scheme="https://buggzd.github.io/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue+xlsxjs操作Excel</title>
+    <link href="https://buggzd.github.io/2022/12/28/vue+xlsxjs%E6%93%8D%E4%BD%9CExcel-vuexlsxjs-cao-zuo-excel/"/>
+    <id>https://buggzd.github.io/2022/12/28/vue+xlsxjs%E6%93%8D%E4%BD%9CExcel-vuexlsxjs-cao-zuo-excel/</id>
+    <published>2022-12-28T09:31:03.291Z</published>
+    <updated>2022-12-28T09:31:03.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h1&gt;&lt;p&gt;想写一个html用来打开Excel文件，添加人物，随机抽取人员，输出添加人员后的Excel。&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="前端" scheme="https://buggzd.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="vue" scheme="https://buggzd.github.io/tags/vue/"/>
+    
+    <category term="xlsx" scheme="https://buggzd.github.io/tags/xlsx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel制作随机点名</title>
     <link href="https://buggzd.github.io/2022/12/28/Excel%E5%88%B6%E4%BD%9C%E9%9A%8F%E6%9C%BA%E7%82%B9%E5%90%8D/"/>
     <id>https://buggzd.github.io/2022/12/28/Excel%E5%88%B6%E4%BD%9C%E9%9A%8F%E6%9C%BA%E7%82%B9%E5%90%8D/</id>
     <published>2022-12-28T01:31:56.000Z</published>
@@ -290,272 +566,6 @@
     <category term="vue" scheme="https://buggzd.github.io/tags/vue/"/>
     
     <category term="xlsx.js" scheme="https://buggzd.github.io/tags/xlsx-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot学习001</title>
-    <link href="https://buggzd.github.io/2022/12/24/SpringBoot%E5%AD%A6%E4%B9%A0001/"/>
-    <id>https://buggzd.github.io/2022/12/24/SpringBoot%E5%AD%A6%E4%B9%A0001/</id>
-    <published>2022-12-24T14:10:47.000Z</published>
-    <updated>2022-12-24T14:25:38.553Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Spring基础&quot;&gt;&lt;a href=&quot;#Spring基础&quot; class=&quot;headerlink&quot; title=&quot;Spring基础&quot;&gt;&lt;/a&gt;Spring基础&lt;/h1&gt;&lt;h1 id=&quot;控制器&quot;&gt;&lt;a href=&quot;#控制器&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="后端" scheme="https://buggzd.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="SpringBoot" scheme="https://buggzd.github.io/tags/SpringBoot/"/>
-    
-    <category term="Java" scheme="https://buggzd.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://buggzd.github.io/2022/12/24/hello-world/"/>
-    <id>https://buggzd.github.io/2022/12/24/hello-world/</id>
-    <published>2022-12-24T11:11:23.351Z</published>
-    <updated>2022-12-24T11:11:23.351Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第八章</title>
-    <link href="https://buggzd.github.io/2022/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%85%AB%E7%AB%A0-computerarchitecture08/"/>
-    <id>https://buggzd.github.io/2022/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%85%AB%E7%AB%A0-computerarchitecture08/</id>
-    <published>2022-06-23T06:26:07.890Z</published>
-    <updated>2022-06-23T13:07:23.528Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;IO系统的可靠性，可用性，可信性&quot;&gt;&lt;a href=&quot;#IO系统的可靠性，可用性，可信性&quot; class=&quot;headerlink&quot; title=&quot;IO系统的可靠性，可用性，可信性&quot;&gt;&lt;/a&gt;IO系统的可靠性，可用性，可信性&lt;/h1&gt;&lt;h2 id=&quot;可靠性&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第七章</title>
-    <link href="https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E7%AB%A0-computerarchitecture07/"/>
-    <id>https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E7%AB%A0-computerarchitecture07/</id>
-    <published>2022-06-21T09:05:38.492Z</published>
-    <updated>2022-06-23T06:14:49.758Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;系统的三级存储结构&quot;&gt;&lt;a href=&quot;#系统的三级存储结构&quot; class=&quot;headerlink&quot; title=&quot;系统的三级存储结构&quot;&gt;&lt;/a&gt;系统的三级存储结构&lt;/h1&gt;&lt;p&gt;缓存Cache-主存储器-辅存（磁盘存储器）&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第五章</title>
-    <link href="https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E7%AB%A0-computerarchitecture05/"/>
-    <id>https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E7%AB%A0-computerarchitecture05/</id>
-    <published>2022-06-21T07:05:52.706Z</published>
-    <updated>2022-06-22T03:10:34.607Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;指令集并行的概念&quot;&gt;&lt;a href=&quot;#指令集并行的概念&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第四章</title>
-    <link href="https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E7%AB%A0-computerarchitecture04/"/>
-    <id>https://buggzd.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E7%AB%A0-computerarchitecture04/</id>
-    <published>2022-06-21T06:52:55.094Z</published>
-    <updated>2022-06-21T07:02:07.036Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;向量处理方式&quot;&gt;&lt;a href=&quot;#向量处理方式&quot; class=&quot;headerlink&quot; title=&quot;向量处理方式&quot;&gt;&lt;/a&gt;向量处理方式&lt;/h1&gt;&lt;p&gt;例：&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第三章</title>
-    <link href="https://buggzd.github.io/2022/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0-computerarchitecture03/"/>
-    <id>https://buggzd.github.io/2022/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0-computerarchitecture03/</id>
-    <published>2022-06-20T08:37:50.353Z</published>
-    <updated>2022-06-21T06:40:35.488Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;流水线的概念&quot;&gt;&lt;a href=&quot;#流水线的概念&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第二章</title>
-    <link href="https://buggzd.github.io/2022/06/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0-computerarchitecture02/"/>
-    <id>https://buggzd.github.io/2022/06/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0-computerarchitecture02/</id>
-    <published>2022-06-08T12:28:36.035Z</published>
-    <updated>2022-06-20T08:37:40.575Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;x3D-x3D-指令系统结构分类-x3D-x3D&quot;&gt;&lt;a href=&quot;#x3D-x3D-指令系统结构分类-x3D-x3D&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机体系结构笔记第一章</title>
-    <link href="https://buggzd.github.io/2022/06/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0-computerarchitecture01/"/>
-    <id>https://buggzd.github.io/2022/06/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0-computerarchitecture01/</id>
-    <published>2022-06-06T09:49:39.979Z</published>
-    <updated>2022-06-19T01:28:48.666Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;x3D-x3D-计算机系统多级层次结构-x3D-x3D&quot;&gt;&lt;a href=&quot;#x3D-x3D-计算机系统多级层次结构-x3D-x3D&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://buggzd.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="计算机体系结构" scheme="https://buggzd.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站们</title>
-    <link href="https://buggzd.github.io/2022/04/27/%E7%BD%91%E7%AB%99%E4%BB%AC-webs/"/>
-    <id>https://buggzd.github.io/2022/04/27/%E7%BD%91%E7%AB%99%E4%BB%AC-webs/</id>
-    <published>2022-04-27T03:00:03.427Z</published>
-    <updated>2022-12-25T15:05:22.414Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;番剧&quot;&gt;&lt;a href=&quot;#番剧&quot; class=&quot;headerlink&quot; title=&quot;番剧&quot;&gt;&lt;/a&gt;番剧&lt;/h1&gt;&lt;h2 id=&quot;在线&quot;&gt;&lt;a href=&quot;#在线&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
-    
-    
-    <category term="实用类" scheme="https://buggzd.github.io/tags/%E5%AE%9E%E7%94%A8%E7%B1%BB/"/>
-    
-    <category term="工具" scheme="https://buggzd.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="番剧" scheme="https://buggzd.github.io/tags/%E7%95%AA%E5%89%A7/"/>
-    
-    <category term="电影" scheme="https://buggzd.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
     
   </entry>
   

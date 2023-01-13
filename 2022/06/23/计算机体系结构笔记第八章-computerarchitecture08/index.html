@@ -116,15 +116,15 @@
 <h2 id="可信性"><a href="#可信性" class="headerlink" title="可信性"></a>可信性</h2><p>服务的质量。（主观评价非量化）</p>
 <h1 id="廉价磁盘冗余阵列RAID"><a href="#廉价磁盘冗余阵列RAID" class="headerlink" title="廉价磁盘冗余阵列RAID"></a>廉价磁盘冗余阵列RAID</h1><p>磁盘整列：用多个磁盘构成一个大容量的磁盘。</p>
 <h2 id="数据交叉存放的粒度（-RAID的特征）"><a href="#数据交叉存放的粒度（-RAID的特征）" class="headerlink" title="数据交叉存放的粒度（ RAID的特征）"></a>数据交叉存放的粒度（ RAID的特征）</h2><p>细粒度磁盘整列：在概念上把数据分割为相对较小的单位交叉存放。<br>高传输速度，存在IO请求定位，浪费时间。<br>粗粒度磁盘整列：把数据以较大的单位交叉存放</p>
-<h2 id="RAID分级"><a href="#RAID分级" class="headerlink" title="RAID分级"></a>RAID分级</h2><p><img src="https://s2.loli.net/2022/12/26/yTxV3ceMJjObfao.png" alt="image-1655967824497.png"><br><img src="https://s2.loli.net/2022/12/26/3ADrKB5atpXWMnz.png" alt="image-1655967867081.png"></p>
+<h2 id="RAID分级"><a href="#RAID分级" class="headerlink" title="RAID分级"></a>RAID分级</h2><p><img src="/upload/2022/06/image-1655967824497.png" alt="image-1655967824497"><br><img src="/upload/2022/06/image-1655967867081.png" alt="image-1655967867081"></p>
 <h2 id="RAID0"><a href="#RAID0" class="headerlink" title="RAID0"></a>RAID0</h2><p>无冗余盘，把数据切分为条带，按条带为单位交叉分布存放到多个磁盘内。</p>
-<h2 id="RAID1"><a href="#RAID1" class="headerlink" title="RAID1"></a>RAID1</h2><p>镜像磁盘，对每一个磁盘添加一个冗余备份。速度最快。但是成高<br><img src="https://s2.loli.net/2022/12/26/fP7IuJjBHal9dxZ.png" alt="image-1655969483088.png"></p>
-<h2 id="RAID2"><a href="#RAID2" class="headerlink" title="RAID2"></a>RAID2</h2><p>使用汉明码做伪纠错。冗余盘个数为log<del>2</del>m  m是数据盘个数<br><img src="https://s2.loli.net/2022/12/26/ad4TLVuMcqFAQWo.png" alt="image-1655969635428.png"></p>
-<h2 id="RAID3"><a href="#RAID3" class="headerlink" title="RAID3"></a>RAID3</h2><p>使用位交叉奇偶校验磁盘阵列<br>细粒度整列。<br><img src="https://s2.loli.net/2022/12/26/tr2YCwKDnyxsoJQ.png" alt="image-1655982074406.png"></p>
+<h2 id="RAID1"><a href="#RAID1" class="headerlink" title="RAID1"></a>RAID1</h2><p>镜像磁盘，对每一个磁盘添加一个冗余备份。速度最快。但是成高<br><img src="/upload/2022/06/image-1655969483088.png" alt="image-1655969483088"></p>
+<h2 id="RAID2"><a href="#RAID2" class="headerlink" title="RAID2"></a>RAID2</h2><p>使用汉明码做伪纠错。冗余盘个数为log<del>2</del>m  m是数据盘个数<br><img src="/upload/2022/06/image-1655969635428.png" alt="image-1655969635428"></p>
+<h2 id="RAID3"><a href="#RAID3" class="headerlink" title="RAID3"></a>RAID3</h2><p>使用位交叉奇偶校验磁盘阵列<br>细粒度整列。<br><img src="/upload/2022/06/image-1655982074406.png" alt="image-1655982074406"></p>
 <h2 id="RAID4"><a href="#RAID4" class="headerlink" title="RAID4"></a>RAID4</h2><p>块交叉奇偶校验磁盘阵列<br>和RAID3类似，但是是粗粒度</p>
-<h2 id="RAID5"><a href="#RAID5" class="headerlink" title="RAID5"></a>RAID5</h2><p>块交叉分布奇偶校验磁盘阵列<br>不使用专用的冗余盘，把冗余校验信息放在各盘中。<br><img src="https://s2.loli.net/2022/12/26/jVY6s2ynlMF1dag.png" alt="image-1655982582515.png"></p>
-<h2 id="RAID6"><a href="#RAID6" class="headerlink" title="RAID6"></a>RAID6</h2><p>P+Q双校验磁盘阵列<br>是RAID5校验开销的2倍，因为使用了两次校验。允许两个盘出现错误。<br><img src="https://s2.loli.net/2022/12/26/Ls9FngJPITqHAWY.png" alt="image-1655982698240.png"></p>
-<h2 id="RAID10和RAID01"><a href="#RAID10和RAID01" class="headerlink" title="RAID10和RAID01"></a>RAID10和RAID01</h2><p><img src="https://s2.loli.net/2022/12/26/GOd57zZCqxKWr19.png" alt="image-1655987540182.png"></p>
+<h2 id="RAID5"><a href="#RAID5" class="headerlink" title="RAID5"></a>RAID5</h2><p>块交叉分布奇偶校验磁盘阵列<br>不使用专用的冗余盘，把冗余校验信息放在各盘中。<br><img src="/upload/2022/06/image-1655982582515.png" alt="image-1655982582515"></p>
+<h2 id="RAID6"><a href="#RAID6" class="headerlink" title="RAID6"></a>RAID6</h2><p>P+Q双校验磁盘阵列<br>是RAID5校验开销的2倍，因为使用了两次校验。允许两个盘出现错误。<br><img src="/upload/2022/06/image-1655982698240.png" alt="image-1655982698240"></p>
+<h2 id="RAID10和RAID01"><a href="#RAID10和RAID01" class="headerlink" title="RAID10和RAID01"></a>RAID10和RAID01</h2><p><img src="/upload/2022/06/image-1655987540182.png" alt="image-1655987540182"></p>
  
       <!-- reward -->
       
@@ -202,19 +202,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/12/24/hello-world/" class="article-nav-link">
+      <a href="/2022/07/01/2022%E5%B9%B47%E6%9C%881%E6%97%A5MEME-2022-nian-7-yue-1-ri-meme/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Hello World
+            2022年7月1日MEME
           
         </div>
       </a>
     
     
-      <a href="/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E7%AB%A0-computerarchitecture07/" class="article-nav-link">
+      <a href="/2022/06/22/2022%E5%B9%B46%E6%9C%8822%E6%97%A5MEME-2022-nian-6-yue-22-ri-meme/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">计算机体系结构笔记第七章</div>
+        <div class="article-nav-title">2022年6月22日MEME</div>
       </a>
     
   </nav>

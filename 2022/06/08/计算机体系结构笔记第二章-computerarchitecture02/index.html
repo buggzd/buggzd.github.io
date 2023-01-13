@@ -150,7 +150,7 @@
 <td>指令字长变化大，速度慢</td>
 </tr>
 </tbody></table>
-<h1 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h1><p>寻找有效地址EA<br>表达方式：<br><img src="https://s2.loli.net/2022/12/26/9yU4V5Ed3Fl8pbw.png" alt="image-1654697899593.png"></p>
+<h1 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h1><p>寻找有效地址EA<br>表达方式：<br><img src="/upload/2022/06/image-1654697899593.png" alt="image-1654697899593"></p>
 <ol>
 <li>寄存器寻址ADD R1，R2</li>
 <li>立即数寻址ADD R1，#6</li>
@@ -164,7 +164,7 @@
 <li>缩放寻址ADD R1，80（R2）[R3]</li>
 </ol>
 <p>不同寻址方式使用频率不同<br>最高为立即数寻址和偏移寻址</p>
-<p>物理空间的信息存放问题：<br><img src="https://s2.loli.net/2022/12/26/z4vqwsOPxVlB7c8.png" alt="image-1654698935808.png"><br>如果使用左侧则会降低读入效率，右侧浪费存储空间。</p>
+<p>物理空间的信息存放问题：<br><img src="/upload/2022/06/image-1654698935808.png" alt="image-1654698935808"><br>如果使用左侧则会降低读入效率，右侧浪费存储空间。</p>
 <h1 id="指令系统的设计与优化"><a href="#指令系统的设计与优化" class="headerlink" title="指令系统的设计与优化"></a>指令系统的设计与优化</h1><h2 id="指令系统的设计"><a href="#指令系统的设计" class="headerlink" title="指令系统的设计"></a>指令系统的设计</h2><p>功能设计，格式设计。<br>指令系统的设计需要考虑速度，成本，灵活性</p>
 <h2 id="x3D-x3D-指令系统的基本要求-x3D-x3D"><a href="#x3D-x3D-指令系统的基本要求-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;指令系统的基本要求&#x3D;&#x3D;"></a>&#x3D;&#x3D;指令系统的基本要求&#x3D;&#x3D;</h2><ol>
 <li>完整性：提供的指令对于程序而言足够</li>
@@ -173,10 +173,10 @@
 <li>高效率：速度快</li>
 <li>兼容性：向后兼容</li>
 </ol>
-<h2 id="控制指令"><a href="#控制指令" class="headerlink" title="控制指令"></a>控制指令</h2><p>包括：跳转，分支。<br>对于控制指令而言，分支指令最为常用。<br>分支条件的方法：<br><img src="https://s2.loli.net/2022/12/26/vuBTo5LRIZGSxnC.png" alt="image-1655605265132.png"></p>
+<h2 id="控制指令"><a href="#控制指令" class="headerlink" title="控制指令"></a>控制指令</h2><p>包括：跳转，分支。<br>对于控制指令而言，分支指令最为常用。<br>分支条件的方法：<br><img src="/upload/2022/06/image-1655605265132.png" alt="image-1655605265132"></p>
 <h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h3><p>&#x3D;&#x3D;使用频率最高的用最短的编码。&#x3D;&#x3D;<br>构造方式：哈夫曼树<br>缺点：变长，难以处理。<br>改进：使用几种固定长度的编码，但是也是概率高的用短的。</p>
-<h3 id="操作码优化程度的判定"><a href="#操作码优化程度的判定" class="headerlink" title="操作码优化程度的判定"></a>操作码优化程度的判定</h3><p>信息熵：<br><img src="https://s2.loli.net/2022/12/26/YHrMLRnwVOdXs3G.png" alt="image-1654865460945.png"><br>信息冗余计算&#x3D;(实际平均编码长度-理论最短平均长度)&#x2F;实际平均编码长度 *100% </p>
-<h3 id="等长扩展码"><a href="#等长扩展码" class="headerlink" title="等长扩展码"></a>等长扩展码</h3><p>15&#x2F;15&#x2F;15编码 每一轮的1111作为扩展位<br>8&#x2F;64&#x2F;512编码 每四位选第一为做扩展位<br><img src="https://s2.loli.net/2022/12/26/wdUIumbtvDNCQ37.png" alt="image-1654867059473.png"></p>
+<h3 id="操作码优化程度的判定"><a href="#操作码优化程度的判定" class="headerlink" title="操作码优化程度的判定"></a>操作码优化程度的判定</h3><p>信息熵：<br><img src="/upload/2022/06/image-1654865460945.png" alt="image-1654865460945"><br>信息冗余计算&#x3D;(实际平均编码长度-理论最短平均长度)&#x2F;实际平均编码长度 *100% </p>
+<h3 id="等长扩展码"><a href="#等长扩展码" class="headerlink" title="等长扩展码"></a>等长扩展码</h3><p>15&#x2F;15&#x2F;15编码 每一轮的1111作为扩展位<br>8&#x2F;64&#x2F;512编码 每四位选第一为做扩展位<br><img src="/upload/2022/06/image-1654867059473.png" alt="image-1654867059473"></p>
 <h3 id="定长操作码：目前常用"><a href="#定长操作码：目前常用" class="headerlink" title="定长操作码：目前常用"></a>定长操作码：目前常用</h3><p>优点：编译速度快<br>缺点：存储空间占用大</p>
 <h3 id="x3D-x3D-编码格式-x3D-x3D"><a href="#x3D-x3D-编码格式-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;编码格式&#x3D;&#x3D;"></a>&#x3D;&#x3D;编码格式&#x3D;&#x3D;</h3><ol>
 <li>可变长度编码格式：</li>
@@ -204,9 +204,9 @@
 </ol>
 <p>MIPS指令格式分类：</p>
 <ol>
-<li>I类指令（立即跳转），如load，store，立即数，分支，寄存器跳转<br><img src="https://s2.loli.net/2022/12/26/lmGUucT7dbPFwHM.png" alt="image-1655713665768.png"></li>
-<li>R类指令（Register）<br><img src="https://s2.loli.net/2022/12/26/54I7dHwUo1KPOjE.png" alt="image-1655713848575.png"></li>
-<li>J类指令（Jump）<br><img src="https://s2.loli.net/2022/12/26/UTvIM4kderJ2QXc.png" alt="image-1655713918821.png"></li>
+<li>I类指令（立即跳转），如load，store，立即数，分支，寄存器跳转<br><img src="/upload/2022/06/image-1655713665768.png" alt="image-1655713665768"></li>
+<li>R类指令（Register）<br><img src="/upload/2022/06/image-1655713848575.png" alt="image-1655713848575"></li>
+<li>J类指令（Jump）<br><img src="/upload/2022/06/image-1655713918821.png" alt="image-1655713918821"></li>
 </ol>
  
       <!-- reward -->
@@ -285,19 +285,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0-computerarchitecture03/" class="article-nav-link">
+      <a href="/2022/06/08/2022%E5%B9%B46%E6%9C%888%E6%97%A5MEME-enderman/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            计算机体系结构笔记第三章
+            2022年6月8日MEME
           
         </div>
       </a>
     
     
-      <a href="/2022/06/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E7%AB%A0-computerarchitecture01/" class="article-nav-link">
+      <a href="/2022/06/08/%E3%80%8A%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">计算机体系结构笔记第一章</div>
+        <div class="article-nav-title">《信息安全基础》复习大纲</div>
       </a>
     
   </nav>
