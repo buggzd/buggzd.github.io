@@ -3520,4 +3520,217 @@ SSH的含义</p>
     <url>/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B/</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>SteamDeck折腾记录-02-基本使用</title>
+    <url>/2023/01/14/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-02-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="SteamDeck的基本使用"><a href="#SteamDeck的基本使用" class="headerlink" title="SteamDeck的基本使用"></a>SteamDeck的基本使用</h1><blockquote>
+<p>建议先配置网络环境再进行操作 <a href="https://www.dongjunto.xyz/archives/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-02-%E7%BB%99steamdeck%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F">给SteamDeck网络加速</a></p>
+</blockquote>
+<h2 id="普通游玩"><a href="#普通游玩" class="headerlink" title="普通游玩"></a>普通游玩</h2><p>如果不想折腾别的，刷完机登录后就可以开始下载游戏和游玩了。<br><del>（你买了steamdeck居然不折腾？）</del></p>
+<h3 id="下载steam游戏"><a href="#下载steam游戏" class="headerlink" title="下载steam游戏"></a>下载steam游戏</h3><blockquote>
+<p>知识拓展：<br>steamdeck上装的是Linux系统，但是大部分游戏都是window平台的，因此steam使用了Proton兼容层来运行这些游戏。<br>名词：<br>Proton：Proton 是允许 Windows 游戏在 Linux 上运行的兼容层，它通过使用修改过的 Wine 版本和一套高性能图形 API 实现来达到这一点。<br>支持的API有 DirectX 9&#x2F;10&#x2F;11&#x2F;12</p>
+</blockquote>
+<p>SteamDeck上游戏被官方分为四种兼容性类别。</p>
+<blockquote>
+<p>兼容性验证：<a href="https://www.steamdeck.com/zh-cn/verified">https://www.steamdeck.com/zh-cn/verified</a></p>
+</blockquote>
+<p><img src="https://s2.loli.net/2023/01/14/FPkEqAtGsNR8Oow.png" alt="image.png"><br>在steamdeck商店和库中浏览游戏时，会看到相应的兼容性徽章。</p>
+<blockquote>
+<p>其实有很多【可玩】级兼容性的游戏也可以完美运行，比如“尼尔：机械纪元”，“逆转裁判”等。</p>
+</blockquote>
+<p>除了必须要键鼠操作的游戏，如“文明”，“dota2”，“矮人要塞”等，其他只要是支持手柄的，都可以试试。（一些老游戏可能会画面不兼容）</p>
+<h3 id="Steam家庭共享"><a href="#Steam家庭共享" class="headerlink" title="Steam家庭共享"></a>Steam家庭共享</h3><blockquote>
+<p>Steam官网家庭共享： <a href="https://store.steampowered.com/promotion/familysharing">https://store.steampowered.com/promotion/familysharing</a></p>
+</blockquote>
+<p>既然都是steam了，当然是可以白嫖好友的共享库啦！</p>
+<ol>
+<li>登录好友设备</li>
+<li>设置家庭共享添加设备</li>
+<li>下载好友游戏</li>
+</ol>
+<p>基本过程和PC上添加好友家庭共享是一样的。<br><strong>但是玩共享游戏的时候需要联网，并且朋友不能在使用库，离线登录是玩不了的。</strong></p>
+<h2 id="SteamOS-Desktop快捷键"><a href="#SteamOS-Desktop快捷键" class="headerlink" title="SteamOS Desktop快捷键"></a>SteamOS Desktop快捷键</h2><p>每个按键上都有标识按键名词，不清楚的按键直接看机子就行。<br>系统默认快捷键：</p>
+<ul>
+<li>steam+B 长按&#x3D;强制游戏关闭</li>
+<li>steam+X 释放按压&#x3D;显示键盘</li>
+<li>steam+L1&#x3D;切换放大器</li>
+<li>steam+R1&#x3D;截图</li>
+<li>steam+L2&#x3D;鼠标右键点击</li>
+<li>steam+R2&#x3D;鼠标左键点击</li>
+<li>steam+R2&#x3D;鼠标左键点击</li>
+<li>steam+右摇杆 R3&#x3D;摇杆鼠标</li>
+<li>steam+右触摸板Trackpad 移动&#x3D;作鼠标用</li>
+<li>steam+右触摸板Trackpad 按压&#x3D;鼠标左键点击</li>
+<li>steam+左摇杆L3 ↑↓&#x3D;调高屏幕亮度和降低屏幕亮度</li>
+<li>steam+十字键 D-pad 右&#x3D;回车键</li>
+<li>steam+十字键 D-pad 下&#x3D;Tab键</li>
+<li>steam+十字键 D-pad 左&#x3D;Esc键</li>
+</ul>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>steam</tag>
+        <tag>steamdeck</tag>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SteamDeck折腾记录-03-网络加速</title>
+    <url>/2023/01/15/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-03-%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<h1 id="给SteamDeck网络加速"><a href="#给SteamDeck网络加速" class="headerlink" title="给SteamDeck网络加速"></a>给SteamDeck网络加速</h1><p>本篇只会涉及技术讨论，具体实现方法请自行实现。</p>
+<blockquote>
+<p><strong>建议小白使用加速器或者购买加速盒子。</strong></p>
+</blockquote>
+<h1 id="路由器解决方案"><a href="#路由器解决方案" class="headerlink" title="路由器解决方案"></a>路由器解决方案</h1><h2 id="使用UU加速"><a href="#使用UU加速" class="headerlink" title="使用UU加速"></a>使用UU加速</h2><blockquote>
+<p>UU官方教程: <a href="https://uu.163.com/router/azznan.html">https://uu.163.com/router/azznan.html</a></p>
+</blockquote>
+<p>我的路由器是华硕RT-AC86U梅林固件。在上面可以直接安装UU加速器的插件，然后提供全局游戏加速服务。</p>
+<h2 id="使用科学上网代理加速"><a href="#使用科学上网代理加速" class="headerlink" title="使用科学上网代理加速"></a>使用科学上网代理加速</h2><blockquote>
+<p>科学上网插件: <a href="https://github.com/hq450/fancyss/tree/master/fancyss_hnd/fancyss">https://github.com/hq450/fancyss/tree/master/fancyss_hnd/fancyss</a></p>
+</blockquote>
+<p>华硕路由器也可以安装科学上网插件，然后在科学上网插件中对SteamDeck设备添加游戏代理，这将会把steamdeck的所有端口都走代理。(<em>注意流量！我下两天游戏流量用了500G</em>)</p>
+<h1 id="电脑http代理"><a href="#电脑http代理" class="headerlink" title="电脑http代理"></a>电脑http代理</h1><p>如果没有支持的路由器，也可以用电脑当做http代理。</p>
+<h2 id="clash代理"><a href="#clash代理" class="headerlink" title="clash代理"></a>clash代理</h2><blockquote>
+<p>让steamdeck通过代理上网：<a href="https://ohmydeck.net/d/1">https://ohmydeck.net/d/1</a></p>
+</blockquote>
+<p>电脑上如果有cfw（clash for Windows），打开Allow Lan，然后查看电脑的ipv4地址，和clash的代理端口号Port，在steamdeck网络设置中手动设置代理输入 IP地址:端口号 。<br><img src="https://s2.loli.net/2023/01/15/qcYg4Ey5waNUxdm.png" alt="image.png"></p>
+<h2 id="SSR代理"><a href="#SSR代理" class="headerlink" title="SSR代理"></a>SSR代理</h2><blockquote>
+<p>SSR代理参考资料：<a href="https://ssr.tools/116">https://ssr.tools/116</a></p>
+</blockquote>
+<p>用SSR做代理的方法和Clash是一样的，在SSR选项设置里勾选上允许来自局域网的连接，然后设置一个端接口号，在steamdeck网络设置代理 IP地址：端口号<br><img src="https://s2.loli.net/2023/01/13/azCvLUT5BJ1rFGN.png" alt="image.png"></p>
+<h1 id="安装Steam-加速"><a href="#安装Steam-加速" class="headerlink" title="安装Steam++加速"></a>安装Steam++加速</h1><blockquote>
+<p>参考：<a href="https://tieba.baidu.com/p/8027669666">https://tieba.baidu.com/p/8027669666</a></p>
+<p>视频：<a href="https://www.bilibili.com/video/BV1cT411F7ex">https://www.bilibili.com/video/BV1cT411F7ex</a></p>
+<p>Steam++下载：<a href="https://steampp.net/">https://steampp.net/</a></p>
+</blockquote>
+<p>从 <a href="https://steampp.net/">https://steampp.net/</a> 下载Linux版。</p>
+<p>参考文章中是使用SteamDeck的桌面上的浏览器，但是如果你连Discover商城都打不开，也可以通过U盘下载，然后拷贝到SteamDeck上。</p>
+<p><strong>SteamOS在更新了3.4后，桌面链接发生了变化，如果按照参考教程的方法做是打不开的。</strong><br>一个简单的方法是这样的：</p>
+<ol>
+<li>复制桌面上任意一个应用</li>
+<li>修改复制的应用名称</li>
+<li>使用文本编辑器打开这个应用</li>
+<li>修改exec&#x3D; 后面的部分，改为steam++的路径</li>
+</ol>
+<p>记得给信任证书：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">这里的路径需要注意一下前面那个是你Steam++的安装路径</span></span><br><span class="line">sudo cp /home/deck/.local/share/Steam++/SteamTools.Certificate.cer /etc/ca-certificates/trust-source/anchors</span><br><span class="line">sudo trust extract-compat</span><br></pre></td></tr></table></figure>
+<p>不信任证书可能会爆错，或者已经开始加速了但是依然无法访问steam社区。</p>
+<h1 id="更换flathub镜像源"><a href="#更换flathub镜像源" class="headerlink" title="更换flathub镜像源"></a>更换flathub镜像源</h1><blockquote>
+<p>上交大flathub镜像：<a href="https://mirror.sjtu.edu.cn/docs/flathub">https://mirror.sjtu.edu.cn/docs/flathub</a></p>
+<p>参考：<a href="https://www.bilibili.com/video/BV1ke4y1t76w">https://www.bilibili.com/video/BV1ke4y1t76w</a></p>
+</blockquote>
+<p>在steamOS desktop上Discover商店下载是使用的flathub，国内裸连速度很慢，可以使用上交大的flathub镜像源下载。（据说Discover商店可以裸连然后等几个小时能加载出来）<br>打开Konsole（这是steamOS的控制台）<br>指令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h1><ol>
+<li><p>sudo用不了？<br>第一次使用指令的时候需要设置账号密码。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<p>然后输入密码（linux不会显示密码输入）</p>
+</li>
+<li><p>系统文件是只读（read only）<br>初始steamOS系统文件是read only</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo steamos-readonly disable</span><br></pre></td></tr></table></figure></li>
+<li><p>Steam++加速无效<br>多半是证书没有配置。</p>
+</li>
+<li><p>clash或者ssr的http代理无效<br>首先要确保steamdeck和电脑在同一局域网内，电脑上打开cmd然后使用ping命令，确保能够ping通steamdeck。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>steam</tag>
+        <tag>steamdeck</tag>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SteamDeck折腾记录-04-desktop使用</title>
+    <url>/2023/01/16/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-04-desktop%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>SteamDeck有两个交互界面，一个是自带的SteamOS游戏模式（deck模式），另一个就是桌面模式（desktop）。<br>几乎所有折腾的时间都是花在desktop上，因此我认为有必要了解一下desktop的使用。</p>
+<h1 id="如何-【进入-退出】-desktop"><a href="#如何-【进入-退出】-desktop" class="headerlink" title="如何 【进入|退出】 desktop"></a>如何 【进入|退出】 desktop</h1><h2 id="进入"><a href="#进入" class="headerlink" title="进入"></a>进入</h2><p>长按电源键3s，就会弹出【进入桌面模式】。或者在 STEAM 菜单中，选择“电源”，然后选择“切换至桌面”。</p>
+<p><em>注意：不要按久了，长按7s就是直接断电（和PC一样）</em></p>
+<h2 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h2><p>在桌面模式中，有一个“Return to Gaming Mode”（返回游戏模式）链接。 选择该链接即可返回标准的 Steam Deck UI。也可以在系统菜单中通过“Log Off”（退出）返回。</p>
+<h1 id="desktop的交互逻辑"><a href="#desktop的交互逻辑" class="headerlink" title="desktop的交互逻辑"></a>desktop的交互逻辑</h1><h2 id="使用外接键鼠（推荐）"><a href="#使用外接键鼠（推荐）" class="headerlink" title="使用外接键鼠（推荐）"></a>使用外接键鼠（推荐）</h2><p>在桌面模式下，强烈推荐外接键鼠。可以用蓝牙键鼠连接，也可以直接用type-C扩展口外接键鼠。基本交互和Windows没有多少差异。</p>
+<h2 id="不使用外接键鼠"><a href="#不使用外接键鼠" class="headerlink" title="不使用外接键鼠"></a>不使用外接键鼠</h2><blockquote>
+<p>更改桌面模式按键映射：<a href="https://www.bilibili.com/video/BV1Y14y1h771/">https://www.bilibili.com/video/BV1Y14y1h771/</a></p>
+</blockquote>
+<p>如果没有或者不想使用键鼠，其实也可以使用手柄，但是很不方便。</p>
+<p>鼠标：</p>
+<ul>
+<li>移动：使用右侧触控板可以模拟鼠标移动。</li>
+<li>左键：按下触控板或者A键或者右扳机（RB）可以模拟鼠标左键点击。</li>
+<li>右键：按下左扳机键（LB）模拟鼠标右键。</li>
+<li>滚轮：左触控板上下或者左右拨动（不要斜着滑，建议贴着一边滑）</li>
+</ul>
+<p>键盘：</p>
+<blockquote>
+<p>首先要确保在desktop里登录了Steam（离线登录也行），否则键盘可能呼出失败。</p>
+</blockquote>
+<p>按Steam键+X键 呼出虚拟键盘，或者连按两下X键。<br>虚拟键盘上有手柄的一些快捷键，照着按就行。</p>
+<h1 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h1><h2 id="Konsole"><a href="#Konsole" class="headerlink" title="Konsole"></a>Konsole</h2><p>这个是桌面模式下的控制台，基本你看到的帖子说要输什么命令的，都是在这里输入。</p>
+<h2 id="Discover商店（-Discover-Software-Cente）"><a href="#Discover商店（-Discover-Software-Cente）" class="headerlink" title="Discover商店（ Discover Software Cente）"></a>Discover商店（ Discover Software Cente）</h2><p>下载软件都在这，但是国内打开多半会有问题，据说第一次打开裸连等几个小时能加载出来？</p>
+<h2 id="资源管理器Dolphin"><a href="#资源管理器Dolphin" class="headerlink" title="资源管理器Dolphin"></a>资源管理器Dolphin</h2><p>这个和Windows是资源管理器是一样的，但是感觉比Windows的好用不少，并且支持<a href="https://zhuanlan.zhihu.com/p/110788184">SMB服务</a>。你可以在电脑上开启SMB服务，然后通过局域网和deck传输文件。</p>
+<h2 id="Kwrite"><a href="#Kwrite" class="headerlink" title="Kwrite"></a>Kwrite</h2><p>一个带GUI的文本编辑器，这是一个更人性化的文本编辑器，操作逻辑和Windows相同。</p>
+<h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><blockquote>
+<p>菜鸟教程Vim： <a href="https://www.runoob.com/linux/linux-vim.html">https://www.runoob.com/linux/linux-vim.html</a></p>
+</blockquote>
+<p>这个一般是在控制台用的文本编辑器，功能丰富（所以需要一段时间上手）具体使用方法请参考使用手册。<br>这是Vim的快捷键：</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch1.gif" alt="img"></p>
+<h1 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h1><h2 id="输入法添加中文"><a href="#输入法添加中文" class="headerlink" title="输入法添加中文"></a>输入法添加中文</h2><blockquote>
+<p>参考： <a href="https://tieba.baidu.com/p/8132266420">https://tieba.baidu.com/p/8132266420</a></p>
+</blockquote>
+<p>桌面模式自带的ibus输入法。</p>
+<p>右键右下角的输入法-&gt;preference-&gt;input method-&gt;add</p>
+<p>搜索Chinese添加。</p>
+<h2 id="桌面模式汉化"><a href="#桌面模式汉化" class="headerlink" title="桌面模式汉化"></a>桌面模式汉化</h2><blockquote>
+<p>百度贴吧：<a href="https://tieba.baidu.com/p/8199932616">https://tieba.baidu.com/p/8199932616</a></p>
+<p>原贴（繁体）： <a href="https://forum.gamer.com.tw/C.php?bsn=60599&snA=39235">https://forum.gamer.com.tw/C.php?bsn=60599&amp;snA=39235</a></p>
+<p>汉化脚本：<a href="https://gist.github.com/david082321/42c5007b21ef11e854a9bb8fc271bbc7">https://gist.github.com/david082321/42c5007b21ef11e854a9bb8fc271bbc7</a></p>
+</blockquote>
+<p>其实不是很推荐中文，因为很多游戏或者应用是不支持中文路径的。</p>
+<h1 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h1><h2 id="使用Discover商店安装"><a href="#使用Discover商店安装" class="headerlink" title="使用Discover商店安装"></a>使用Discover商店安装</h2><blockquote>
+<p>参考：安装heroic和epic游戏 <a href="https://www.bilibili.com/video/BV1Xv4y1d7TH">https://www.bilibili.com/video/BV1Xv4y1d7TH</a></p>
+</blockquote>
+<p>如果你可以打开Discover商店，你可以直接从上面下载应用。</p>
+<h2 id="使用命令安装"><a href="#使用命令安装" class="headerlink" title="使用命令安装"></a>使用命令安装</h2><blockquote>
+<p>flathub官网：<a href="https://flathub.org/home">https://flathub.org/home</a><br>配置flathub镜像：<a href="https://www.dongjunto.xyz/archives/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-02-%E7%BB%99steamdeck%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/#toc-head-8">https://www.dongjunto.xyz/archives/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-02-%E7%BB%99steamdeck%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/#toc-head-8</a></p>
+</blockquote>
+<p>你可以在<a href="https://flathub.org/home">flathub官网</a>上浏览应用市场，挑选你要用的程序。</p>
+<p>例如我想安装Chrome<br><img src="https://s2.loli.net/2023/01/15/XVqICLUR3r6vfBo.png" alt="image.png"><br>翻到下方Command line instructions然后复制install的。<br><img src="https://s2.loli.net/2023/01/15/eMh3Gdt5JlSTfAu.png" alt="image.png"><br>打开Konsole输入sudo+复制的命令（如果你没有sudo权限，需要先<a href="https://www.dongjunto.xyz/archives/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-25-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8#toc-head-0">设置密码</a>）。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo flatpak install flathub com.google.Chrome</span><br></pre></td></tr></table></figure>
+<p>然后输入密码，照提示输入1或者0（如果是system就是全局安装），然后y确定。<br>安装完成就可以在应用导航栏看到（和Windows一样）</p>
+<h2 id="安装flathub上没有的Linux程序"><a href="#安装flathub上没有的Linux程序" class="headerlink" title="安装flathub上没有的Linux程序"></a>安装flathub上没有的Linux程序</h2><p>这部分会使用pacman安装，或者下载二进制文件，编译什么的，难度较高需要有Linux使用基础（有经验的也不用看这文章了吧）。</p>
+<p><strong>使用pacman安装</strong></p>
+<blockquote>
+<p>pacman使用教程：<a href="https://www.jianshu.com/p/999700de4023">https://www.jianshu.com/p/999700de4023</a></p>
+</blockquote>
+<p>第一次使用pacman需要<a href="https://www.dongjunto.xyz/archives/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-25-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8#toc-head-2">初始化秘钥</a>。</p>
+<p>一般流程</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以Firefox为例，如果要装别的需要替换Firefox</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看包</span></span><br><span class="line">sudo pacman -Ss firefox</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装</span></span><br><span class="line">sudo pacman -S firefox</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">卸载</span></span><br><span class="line">sudo pacman -R firefox</span><br></pre></td></tr></table></figure>
+<p><strong>直接下载可运行的二进制包</strong></p>
+<blockquote>
+<p>参考Steam++安装：<a href="https://www.bilibili.com/video/BV1cT411F7ex/">https://www.bilibili.com/video/BV1cT411F7ex/</a></p>
+</blockquote>
+<p>需要选择x86_64架构的二进制包。</p>
+<h2 id="添加linux程序到游戏模式（deck）"><a href="#添加linux程序到游戏模式（deck）" class="headerlink" title="添加linux程序到游戏模式（deck）"></a>添加linux程序到游戏模式（deck）</h2><p>你可以把flathub上下的程序添加到steam中，然后在游戏模式就可以看到对应的程序。<br>右键下载的应用，直接就有一个添加到steam。</p>
+<h2 id="安装Windows应用"><a href="#安装Windows应用" class="headerlink" title="安装Windows应用"></a>安装Windows应用</h2><blockquote>
+<p>参考：<a href="https://www.bilibili.com/read/cv19134473">https://www.bilibili.com/read/cv19134473</a></p>
+</blockquote>
+<p>因为Steamdeck自带兼容层，只需要把安装好的程序（.exe）添加到steam，然后兼容性设置强制使用兼容层。对于不同的游戏可能需要使用不同的兼容层。</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><blockquote>
+<p>Steam官方：<a href="https://help.steampowered.com/zh-cn/faqs/view/671a-4453-e8d2-323c">https://help.steampowered.com/zh-cn/faqs/view/671a-4453-e8d2-323c</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+      <tags>
+        <tag>steam</tag>
+        <tag>steamdeck</tag>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
 </search>

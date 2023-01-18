@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>steamdeck折腾记录02-基础上手 |  Junto&#39;s blog</title>
+      <title>SteamDeck折腾记录-03-网络加速 |  Junto&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-steamdeck折腾记录02-基础上手-steamdeck折腾记录02-基础上手"
+  id="post-SteamDeck折腾记录-03-网络加速"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  steamdeck折腾记录02-基础上手
+  SteamDeck折腾记录-03-网络加速
 </h1>
  
 
@@ -75,15 +75,19 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B/" class="article-date">
-  <time datetime="2023-01-13T07:59:45.153Z" itemprop="datePublished">2023-01-13</time>
-</a>   
+      <a href="/2023/01/15/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-03-%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/" class="article-date">
+  <time datetime="2023-01-14T18:25:27.000Z" itemprop="datePublished">2023-01-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">844</span>
         </span>
     </span>
 
@@ -92,20 +96,79 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h1 id="给SteamDeck网络加速"><a href="#给SteamDeck网络加速" class="headerlink" title="给SteamDeck网络加速"></a>给SteamDeck网络加速</h1><p>本篇只会涉及技术讨论，具体实现方法请自行实现。</p>
+<blockquote>
+<p><strong>建议小白使用加速器或者购买加速盒子。</strong></p>
+</blockquote>
+<h1 id="路由器解决方案"><a href="#路由器解决方案" class="headerlink" title="路由器解决方案"></a>路由器解决方案</h1><h2 id="使用UU加速"><a href="#使用UU加速" class="headerlink" title="使用UU加速"></a>使用UU加速</h2><blockquote>
+<p>UU官方教程: <a target="_blank" rel="noopener" href="https://uu.163.com/router/azznan.html">https://uu.163.com/router/azznan.html</a></p>
+</blockquote>
+<p>我的路由器是华硕RT-AC86U梅林固件。在上面可以直接安装UU加速器的插件，然后提供全局游戏加速服务。</p>
+<h2 id="使用科学上网代理加速"><a href="#使用科学上网代理加速" class="headerlink" title="使用科学上网代理加速"></a>使用科学上网代理加速</h2><blockquote>
+<p>科学上网插件: <a target="_blank" rel="noopener" href="https://github.com/hq450/fancyss/tree/master/fancyss_hnd/fancyss">https://github.com/hq450/fancyss/tree/master/fancyss_hnd/fancyss</a></p>
+</blockquote>
+<p>华硕路由器也可以安装科学上网插件，然后在科学上网插件中对SteamDeck设备添加游戏代理，这将会把steamdeck的所有端口都走代理。(<em>注意流量！我下两天游戏流量用了500G</em>)</p>
+<h1 id="电脑http代理"><a href="#电脑http代理" class="headerlink" title="电脑http代理"></a>电脑http代理</h1><p>如果没有支持的路由器，也可以用电脑当做http代理。</p>
+<h2 id="clash代理"><a href="#clash代理" class="headerlink" title="clash代理"></a>clash代理</h2><blockquote>
+<p>让steamdeck通过代理上网：<a target="_blank" rel="noopener" href="https://ohmydeck.net/d/1">https://ohmydeck.net/d/1</a></p>
+</blockquote>
+<p>电脑上如果有cfw（clash for Windows），打开Allow Lan，然后查看电脑的ipv4地址，和clash的代理端口号Port，在steamdeck网络设置中手动设置代理输入 IP地址:端口号 。<br><img src="https://s2.loli.net/2023/01/15/qcYg4Ey5waNUxdm.png" alt="image.png"></p>
+<h2 id="SSR代理"><a href="#SSR代理" class="headerlink" title="SSR代理"></a>SSR代理</h2><blockquote>
+<p>SSR代理参考资料：<a target="_blank" rel="noopener" href="https://ssr.tools/116">https://ssr.tools/116</a></p>
+</blockquote>
+<p>用SSR做代理的方法和Clash是一样的，在SSR选项设置里勾选上允许来自局域网的连接，然后设置一个端接口号，在steamdeck网络设置代理 IP地址：端口号<br><img src="https://s2.loli.net/2023/01/13/azCvLUT5BJ1rFGN.png" alt="image.png"></p>
+<h1 id="安装Steam-加速"><a href="#安装Steam-加速" class="headerlink" title="安装Steam++加速"></a>安装Steam++加速</h1><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/8027669666">https://tieba.baidu.com/p/8027669666</a></p>
+<p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cT411F7ex">https://www.bilibili.com/video/BV1cT411F7ex</a></p>
+<p>Steam++下载：<a target="_blank" rel="noopener" href="https://steampp.net/">https://steampp.net/</a></p>
+</blockquote>
+<p>从 <a target="_blank" rel="noopener" href="https://steampp.net/">https://steampp.net/</a> 下载Linux版。</p>
+<p>参考文章中是使用SteamDeck的桌面上的浏览器，但是如果你连Discover商城都打不开，也可以通过U盘下载，然后拷贝到SteamDeck上。</p>
+<p><strong>SteamOS在更新了3.4后，桌面链接发生了变化，如果按照参考教程的方法做是打不开的。</strong><br>一个简单的方法是这样的：</p>
+<ol>
+<li>复制桌面上任意一个应用</li>
+<li>修改复制的应用名称</li>
+<li>使用文本编辑器打开这个应用</li>
+<li>修改exec&#x3D; 后面的部分，改为steam++的路径</li>
+</ol>
+<p>记得给信任证书：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">这里的路径需要注意一下前面那个是你Steam++的安装路径</span></span><br><span class="line">sudo cp /home/deck/.local/share/Steam++/SteamTools.Certificate.cer /etc/ca-certificates/trust-source/anchors</span><br><span class="line">sudo trust extract-compat</span><br></pre></td></tr></table></figure>
+<p>不信任证书可能会爆错，或者已经开始加速了但是依然无法访问steam社区。</p>
+<h1 id="更换flathub镜像源"><a href="#更换flathub镜像源" class="headerlink" title="更换flathub镜像源"></a>更换flathub镜像源</h1><blockquote>
+<p>上交大flathub镜像：<a target="_blank" rel="noopener" href="https://mirror.sjtu.edu.cn/docs/flathub">https://mirror.sjtu.edu.cn/docs/flathub</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ke4y1t76w">https://www.bilibili.com/video/BV1ke4y1t76w</a></p>
+</blockquote>
+<p>在steamOS desktop上Discover商店下载是使用的flathub，国内裸连速度很慢，可以使用上交大的flathub镜像源下载。（据说Discover商店可以裸连然后等几个小时能加载出来）<br>打开Konsole（这是steamOS的控制台）<br>指令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h1><ol>
+<li><p>sudo用不了？<br>第一次使用指令的时候需要设置账号密码。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<p>然后输入密码（linux不会显示密码输入）</p>
+</li>
+<li><p>系统文件是只读（read only）<br>初始steamOS系统文件是read only</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo steamos-readonly disable</span><br></pre></td></tr></table></figure></li>
+<li><p>Steam++加速无效<br>多半是证书没有配置。</p>
+</li>
+<li><p>clash或者ssr的http代理无效<br>首先要确保steamdeck和电脑在同一局域网内，电脑上打开cmd然后使用ping命令，确保能够ping通steamdeck。</p>
+</li>
+</ol>
+ 
       <!-- reward -->
       
     </div>
@@ -169,30 +232,32 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9502-%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%89%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/01/15/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-03-%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/" rel="tag">steam</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steamdeck/" rel="tag">steamdeck</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2023/01/14/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-02-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="article-nav-link">
+      <a href="/2023/01/16/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-04-desktop%E4%BD%BF%E7%94%A8/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            SteamDeck折腾记录-02-基本使用
+            SteamDeck折腾记录-04-desktop使用
           
         </div>
       </a>
     
     
-      <a href="/2023/01/13/steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F-steamdeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%9501-%E6%8D%A2%E5%9B%BA%E6%80%81%E5%88%B7%E7%B3%BB%E7%BB%9F/" class="article-nav-link">
+      <a href="/2023/01/14/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-02-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">steamdeck折腾记录01-换固态刷系统</div>
+        <div class="article-nav-title">SteamDeck折腾记录-02-基本使用</div>
       </a>
     
   </nav>
