@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>流浪地球2 扫盲 |  Junto&#39;s blog</title>
+      <title>SteamDeck折腾记录-05-Linux进阶 |  Junto&#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-流浪地球2 扫盲"
+  id="post-SteamDeck折腾记录-05-Linux进阶"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  流浪地球2 扫盲
+  SteamDeck折腾记录-05-Linux进阶
 </h1>
  
 
@@ -75,19 +75,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/02/08/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832%20%E6%89%AB%E7%9B%B2/" class="article-date">
-  <time datetime="2023-02-07T17:27:58.000Z" itemprop="datePublished">2023-02-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/">默认分类</a>
-  </div>
-  
+      <a href="/2023/03/04/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-05-Linux%E8%BF%9B%E9%98%B6/" class="article-date">
+  <time datetime="2023-03-04T05:31:51.000Z" itemprop="datePublished">2023-03-04</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.5k</span>
+            <span class="post-count">382</span>
         </span>
     </span>
 
@@ -96,7 +92,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
+            <span class="post-count">1 min</span>
         </span>
     </span>
 </div>
@@ -111,51 +107,22 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>有人和我说流浪地球2不够硬核？</p>
-<p>流浪地球2的很多硬核科幻都没有直接解释含义，还有一些硬核细节就直接是一个镜头一带而过，因此存在一定门槛，这梳理了一些我看到的硬核科幻细节。</p>
-<h1 id="太空电梯"><a href="#太空电梯" class="headerlink" title="太空电梯"></a>太空电梯</h1><p><strong>太空电梯是什么？</strong></p>
-<p>太空电梯是一种人类去往宇宙的设备，是一种科学设想，它和火箭是同一时期被提出的。</p>
-<p><strong>为什么要造太空电梯？</strong></p>
-<p>要制造领航员空间站，月球发动机，需要运输大量的人力物力，如果往返一直使用火箭或者航天器，那么成本是极高的。所以需要太空电梯降低成本，三体中也称太空电梯是地球和宇宙的巴拿马运河。</p>
-<p><strong>为什么电影里太空电梯下降会有白雾？</strong></p>
-<p>白雾是冷却液气化产生的，下降过程中和陨石一样，电梯间与空气摩擦会导致过热，电影中设计了冷却液进行降温。</p>
-<h1 id="太阳风暴"><a href="#太阳风暴" class="headerlink" title="太阳风暴"></a>太阳风暴</h1><p><strong>550C是怎么损坏的？</strong></p>
-<p>电影中夸大了太阳风暴的影响，太阳风暴是的太阳的剧烈活动，一般表象就是电磁干扰。电影中太阳风暴的磁场强度高的惊人，以至于应当于引爆了一颗巨型emp炸弹，极大的电磁场突变带来的就是极高的瞬时电流，这么高的电流足以击穿一切精密电路上的二极管。</p>
-<p><strong>为什么笨笨没有烧掉？</strong></p>
-<p>月球上避难时有一个微不足道的细节，笨笨进入安全屋后，用一个铝箔毯把自己盖住了，这就是对抗emp攻击最有效的方法，电磁屏蔽技术。</p>
-<h1 id="550c底层操作系统实时生成是什么？被黑入后操作系统覆写又是什么？"><a href="#550c底层操作系统实时生成是什么？被黑入后操作系统覆写又是什么？" class="headerlink" title="550c底层操作系统实时生成是什么？被黑入后操作系统覆写又是什么？"></a>550c底层操作系统实时生成是什么？被黑入后操作系统覆写又是什么？</h1><p>众所周知，我们的计算机被分为了软硬件，硬件是实际的电路，软件则是驱动这些硬件的逻辑关系，而操作系统才是真正和硬件直接打交道的软件。</p>
-<p>一般我们组装一些复杂功能的系统，都需要一个底层的操作系统来管理各个硬件，而操作系统中就有各个硬件的驱动代码，而550c的功能就是在原有操作系统运行的过程中，实时动态生成这些操作系统代码，每接入一个设备就自动生成新的操作系统，这大大降低了各功能设备接入的难度。</p>
-<p>同时由于550c是量子计算机，其计算速度比原有计算机速度快的多（和现有超算的速度相比，可能是现有超算上百万倍的速度），因此可以加速月球发动机的建设。</p>
-<p>另外覆写操作系统是一种极端的抵御黑客攻击的方法，类似于得了绝症直接下辈子重开抵御绝症。</p>
-<h1 id="月亮怎么炸的？"><a href="#月亮怎么炸的？" class="headerlink" title="月亮怎么炸的？"></a>月亮怎么炸的？</h1><blockquote>
-<p>科普：月球上有丰富的氦3，根据月球探测的结果，月球上的氦-3含量估计约100万吨以上。氦3是优质的核聚变原料。</p>
-</blockquote>
-<p>引爆月亮的基本原理就是：使用大量核弹同时引爆，核爆的高温会使月球上的氦3发生聚变反应，也就是让月球成为一颗超级氢弹。</p>
-<h1 id="什么是相控阵核爆？为什么要用相控阵核爆？"><a href="#什么是相控阵核爆？为什么要用相控阵核爆？" class="headerlink" title="什么是相控阵核爆？为什么要用相控阵核爆？"></a>什么是相控阵核爆？为什么要用相控阵核爆？</h1><p>相控阵这个词是实际存在的，只是并不是用在核爆上，而是用在通信领域，例如5G通信就是用了相控阵波束成形。</p>
-<p>解释相控阵前需要一些前置物理学常识–波的叠加。<br>如果描述波的方程是线性的，则可以使用叠加原理。这就意味着由在同一空间中传播的两个或多个波的合成振幅，是由每个波单独产生的振幅之和。<br><img src="https://s2.loli.net/2023/02/08/ljHAmUxC1GhZSP5.png" alt="image.png"><br>例如光的干涉现象<br><img src="https://s2.loli.net/2023/02/08/gJojPDqAl7etiNr.png" alt="image.png"><br>在同相位的地方会亮，异相位的地方是暗。</p>
-<p>相控阵就是基于叠加原理，通过多个排列有序的可控波源，在相同方向产生同相波，从而达到束波，聚能的效果。<br><img src="https://s2.loli.net/2023/02/08/lSgzTDKZ4nqyjJ5.png" alt="image.png"></p>
-<p><strong>为什么要用相控阵？</strong></p>
-<p>尽管月球上有大量的氦3，但是想要他们发生聚变反应就需要极高的温度，这个温度即使是所有核弹一起爆炸也无法达到。但是如果把核弹以相控阵的方式排布引爆，其辐射场叠加的温度则足以诱发聚变。</p>
-<h1 id="数字生命"><a href="#数字生命" class="headerlink" title="数字生命"></a>数字生命</h1><p>数字生命一直有一个经典悖论：忒修斯之船</p>
-<blockquote>
-<p>忒修斯之船：如果忒修斯的船上的木头逐渐被替换，直到所有的木头都不是原来的木头，那这艘船还是原来的那艘船吗？</p>
-</blockquote>
-<p>数字生命是一次性替换所有的木头。</p>
-<p>在《赛博朋克2077》中也有和数字生命类似的Relic技术，只不过探讨的侧重点不同。</p>
-<p><strong>人在回路（HITL ）是什么？</strong></p>
-<p>这是人工智能机器学习领域的一种方法，它主要依靠人的智能帮助机器更加智能化。例如前不久大火的ChatGPT就使用了人在回路，通过用户反馈调参。</p>
-<blockquote>
-<p>参考：<br>维基百科编者. 太空電梯[G&#x2F;OL]. 维基百科, 2023(20230124)[2023-01-24]. <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E5%A4%AA%E7%A9%BA%E9%9B%BB%E6%A2%AF&oldid=75664572">https://zh.wikipedia.org/w/index.php?title=%E5%A4%AA%E7%A9%BA%E9%9B%BB%E6%A2%AF&amp;oldid=75664572</a>.</p>
-</blockquote>
-<blockquote>
-<p>维基百科编者. 相控阵[G&#x2F;OL]. 维基百科, 2022(20221129)[2022-11-29]. <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E7%9B%B8%E6%8E%A7%E9%98%B5&oldid=74838774">https://zh.wikipedia.org/w/index.php?title=%E7%9B%B8%E6%8E%A7%E9%98%B5&amp;oldid=74838774</a>.</p>
-</blockquote>
-<blockquote>
-<p>维基百科编者. 叠加原理[G&#x2F;OL]. 维基百科, 2021(20210426)[2021-04-26]. <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E5%8F%A0%E5%8A%A0%E5%8E%9F%E7%90%86&oldid=65365763">https://zh.wikipedia.org/w/index.php?title=%E5%8F%A0%E5%8A%A0%E5%8E%9F%E7%90%86&amp;oldid=65365763</a>.</p>
-</blockquote>
-<blockquote>
-<p>人在回路（Human in the loop)学习中… - 咪咕班克斯的文章 - 知乎<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343074171">https://zhuanlan.zhihu.com/p/343074171</a></p>
-</blockquote>
+  <h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>SSH是Secure Shell的缩写，是一种安全的网络协议，主要用于远程登录和安全数据传输。大部分联网的Linux服务器都是使用ssh连接管理。</p>
+<p>在steamdeck上使用ssh连接，steamdeck就可以成为一台Linux服务器，这将极大的扩展steamdeck的玩法，（你甚至可以在上面装mc服务器跑）。</p>
+<h2 id="steamdeck上开启ssh服务"><a href="#steamdeck上开启ssh服务" class="headerlink" title="steamdeck上开启ssh服务"></a>steamdeck上开启ssh服务</h2><p>需要在steamdeck上安装openSSH，开启服务。<br>使用packman安装openssh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S openssh</span><br></pre></td></tr></table></figure>
+<p>开启sshd服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable sshd</span><br></pre></td></tr></table></figure>
+<p>查看sshd是否开启</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
+<p>ssh服务走的是网络的22号端口，如果有问题可以看一下这个端口是否阻塞了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an|grep 22</span><br></pre></td></tr></table></figure>
+<h2 id="PC上使用SSH服务连接steamdeck"><a href="#PC上使用SSH服务连接steamdeck" class="headerlink" title="PC上使用SSH服务连接steamdeck"></a>PC上使用SSH服务连接steamdeck</h2><h3 id="连接steamdeck"><a href="#连接steamdeck" class="headerlink" title="连接steamdeck"></a>连接steamdeck</h3><p>虽然Windows自带ssh连接，但是建议下载一个ssh连接工具，例如PuTTY，OPENSSH，MobaXterm。我使用的是MobaXterm。</p>
+<p>打开MobaXterm后，新建session，Remote host填写steamdeck的ip地址，这里需要注意pc和steamdeck应该在同一局域网内，不知道steamdeck的ip地址的可以在路由器后台查看。<br><img src="https://s2.loli.net/2023/03/04/2LsgVt7bjDJdYWX.png" alt="image.png"></p>
+<p>连接后输入steamdeck的账号名，默认是deck，密码是最初设置的steamdeck的sudo密码。</p>
+<p>这样你就拥有了一个Linux操作系统的小服务器了，强烈建议正在学Linux的同学折腾折腾。<br><img src="https://s2.loli.net/2023/03/04/pNZqxgcOei963Pl.png" alt="image.png"></p>
+<h3 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h3><p>使用ssh后，可以方便的和steamdeck进行双向文件传输，特别是在使用了ssh连接工具后，操作逻辑就和Windows一样，拖拽即可。</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV188411h76z">https://www.bilibili.com/video/BV188411h76z</a></p>
  
       <!-- reward -->
       
@@ -220,32 +187,21 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/02/08/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832%20%E6%89%AB%E7%9B%B2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://buggzd.github.io/2023/03/04/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-05-Linux%E8%BF%9B%E9%98%B6/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E5%B9%BB/" rel="tag">科幻</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%91%E6%99%AE/" rel="tag">科普</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2023/03/04/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-05-Linux%E8%BF%9B%E9%98%B6/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            SteamDeck折腾记录-05-Linux进阶
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/01/16/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-04-desktop%E4%BD%BF%E7%94%A8/" class="article-nav-link">
+      <a href="/2023/02/08/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832%20%E6%89%AB%E7%9B%B2/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">SteamDeck折腾记录-04-desktop使用</div>
+        <div class="article-nav-title">流浪地球2 扫盲</div>
       </a>
     
   </nav>

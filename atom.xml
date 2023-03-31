@@ -6,7 +6,7 @@
   <link href="https://buggzd.github.io/atom.xml" rel="self"/>
   
   <link href="https://buggzd.github.io/"/>
-  <updated>2023-02-08T01:32:24.574Z</updated>
+  <updated>2023-03-04T13:32:03.345Z</updated>
   <id>https://buggzd.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SteamDeck折腾记录-05-Linux进阶</title>
+    <link href="https://buggzd.github.io/2023/03/04/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-05-Linux%E8%BF%9B%E9%98%B6/"/>
+    <id>https://buggzd.github.io/2023/03/04/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-05-Linux%E8%BF%9B%E9%98%B6/</id>
+    <published>2023-03-04T05:31:51.000Z</published>
+    <updated>2023-03-04T13:32:03.345Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SSH连接&quot;&gt;&lt;a href=&quot;#SSH连接&quot; class=&quot;headerlink&quot; title=&quot;SSH连接&quot;&gt;&lt;/a&gt;SSH连接&lt;/h1&gt;&lt;p&gt;SSH是Secure</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>流浪地球2 扫盲</title>
@@ -82,7 +103,7 @@
     <link href="https://buggzd.github.io/2023/01/15/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-03-%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/"/>
     <id>https://buggzd.github.io/2023/01/15/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-03-%E7%BD%91%E7%BB%9C%E5%8A%A0%E9%80%9F/</id>
     <published>2023-01-14T18:25:27.000Z</published>
-    <updated>2023-01-15T04:36:46.446Z</updated>
+    <updated>2023-03-31T14:55:50.125Z</updated>
     
     
       
@@ -552,34 +573,6 @@
     <category term="python" scheme="https://buggzd.github.io/tags/python/"/>
     
     <category term="socket编程" scheme="https://buggzd.github.io/tags/socket%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【施工中】DawnCraft黎明世界Mod列表</title>
-    <link href="https://buggzd.github.io/2023/01/04/DawnCraft%E6%8C%87%E5%8D%97/"/>
-    <id>https://buggzd.github.io/2023/01/04/DawnCraft%E6%8C%87%E5%8D%97/</id>
-    <published>2023-01-03T23:58:17.000Z</published>
-    <updated>2023-01-06T09:30:10.529Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;游戏版本：DawnCraftv0.7&lt;br&gt;本篇涵盖大部分游戏中的mod，不会涉及前置mod或优化mod。&lt;/p&gt;
-&lt;p&gt;标题带有一个*的是无内置汉化但是有其他的汉化获取渠道。&lt;/p&gt;
-&lt;p&gt;标题带有两个*的是什么汉化都没有。&lt;/p&gt;
-&lt;h1</summary>
-        
-      
-    
-    
-    
-    <category term="默认分类" scheme="https://buggzd.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
-    
-    
-    <category term="MineCraft" scheme="https://buggzd.github.io/tags/MineCraft/"/>
     
   </entry>
   

@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">844</span>
+            <span class="post-count">1.1k</span>
         </span>
     </span>
 
@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">3 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
@@ -124,6 +124,18 @@
 </blockquote>
 <p>华硕路由器也可以安装科学上网插件，然后在科学上网插件中对SteamDeck设备添加游戏代理，这将会把steamdeck的所有端口都走代理。(<em>注意流量！我下两天游戏流量用了500G</em>)</p>
 <h1 id="电脑http代理"><a href="#电脑http代理" class="headerlink" title="电脑http代理"></a>电脑http代理</h1><p>如果没有支持的路由器，也可以用电脑当做http代理。</p>
+<h2 id="使用OpenVPN"><a href="#使用OpenVPN" class="headerlink" title="使用OpenVPN"></a>使用OpenVPN</h2><p>steamdeck也可以使用OpenVPN代理，vpn代理十分底层，很多不走443端口的tcp游戏都能够成功代理。</p>
+<h3 id="需要准备的"><a href="#需要准备的" class="headerlink" title="需要准备的"></a>需要准备的</h3><p>OpenVPN文件，格式为.ovpn的文件，具体参考openVPN官方（<a target="_blank" rel="noopener" href="https://github.com/OpenVPN/openvpn">https://github.com/OpenVPN/openvpn</a>）,请确保该ovpn文件可用，可以在别的客户端上（比如电脑）先连接验证。</p>
+<p>进入desktop模式</p>
+<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<li>首先安装 networkmanager-openvpn<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo steamos-readonly <span class="built_in">disable</span></span><br><span class="line">sudo pacman-key --init</span><br><span class="line">sudo pacman-key --populate</span><br><span class="line">sudo pacman -Syu</span><br><span class="line">sudo pacman -S networkmanager-openvpn</span><br><span class="line">sudo steamos-readonly <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+如果出现类似<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tzdata: /usr/bin/tzselect exists <span class="keyword">in</span> filesystem</span><br><span class="line">tzdata: /usr/bin/zdump exists <span class="keyword">in</span> filesystem</span><br><span class="line">tzdata: /usr/bin/zic exists <span class="keyword">in</span> filesystem</span><br></pre></td></tr></table></figure>
+的情况，可以覆盖，但是，这可能会导致其他软件包出现问题，因为它们依赖于冲突的文件。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S --overwrite <span class="string">&#x27;*&#x27;</span> networkmanager-openvpn</span><br></pre></td></tr></table></figure>
+安装完毕后可以使用<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -Q networkmanager-openvpn</span><br></pre></td></tr></table></figure>
+查看是否安装。</li>
+<li>导入.ovpn文件<br>桌面模式，network-&gt;connections-&gt;下方加号<br><img src="https://s2.loli.net/2023/03/31/qITLelb7f2dk1pi.png" alt="image.png"><br><img src="https://s2.loli.net/2023/03/31/8PYQBpIz91CDcTG.png" alt="image.png"><br>添加自己的ovpn文件。</li>
+<li>使用<br>对于已经导入的ovpn，右键（RT）点击connect，如果一切正常就可以使用vpn了。</li>
+</ol>
 <h2 id="clash代理"><a href="#clash代理" class="headerlink" title="clash代理"></a>clash代理</h2><blockquote>
 <p>让steamdeck通过代理上网：<a target="_blank" rel="noopener" href="https://ohmydeck.net/d/1">https://ohmydeck.net/d/1</a></p>
 </blockquote>

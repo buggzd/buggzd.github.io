@@ -1404,6 +1404,18 @@ return a;
 </blockquote>
 <p>华硕路由器也可以安装科学上网插件，然后在科学上网插件中对SteamDeck设备添加游戏代理，这将会把steamdeck的所有端口都走代理。(<em>注意流量！我下两天游戏流量用了500G</em>)</p>
 <h1 id="电脑http代理"><a href="#电脑http代理" class="headerlink" title="电脑http代理"></a>电脑http代理</h1><p>如果没有支持的路由器，也可以用电脑当做http代理。</p>
+<h2 id="使用OpenVPN"><a href="#使用OpenVPN" class="headerlink" title="使用OpenVPN"></a>使用OpenVPN</h2><p>steamdeck也可以使用OpenVPN代理，vpn代理十分底层，很多不走443端口的tcp游戏都能够成功代理。</p>
+<h3 id="需要准备的"><a href="#需要准备的" class="headerlink" title="需要准备的"></a>需要准备的</h3><p>OpenVPN文件，格式为.ovpn的文件，具体参考openVPN官方（<a href="https://github.com/OpenVPN/openvpn">https://github.com/OpenVPN/openvpn</a>）,请确保该ovpn文件可用，可以在别的客户端上（比如电脑）先连接验证。</p>
+<p>进入desktop模式</p>
+<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<li>首先安装 networkmanager-openvpn<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo steamos-readonly <span class="built_in">disable</span></span><br><span class="line">sudo pacman-key --init</span><br><span class="line">sudo pacman-key --populate</span><br><span class="line">sudo pacman -Syu</span><br><span class="line">sudo pacman -S networkmanager-openvpn</span><br><span class="line">sudo steamos-readonly <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+如果出现类似<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tzdata: /usr/bin/tzselect exists <span class="keyword">in</span> filesystem</span><br><span class="line">tzdata: /usr/bin/zdump exists <span class="keyword">in</span> filesystem</span><br><span class="line">tzdata: /usr/bin/zic exists <span class="keyword">in</span> filesystem</span><br></pre></td></tr></table></figure>
+的情况，可以覆盖，但是，这可能会导致其他软件包出现问题，因为它们依赖于冲突的文件。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S --overwrite <span class="string">&#x27;*&#x27;</span> networkmanager-openvpn</span><br></pre></td></tr></table></figure>
+安装完毕后可以使用<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pacman -Q networkmanager-openvpn</span><br></pre></td></tr></table></figure>
+查看是否安装。</li>
+<li>导入.ovpn文件<br>桌面模式，network-&gt;connections-&gt;下方加号<br><img src="https://s2.loli.net/2023/03/31/qITLelb7f2dk1pi.png" alt="image.png"><br><img src="https://s2.loli.net/2023/03/31/8PYQBpIz91CDcTG.png" alt="image.png"><br>添加自己的ovpn文件。</li>
+<li>使用<br>对于已经导入的ovpn，右键（RT）点击connect，如果一切正常就可以使用vpn了。</li>
+</ol>
 <h2 id="clash代理"><a href="#clash代理" class="headerlink" title="clash代理"></a>clash代理</h2><blockquote>
 <p>让steamdeck通过代理上网：<a href="https://ohmydeck.net/d/1">https://ohmydeck.net/d/1</a></p>
 </blockquote>
@@ -3818,5 +3830,26 @@ SSH的含义</p>
         <tag>steam</tag>
         <tag>steamdeck</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>SteamDeck折腾记录-05-Linux进阶</title>
+    <url>/2023/03/04/SteamDeck%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-05-Linux%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>SSH是Secure Shell的缩写，是一种安全的网络协议，主要用于远程登录和安全数据传输。大部分联网的Linux服务器都是使用ssh连接管理。</p>
+<p>在steamdeck上使用ssh连接，steamdeck就可以成为一台Linux服务器，这将极大的扩展steamdeck的玩法，（你甚至可以在上面装mc服务器跑）。</p>
+<h2 id="steamdeck上开启ssh服务"><a href="#steamdeck上开启ssh服务" class="headerlink" title="steamdeck上开启ssh服务"></a>steamdeck上开启ssh服务</h2><p>需要在steamdeck上安装openSSH，开启服务。<br>使用packman安装openssh</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo pacman -S openssh</span><br></pre></td></tr></table></figure>
+<p>开启sshd服务</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo systemctl enable sshd</span><br></pre></td></tr></table></figure>
+<p>查看sshd是否开启</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status sshd</span><br></pre></td></tr></table></figure>
+<p>ssh服务走的是网络的22号端口，如果有问题可以看一下这个端口是否阻塞了</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netstat -an|grep 22</span><br></pre></td></tr></table></figure>
+<h2 id="PC上使用SSH服务连接steamdeck"><a href="#PC上使用SSH服务连接steamdeck" class="headerlink" title="PC上使用SSH服务连接steamdeck"></a>PC上使用SSH服务连接steamdeck</h2><h3 id="连接steamdeck"><a href="#连接steamdeck" class="headerlink" title="连接steamdeck"></a>连接steamdeck</h3><p>虽然Windows自带ssh连接，但是建议下载一个ssh连接工具，例如PuTTY，OPENSSH，MobaXterm。我使用的是MobaXterm。</p>
+<p>打开MobaXterm后，新建session，Remote host填写steamdeck的ip地址，这里需要注意pc和steamdeck应该在同一局域网内，不知道steamdeck的ip地址的可以在路由器后台查看。<br><img src="https://s2.loli.net/2023/03/04/2LsgVt7bjDJdYWX.png" alt="image.png"></p>
+<p>连接后输入steamdeck的账号名，默认是deck，密码是最初设置的steamdeck的sudo密码。</p>
+<p>这样你就拥有了一个Linux操作系统的小服务器了，强烈建议正在学Linux的同学折腾折腾。<br><img src="https://s2.loli.net/2023/03/04/pNZqxgcOei963Pl.png" alt="image.png"></p>
+<h3 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h3><p>使用ssh后，可以方便的和steamdeck进行双向文件传输，特别是在使用了ssh连接工具后，操作逻辑就和Windows一样，拖拽即可。</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p>视频：<a href="https://www.bilibili.com/video/BV188411h76z">https://www.bilibili.com/video/BV188411h76z</a></p>
+]]></content>
   </entry>
 </search>
