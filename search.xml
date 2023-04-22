@@ -3852,4 +3852,62 @@ SSH的含义</p>
 <h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p>视频：<a href="https://www.bilibili.com/video/BV188411h76z">https://www.bilibili.com/video/BV188411h76z</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>GPT增强</title>
+    <url>/2023/04/22/GPT%E5%A2%9E%E5%BC%BA/</url>
+    <content><![CDATA[<h1 id="解决频繁掉线问题"><a href="#解决频繁掉线问题" class="headerlink" title="解决频繁掉线问题"></a>解决频繁掉线问题</h1><p>OpenAI现在应该是有意限制非付费用户，挂机时间稍微久一些就会自动断开服务，就需要刷新，经常见到这样的情况。<br><img src="https://global.discourse-cdn.com/openai1/optimized/3X/7/a/7a319d9707378e1ab71b8d913ad4d7015f187e73_2_1035x105.png" alt="error"><br>解决方法是安装一个叫KeepChatGPT的油猴插件</p>
+<h2 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h2><h3 id="给Chrome安装油猴"><a href="#给Chrome安装油猴" class="headerlink" title="给Chrome安装油猴"></a>给Chrome安装油猴</h3><p>Chrome访问这个链接，安装：<br><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo</a></p>
+<p><img src="https://i.328888.xyz/2023/04/22/i50gL5.png" alt="i50gL5.png"><br>安装完成后浏览器右上角有个拼图<br><a href="https://imgloc.com/i/i50eoF"><img src="https://i.328888.xyz/2023/04/22/i50eoF.png" alt="i50eoF.png"></a><br><img src="https://i.328888.xyz/2023/04/22/i506fH.png" alt="i506fH.png"></p>
+<h3 id="安装油猴插件"><a href="#安装油猴插件" class="headerlink" title="安装油猴插件"></a>安装油猴插件</h3><p>确保油猴安装成功，点下面这个链接：<br><a href="https://greasyfork.org/zh-CN/scripts/462804-keepchatgpt">https://greasyfork.org/zh-CN/scripts/462804-keepchatgpt</a></p>
+<p>安装<br><img src="https://i.328888.xyz/2023/04/22/i50GFE.png" alt="i50GFE.png"><br>安装成功后打开GPT就会显示<br><img src="https://i.328888.xyz/2023/04/22/i50dYC.png" alt="i50dYC.png"><br>我频率调整到60，基本就不会出现中断的情况了。</p>
+<h1 id="导出对话"><a href="#导出对话" class="headerlink" title="导出对话"></a>导出对话</h1><p>GPT本身只有代码可以复制粘贴，虽然也可以让它把所有对话都输入到代码块里，但是很麻烦，只需要装另一个油猴插件就可以搞定。</p>
+<p>支持导出html，Markdown，图片</p>
+<p>看前面的安装油猴，安装完后再安装ChatGPT Exporter<br><a href="https://greasyfork.org/zh-CN/scripts/456055-chatgpt-exporter">https://greasyfork.org/zh-CN/scripts/456055-chatgpt-exporter</a><br>安装完毕后，左下角多了一个导出助手。<br><img src="https://i.328888.xyz/2023/04/22/i50dYC.png" alt="i50dYC.png"><br>所有对话除了评分，多出来了一个复制按钮<br><img src="https://i.328888.xyz/2023/04/22/i50JsA.png" alt="i50JsA.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>SteamDeck入门-06-其他游戏机模拟器</title>
+    <url>/2023/04/01/SteamDeck%E5%85%A5%E9%97%A8-06-%E5%85%B6%E4%BB%96%E6%B8%B8%E6%88%8F%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="安装EmuDeck"><a href="#安装EmuDeck" class="headerlink" title="安装EmuDeck"></a>安装EmuDeck</h1><p>在steamdeck上玩其他端的游戏，基本都是通过Emudeck实现的，比如psp，psv，Switch。<br>因此需要安装EmuDeck。<br>前置条件：</p>
+<ol>
+<li>进入desktop桌面模式（参考decktop篇）</li>
+<li>能够访问Google（请参考网络加速篇）</li>
+</ol>
+<p>安装步骤：</p>
+<ol>
+<li>访问EmuDeck官网：&lt; <a href="https://emudeck.com/">https://emudeck.com/</a> &gt; ,点击右上角download，然后点击download installer。<img src="https://s2.loli.net/2023/03/31/vwROmbkIHE6yCfZ.png" alt="image.png"></li>
+<li>把下载的文件（Install EmuDeck）拖到桌面（desktop），双击运行，正常的话会出现一个黑色控制台，并且开始下载<img src="https://s2.loli.net/2023/03/31/cpCALjJBiYTP6Hr.png" alt="image.png"></li>
+<li>若步骤2下载的文件点开后闪退，请确认网络环境。</li>
+<li>步骤2下载完毕后，弹出新窗口<img src="https://s2.loli.net/2023/03/31/fuXOwscVEv4Ymay.png" alt="image.png"></li>
+</ol>
+<h1 id="添加模拟器到steam库"><a href="#添加模拟器到steam库" class="headerlink" title="添加模拟器到steam库"></a>添加模拟器到steam库</h1><p>在安装Emudeck后，会出现一个Steam ROM Manager（找不到可以在桌面模式，点击左下角搜索，没有就是前面没有安装成功），打开后点击Preview，Generate app list，可以看到安装了的模拟器。点击save apps to steam会自动把他们添加到steam库中。</p>
+<h1 id="添加游戏"><a href="#添加游戏" class="headerlink" title="添加游戏"></a>添加游戏</h1><p>不同模拟器有不同的游戏rom，通常需要把这些游戏文件放到对应模拟器的roms文件夹下（位置：home&#x2F;Emulation&#x2F;roms&#x2F;&lt;对应的模拟器&gt;&#x2F;roms）</p>
+<h1 id="将游戏添加到steam"><a href="#将游戏添加到steam" class="headerlink" title="将游戏添加到steam"></a>将游戏添加到steam</h1><p>Steam ROM Manager中重新点击Preview，Generate app list，会出现对应模拟器内的游戏，点击save apps to steam。</p>
+<h1 id="以塞尔达为例"><a href="#以塞尔达为例" class="headerlink" title="以塞尔达为例"></a>以塞尔达为例</h1><ol>
+<li>下载塞尔达游戏本体，将游戏放到<code>home/Emulation/roms/wiiu/roms</code>内。</li>
+<li>打开Steam ROM Manager中重新点击Preview，Generate app list，找到wiiu下的塞尔达，点击save apps to steam。</li>
+<li>配置塞尔达模拟：打开cemu（这是安装EmuDeck后应该有的一个软件），可以看到塞尔达，（如果触控板点击失效，需要在steam中配置一下cemu的按键设置）。对塞尔达右键edit game profile里graphic选择Vulkan。</li>
+<li>mod解锁60帧：右键塞尔达，edit graphic packs，右下角download，然后选择左边Graphics配置分辨率，mods里选择fps++解锁60帧。</li>
+</ol>
+<blockquote>
+<p>补充：塞尔达有体感游戏部分，需要打一个插件才能完美支持。<br>插件地址在这：<a href="https://github.com/kmicki/SteamDeckGyroDSU">https://github.com/kmicki/SteamDeckGyroDSU</a></p>
+</blockquote>
+<p>安装方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -sL https://raw.githubusercontent.com/kmicki/SteamDeckGyroDSU/master/pkg/update.sh)</span><br></pre></td></tr></table></figure>
+<p>按照安装的提示输入密码，然后重启steamdeck。</p>
+<p>重启后，进入游戏模式可以在非steam游戏内找到塞尔达。<br><img src="https://steamuserimages-a.akamaihd.net/ugc/2029475240622659545/3B13BA4B0A95CF44860B9F12EB3CBD09D804F4C3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"></p>
+<h2 id="塞尔达实机体验"><a href="#塞尔达实机体验" class="headerlink" title="塞尔达实机体验"></a>塞尔达实机体验</h2><ol>
+<li>帧率：因为是在模拟器环境运行，deck性能无法完全发挥，平均帧率在40帧，有时出现掉帧现象，掉到12帧。</li>
+<li>正常游戏体验：本来遥感支持是有问题的，但安装了遥感插件后得以解决，但是游戏振动反馈没有。</li>
+<li>是否能通关：据说红月会出现bug，我体验的1h内没有崩溃和恶性bug出现。</li>
+</ol>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p>本篇大部分都是参考小峰峰的视频制作，因此建议直接看原版，本篇作为笔记参考。</p>
+<blockquote>
+<p>steamdeck掌机流畅运行塞尔达荒野之息:<a href="https://www.bilibili.com/video/BV1oB4y1V7Sv">https://www.bilibili.com/video/BV1oB4y1V7Sv</a></p>
+</blockquote>
+<blockquote>
+<p>完美运行体感神庙: <a href="https://www.bilibili.com/video/BV1Yd4y1c7DG">https://www.bilibili.com/video/BV1Yd4y1c7DG</a></p>
+</blockquote>
+]]></content>
+  </entry>
 </search>
