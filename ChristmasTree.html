@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣诞节快乐😘</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 6;
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        document.body.appendChild(renderer.domElement);
+
+        // 雪花粒子
+        const particleCount = 1000;
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesPositions = new Float32Array(particleCount * 3);
+        const particlesVelocities = new Float32Array(particleCount * 3);
+        const gravity = -0.0003;
+
+        function initializeParticles() {
+            const aspectRatio = window.innerWidth / window.innerHeight;
+            for (let i = 0; i < particleCount; i++) {
+                particlesPositions[i * 3] = (Math.random() - 0.5) * 10 * aspectRatio;
+                particlesPositions[i * 3 + 1] = Math.random() * 10;
+                particlesPositions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+                particlesVelocities[i * 3 + 1] = Math.random() * 0.1;
+            }
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(particlesPositions, 3));
+        }
+
+        initializeParticles();
+
+        const particleMaterial = new THREE.ShaderMaterial({
+            uniforms: {
+                color: { value: new THREE.Color(0xFFFFFF) },
+                pointSize: { value: 5.0 }
+            },
+            vertexShader: `
+                uniform float pointSize;
+                void main() {
+                    gl_PointSize = pointSize;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform vec3 color;
+                void main() {
+                    vec2 coord = gl_PointCoord - vec2(0.5);
+                    if (length(coord) < 0.5) {
+                        gl_FragColor = vec4(color, 1.0);
+                    } else {
+                        discard;
+                    }
+                }
+            `
+        });
+
+        const particleSystem = new THREE.Points(particlesGeometry, particleMaterial);
+        particleSystem.position.y = -1;
+        scene.add(particleSystem);
+
+        // dat.gui 控制
+        // const gui = new dat.GUI();
+        const controls = {
+            snowSpeed: 0.03,
+            rotationSpeed: 0.003,
+            waveSpeed: 1.5,
+            waveHeight: 0.1,
+            waveFrequency: 2.5,
+            waveDirectionX: 1.0,
+            waveDirectionZ: 0.5,
+            waveVerticalSpeed: 0.5
+        };
+        // gui.add(controls, 'snowSpeed', 0, 0.1).name('下雪速度');
+        // gui.add(controls, 'rotationSpeed', 0, 0.01).name('旋转速度');
+        // const waveFolder = gui.addFolder('Wave');
+        // waveFolder.add(controls, 'waveSpeed', 0, 5).name('波速');
+        // waveFolder.add(controls, 'waveHeight', 0, 1).name('波高');
+        // waveFolder.add(controls, 'waveFrequency', 0, 5).name('波频');
+        // waveFolder.add(controls, 'waveDirectionX', -1, 1).name('波向 X');
+        // waveFolder.add(controls, 'waveDirectionZ', -1, 1).name('波向 Z');
+        // waveFolder.add(controls, 'waveVerticalSpeed', 0, 2).name('Y 轴速度');
+        // waveFolder.open();
+
+        function updateParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particlesVelocities[i * 3 + 1] += gravity;
+                particlesPositions[i * 3 + 1] += particlesVelocities[i * 3 + 1] * controls.snowSpeed;
+                if (particlesPositions[i * 3 + 1] < -1) {
+                    const aspectRatio = window.innerWidth / window.innerHeight;
+                    particlesPositions[i * 3] = (Math.random() - 0.5) * 10 * aspectRatio;
+                    particlesPositions[i * 3 + 1] = Math.random() * 10;
+                    particlesVelocities[i * 3 + 1] = Math.random() * 0.1;
+                }
+            }
+            particleSystem.geometry.attributes.position.needsUpdate = true;
+        }
+
+        // 圣诞树粒子
+        let treeParticles;
+        let treeParticleMaterial;
+        const loader = new THREE.GLTFLoader();
+
+        loader.load('tree.glb', (gltf) => {
+            const tree = gltf.scene;
+            const treeSize = 2;
+            tree.scale.set(treeSize, treeSize, treeSize);
+            tree.position.set(0, -0.8, 0);
+            tree.traverse((child) => {
+                if (child.isMesh) {
+                    const geometry = child.geometry.clone();
+                    geometry.applyMatrix4(child.matrixWorld);
+                    const positions = geometry.attributes.position.array;
+                    const treeGeometry = new THREE.BufferGeometry();
+                    treeGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+                    treeParticleMaterial = new THREE.ShaderMaterial({
+                        uniforms: {
+                            time: { value: 0.0 },
+                            topColor: { value: new THREE.Color(0xffff00) },
+                            midColor1: { value: new THREE.Color(0x00ff00) },
+                            midColor2: { value: new THREE.Color(0xff0000) }
+                        },
+                        vertexShader: `
+                            attribute float size;
+                            varying float vColorType;
+                            void main() {
+                                vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+                                gl_PointSize = size * (300.0 / -mvPosition.z);
+                                gl_Position = projectionMatrix * mvPosition;
+                                if (position.y > 1.6) {
+                                    vColorType = 0.0;
+                                } else if (position.y > -0.2 && position.y <= 1.6) {
+                                    vColorType = 1.0;
+                                } else {
+                                    vColorType = 2.0;
+                                }
+                            }
+                        `,
+                        fragmentShader: `
+                            uniform float time;
+                            uniform vec3 topColor;
+                            uniform vec3 midColor1;
+                            uniform vec3 midColor2;
+                            varying float vColorType;
+                            void main() {
+                                vec3 color;
+                                if (vColorType == 0.0) {
+                                    color = topColor;
+                                } else if (vColorType == 1.0) {
+                                    float blendFactor = mod(time, 2.0) < 1.0 ? 0.0 : 1.0;
+                                    color = mix(midColor1, midColor2, blendFactor);
+                                } else {
+                                    color = vec3(0.0, 1.0, 0.0);
+                                }
+                                gl_FragColor = vec4(color, 1.0);
+                            }
+                        `,
+                        transparent: true
+                    });
+
+                    treeParticles = new THREE.Points(treeGeometry, treeParticleMaterial);
+                    treeParticles.position.set(0, -2, 0);
+                    treeParticles.scale.set(treeSize, treeSize, treeSize);
+
+                    const sizes = new Float32Array(positions.length / 3);
+                    for (let i = 0; i < sizes.length; i++) {
+                        sizes[i] = 0.01 + Math.random() * 0.03;
+                    }
+                    treeGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+                    scene.add(treeParticles);
+                    // 移除了 addDecorativeSpheres(treeGeometry, treeParticles);
+                }
+            });
+        }, undefined, (error) => {
+            console.error('加载模型出错:', error);
+        });
+
+        // 地面粒子
+        const groundGeometry = new THREE.PlaneGeometry(10, 10, 64, 64);
+        const groundMaterial = new THREE.ShaderMaterial({
+            uniforms: {
+                color: { value: new THREE.Color(0xFFF8DC) },
+                pointSize: { value: 5.0 },
+                time: { value: 0.0 },
+                waveSpeed: { value: controls.waveSpeed },
+                waveHeight: { value: controls.waveHeight },
+                waveFrequency: { value: controls.waveFrequency },
+                waveDirectionX: { value: controls.waveDirectionX },
+                waveDirectionZ: { value: controls.waveDirectionZ },
+                waveVerticalSpeed: { value: controls.waveVerticalSpeed }
+            },
+            vertexShader: `
+                uniform float pointSize;
+                uniform float time;
+                uniform float waveSpeed;
+                uniform float waveHeight;
+                uniform float waveFrequency;
+                uniform float waveDirectionX;
+                uniform float waveDirectionZ;
+                uniform float waveVerticalSpeed;
+
+                float rand(vec2 co){
+                    return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
+                }
+
+                float calculateWave(vec2 pos) {
+                    vec2 direction = normalize(vec2(waveDirectionX, waveDirectionZ));
+                    float waveXZ = sin(dot(pos, direction) * waveFrequency - time * waveSpeed) * waveHeight;
+                    float waveY = sin(time * waveVerticalSpeed) * waveHeight;
+                    float randomOffset = (rand(pos) - 0.5) * waveHeight * 0.5;
+                    return waveXZ + waveY + randomOffset;
+                }
+
+                void main() {
+                    float waveHeightValue = calculateWave(position.xz);
+                    vec3 newPosition = vec3(position.x, position.y + waveHeightValue, position.z);
+                    vec4 mvPosition = modelViewMatrix * vec4(newPosition, 1.0);
+                    gl_PointSize = pointSize * (1.0 / -mvPosition.z);
+                    gl_Position = projectionMatrix * mvPosition;
+                }
+            `,
+            fragmentShader: `
+                uniform vec3 color;
+                void main() {
+                    if (length(gl_PointCoord - vec2(0.5)) < 0.5) {
+                        gl_FragColor = vec4(color, 1.0);
+                    } else {
+                        discard;
+                    }
+                }
+            `
+        });
+
+        const groundParticlesGeometry = new THREE.BufferGeometry().setAttribute('position', groundGeometry.attributes.position);
+        const groundParticles = new THREE.Points(groundParticlesGeometry, groundMaterial);
+        groundParticles.rotation.x = -Math.PI / 2;
+        groundParticles.position.y = -0.5;
+        groundParticles.position.z = 5;
+        scene.add(groundParticles);
+
+        // 添加字体加载器
+        const fontLoader = new THREE.FontLoader();
+
+        // 辅助函数
+        function sampleGeometry(geometry, pointNum) {
+            const points = [];
+            const positions = geometry.attributes.position.array;
+            const triangles = [];
+
+            for (let i = 0; i < positions.length; i += 9) {
+                triangles.push([
+                    new THREE.Vector3(positions[i], positions[i + 1], positions[i + 2]),
+                    new THREE.Vector3(positions[i + 3], positions[i + 4], positions[i + 5]),
+                    new THREE.Vector3(positions[i + 6], positions[i + 7], positions[i + 8])
+                ]);
+            }
+
+            function isPointInTriangle(p, a, b, c) {
+                const s = (a.y * c.x - a.x * c.y + (c.y - a.y) * p.x + (a.x - c.x) * p.y);
+                const t = (a.x * b.y - a.y * b.x + (a.y - b.y) * p.x + (b.x - a.x) * p.y);
+
+                if ((s < 0) != (t < 0))
+                    return false;
+
+                const A = -b.y * c.x + a.y * (c.x - b.x) + a.x * (b.y - c.y) + b.x * c.y;
+
+                return A < 0 ?
+                    (s <= 0 && s + t >= A) :
+                    (s >= 0 && s + t <= A);
+            }
+
+            function getAreaOfTriangle(a, b, c) {
+                return 0.5 * Math.abs((b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y));
+            }
+
+            const totalArea = triangles.reduce((sum, tri) => sum + getAreaOfTriangle(tri[0], tri[1], tri[2]), 0);
+
+            while (points.length < pointNum) {
+                const randomIndex = Math.floor(Math.random() * triangles.length);
+                const tri = triangles[randomIndex];
+                const a = tri[0], b = tri[1], c = tri[2];
+
+                // Generate random point within the bounding box of the triangle
+                const minX = Math.min(a.x, b.x, c.x);
+                const maxX = Math.max(a.x, b.x, c.x);
+                const minY = Math.min(a.y, b.y, c.y);
+                const maxY = Math.max(a.y, b.y, c.y);
+
+                const randomX = minX + Math.random() * (maxX - minX);
+                const randomY = minY + Math.random() * (maxY - minY);
+                const randomZ = a.z
+
+                const randomPoint = new THREE.Vector3(randomX, randomY, randomZ);
+
+                if (isPointInTriangle(randomPoint, a, b, c)) {
+                    points.push(randomPoint);
+                }
+            }
+
+            return points;
+        }
+
+        // 创建粒子文字
+        function createParticleText(text, font, size, height, color, x, y, z) {
+            const textGeometry = new THREE.TextGeometry(text, {
+                font: font,
+                size: size,
+                height: height,
+                curveSegments: 12,
+                bevelEnabled: false,
+            });
+
+            textGeometry.computeBoundingBox();
+            const centerOffset = -0.5 * (textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x);
+
+            const positions = [];
+            const colors = [];
+            const sizes = [];
+            const initialPositions = [];
+
+            const points = sampleGeometry(textGeometry, 5000);
+
+            for (let i = 0; i < points.length; i++) {
+                const point = points[i];
+                positions.push(point.x + centerOffset + x, point.y + y, point.z + z);
+                initialPositions.push(point.x + centerOffset + x, point.y + y, point.z + z)
+                colors.push(color.r, color.g, color.b);
+                sizes.push(0.02);
+            }
+
+            const particleGeometry = new THREE.BufferGeometry();
+            particleGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+            particleGeometry.setAttribute('initialPosition', new THREE.Float32BufferAttribute(initialPositions, 3));
+            particleGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+            particleGeometry.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
+
+            const particleMaterial = new THREE.ShaderMaterial({
+                uniforms: {
+                    uTime: { value: 0 },
+                    uColor1: { value: new THREE.Color(0xffffff) }, // 红色
+                    uColor2: { value: new THREE.Color(0xFF7F50) }, // 橘色
+                    uColor3: { value: new THREE.Color(0xffff00) }, // 黄色
+                },
+                vertexShader: `
+                    attribute vec3 initialPosition;
+                    attribute float size;
+                    attribute vec3 color;
+                    varying vec3 vColor;
+                    uniform float uTime;
+
+                    void main() {
+                        vec3 pos = position;
+
+                        // 呼吸膨胀收缩动画
+                        float pulse = sin(uTime*0.1 ) * 0.05 + 1.0;
+                        pos = initialPosition * pulse;
+
+                        vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+                        gl_PointSize = size * (300.0 / -mvPosition.z) * pulse;
+                        gl_Position = projectionMatrix * mvPosition;
+                        vColor = color;
+                    }
+                `,
+                fragmentShader: `
+                    uniform float uTime;
+                    uniform vec3 uColor1;
+                    uniform vec3 uColor2;
+                    uniform vec3 uColor3;
+                    varying vec3 vColor;
+
+                    void main() {
+                        // 渐变色动画
+                        float colorBlend = sin(uTime * 0.1) * 0.5 + 0.5;
+                        vec3 finalColor;
+
+                        if (colorBlend < 0.33) {
+                            finalColor = mix(uColor1, uColor2, colorBlend * 3.0);
+                        } else if (colorBlend < 0.66) {
+                            finalColor = mix(uColor2, uColor3, (colorBlend - 0.33) * 3.0);
+                        } else {
+                            finalColor = mix(uColor3, uColor1, (colorBlend - 0.66) * 3.0);
+                        }
+
+                        vec2 coord = gl_PointCoord - vec2(0.5);
+                        if (length(coord) < 0.5) {
+                            gl_FragColor = vec4(finalColor, 1.0);
+                        } else {
+                            discard;
+                        }
+                    }
+                `,
+                transparent: true,
+            });
+
+            const particleText = new THREE.Points(particleGeometry, particleMaterial);
+            scene.add(particleText);
+
+            return particleText;
+        }
+
+        fontLoader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', (font) => {
+            const particleText = createParticleText("Merry", font, 0.34, 0.05, new THREE.Color(0xffffff), 0, 1.65, 2);
+            const particleText2 = createParticleText("Christmas", font, 0.34, 0.05, new THREE.Color(0xffffff), 0, 1.25, 2);
+            const particleText3 = createParticleText("      xxx", font, 0.34, 0.05, new THREE.Color(0xffffff), 0, 0.8, 2);
+
+            // 动画循环中更新粒子文字的动画
+            function animate() {
+                requestAnimationFrame(animate);
+                updateParticles();
+
+                if (treeParticles) {
+                    treeParticles.rotation.y += controls.rotationSpeed;
+                    particleSystem.rotation.y += controls.rotationSpeed;
+                }
+
+                groundMaterial.uniforms.time.value += 0.01;
+                groundMaterial.uniforms.waveSpeed.value = controls.waveSpeed;
+                groundMaterial.uniforms.waveHeight.value = controls.waveHeight;
+                groundMaterial.uniforms.waveFrequency.value = controls.waveFrequency;
+                groundMaterial.uniforms.waveDirectionX.value = controls.waveDirectionX;
+                groundMaterial.uniforms.waveDirectionZ.value = controls.waveDirectionZ;
+
+                // 更新粒子文字的动画
+                if (particleText) {
+                    particleText.material.uniforms.uTime.value += 0.02;
+                    particleText2.material.uniforms.uTime.value += 0.02;
+                    particleText3.material.uniforms.uTime.value += 0.02;
+                }
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+        });
+
+        // 窗口大小变化
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            initializeParticles();
+        });
+    </script>
+</body>
+</html>
